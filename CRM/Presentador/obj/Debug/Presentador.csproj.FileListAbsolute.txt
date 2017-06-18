@@ -1,0 +1,13 @@
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Presentador.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmCRM.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmDevoluciones.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmFacturas.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmListaPrecios.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmLogin.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmVentas.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.Properties.Resources.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Presentador.exe
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.exe
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.csprojResolveAssemblyReference.cache

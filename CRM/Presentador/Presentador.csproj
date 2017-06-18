@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BC32A6E1-C46D-4A6E-B51A-7512FCDB73F2}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Presentador</RootNamespace>
     <AssemblyName>Presentador</AssemblyName>
@@ -29,6 +29,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -42,18 +45,232 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="frmCRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="frmCRM.Designer.cs">
+      <DependentUpon>frmCRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevoluciones.Designer.cs">
+      <DependentUpon>frmDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacturas.Designer.cs">
+      <DependentUpon>frmFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaPrecios.Designer.cs">
+      <DependentUpon>frmListaPrecios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StartUp.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="frmCRM.resx">
+      <DependentUpon>frmCRM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDevoluciones.resx">
+      <DependentUpon>frmDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacturas.resx">
+      <DependentUpon>frmFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaPrecios.resx">
+      <DependentUpon>frmListaPrecios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bancos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CALENDARIO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuentasporpagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EFECTIVO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estadisticas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go to first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go to last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loggin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manual usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\privilegios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TARJETADECREDITO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubicacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bancos-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuentas_por_cobrar-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facturacion-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_principal-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventario-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produccion-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rrhh-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-icon-purple-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facturaIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RETURNS_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-circle-invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crm_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

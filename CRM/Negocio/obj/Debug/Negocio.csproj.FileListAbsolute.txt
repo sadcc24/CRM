@@ -1,0 +1,4 @@
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\Negocio.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\obj\Debug\Negocio.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\obj\Debug\Negocio.pdb
