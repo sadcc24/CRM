@@ -1,0 +1,4 @@
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Entidades\bin\Debug\Entidades.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Entidades\obj\Debug\Entidades.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Entidades\obj\Debug\Entidades.pdb
