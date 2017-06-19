@@ -16,5 +16,11 @@ namespace Presentador
         {
             InitializeComponent();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmVentasRegistro vregistro = new frmVentasRegistro();
+            vregistro.Show();
+        }
     }
 }

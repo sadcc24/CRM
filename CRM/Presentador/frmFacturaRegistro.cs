@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Presentador
 {
-    public partial class frmFacturas : Form
+    public partial class frmFacturaRegistro : Form
     {
-        public frmFacturas()
+        public frmFacturaRegistro()
         {
             InitializeComponent();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }
