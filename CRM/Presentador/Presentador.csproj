@@ -93,6 +93,12 @@
     <Compile Include="frmtipocampania.Designer.cs">
       <DependentUpon>frmtipocampania.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmtipocampaniav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtipocampaniav.Designer.cs">
+      <DependentUpon>frmtipocampaniav.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmtipocampania.resx">
       <DependentUpon>frmtipocampania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtipocampaniav.resx">
+      <DependentUpon>frmtipocampaniav.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendedores.resx">
       <DependentUpon>frmVendedores.cs</DependentUpon>
