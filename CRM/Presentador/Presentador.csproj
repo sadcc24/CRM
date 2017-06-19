@@ -159,11 +159,11 @@
     <Compile Include="frmtipocampania.Designer.cs">
       <DependentUpon>frmtipocampania.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVendedores.cs">
+    <Compile Include="frmConsultaVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVendedores.Designer.cs">
-      <DependentUpon>frmVendedores.cs</DependentUpon>
+    <Compile Include="frmConsultaVendedores.Designer.cs">
+      <DependentUpon>frmConsultaVendedores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmvendoresc.cs">
       <SubType>Form</SubType>
@@ -231,8 +231,8 @@
     <EmbeddedResource Include="frmtipocampania.resx">
       <DependentUpon>frmtipocampania.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVendedores.resx">
-      <DependentUpon>frmVendedores.cs</DependentUpon>
+    <EmbeddedResource Include="frmConsultaVendedores.resx">
+      <DependentUpon>frmConsultaVendedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmvendoresc.resx">
       <DependentUpon>frmvendoresc.cs</DependentUpon>
