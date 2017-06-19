@@ -57,6 +57,24 @@
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCobrosProximos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCobrosProximos.Designer.cs">
+      <DependentUpon>frmCobrosProximos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConceptos.Designer.cs">
+      <DependentUpon>frmConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCliente.Designer.cs">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +105,12 @@
     <Compile Include="frmFacturas.Designer.cs">
       <DependentUpon>frmFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHistoricoCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistoricoCxC.Designer.cs">
+      <DependentUpon>frmHistoricoCxC.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaPrecios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +128,18 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientosCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientosCxC.Designer.cs">
+      <DependentUpon>frmMovimientosCxC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalConceptosCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalConceptosCxC.Designer.cs">
+      <DependentUpon>frmPrincipalConceptosCxC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmtipocampania.cs">
       <SubType>Form</SubType>
