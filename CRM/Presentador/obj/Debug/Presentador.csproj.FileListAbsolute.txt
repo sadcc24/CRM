@@ -32,3 +32,5 @@ C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Pr
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.TipoCampania.resources
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmVendedores.resources
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmVentasRegistro.resources
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.exe
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
