@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Presentador
 {
-    public partial class frmtipocampaniav : Form
+    public partial class TipoCampania : Form
     {
-        public frmtipocampaniav()
+        public TipoCampania()
         {
             InitializeComponent();
+        }
+
+        private void TipoCampania_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
