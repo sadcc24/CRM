@@ -24,3 +24,30 @@ C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentad
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.frmVentas.resources
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.Properties.Resources.resources
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmCampania.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmclientes.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmDevRegistro.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmFacturaRegistro.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmListaPreciosReg.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.TipoCampania.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmVendedores.resources
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmVentasRegistro.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.exe
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.csprojResolveAssemblyReference.cache
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmCampania.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmclientes.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmCRM.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmDevoluciones.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmDevRegistro.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmFacturaRegistro.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmFacturas.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmListaPrecios.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmListaPreciosReg.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmLogin.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.TipoCampania.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmVendedores.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmVentas.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmVentasRegistro.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.Properties.Resources.resources
+C:\Users\Parqueo\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache

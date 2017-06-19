@@ -57,6 +57,24 @@
     <Compile Include="frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCobrosProximos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCobrosProximos.Designer.cs">
+      <DependentUpon>frmCobrosProximos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConceptos.Designer.cs">
+      <DependentUpon>frmConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaCliente.Designer.cs">
+      <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,11 +87,29 @@
     <Compile Include="frmDevoluciones.Designer.cs">
       <DependentUpon>frmDevoluciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDevRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevRegistro.Designer.cs">
+      <DependentUpon>frmDevRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacturaRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacturaRegistro.Designer.cs">
+      <DependentUpon>frmFacturaRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFacturas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmFacturas.Designer.cs">
       <DependentUpon>frmFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistoricoCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistoricoCxC.Designer.cs">
+      <DependentUpon>frmHistoricoCxC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaPrecios.cs">
       <SubType>Form</SubType>
@@ -81,11 +117,29 @@
     <Compile Include="frmListaPrecios.Designer.cs">
       <DependentUpon>frmListaPrecios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaPreciosReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaPreciosReg.Designer.cs">
+      <DependentUpon>frmListaPreciosReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientosCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientosCxC.Designer.cs">
+      <DependentUpon>frmMovimientosCxC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalConceptosCxC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalConceptosCxC.Designer.cs">
+      <DependentUpon>frmPrincipalConceptosCxC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmtipocampania.cs">
       <SubType>Form</SubType>
@@ -111,6 +165,12 @@
     <Compile Include="frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentasRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentasRegistro.Designer.cs">
+      <DependentUpon>frmVentasRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -132,11 +192,20 @@
     <EmbeddedResource Include="frmDevoluciones.resx">
       <DependentUpon>frmDevoluciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDevRegistro.resx">
+      <DependentUpon>frmDevRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacturaRegistro.resx">
+      <DependentUpon>frmFacturaRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFacturas.resx">
       <DependentUpon>frmFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaPrecios.resx">
       <DependentUpon>frmListaPrecios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaPreciosReg.resx">
+      <DependentUpon>frmListaPreciosReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -152,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentasRegistro.resx">
+      <DependentUpon>frmVentasRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
