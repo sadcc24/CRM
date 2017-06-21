@@ -16,5 +16,11 @@ namespace Presentador
         {
             InitializeComponent();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmConceptos conceptos = new frmConceptos();
+            conceptos.Show();
+        }
     }
 }

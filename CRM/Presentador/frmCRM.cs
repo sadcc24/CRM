@@ -85,5 +85,24 @@ namespace Presentador
             ConsultaClientes.MdiParent = this;
             ConsultaClientes.Show();
         }
+
+        private void frmCRM_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuentasPorCobrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPrincipalConceptosCxC cuentascxc = new frmPrincipalConceptosCxC();
+            cuentascxc.MdiParent = this;
+            cuentascxc.Show();
+        }
+
+        private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaVendedores consultavendedor = new frmConsultaVendedores();
+            consultavendedor.MdiParent = this;
+            consultavendedor.Show();
+        }
     }
 }

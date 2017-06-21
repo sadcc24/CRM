@@ -110,7 +110,7 @@
             // 
             // pbCRM
             // 
-            this.pbCRM.Image = global::Presentador.Properties.Resources.crm_icon;
+            this.pbCRM.Image = global::Presentador.Properties.Resources.LogoCRM3;
             this.pbCRM.Location = new System.Drawing.Point(131, 3);
             this.pbCRM.Name = "pbCRM";
             this.pbCRM.Size = new System.Drawing.Size(108, 98);
@@ -122,6 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(363, 325);
             this.Controls.Add(this.pbCRM);
             this.Controls.Add(this.txtPassword);

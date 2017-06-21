@@ -21,5 +21,11 @@ namespace Presentador
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmvendoresc vendedores = new frmvendoresc();
+            vendedores.Show();
+        }
     }
 }
