@@ -42,5 +42,23 @@ namespace Presentador
         {
 
         }
+
+        private void campaniasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+           
+        }
+
+        private void ingresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegCampania RegistoCampania = new frmRegCampania();
+            RegistoCampania.MdiParent = this;
+            RegistoCampania.Show();
+        }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
