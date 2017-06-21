@@ -58,7 +58,32 @@ namespace Presentador
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
+
+            frmtipocampania TipoCampania = new frmtipocampania();
+            TipoCampania.MdiParent = this;
+            TipoCampania.Show();
+        }
+
+        private void ingresoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmClientes IngresoClientes = new frmClientes();
+            IngresoClientes.MdiParent = this;
+            IngresoClientes.Show();
+        }
+
+        private void catalogoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCatalogClientes CatalogoClientes = new frmCatalogClientes();
+            CatalogoClientes.MdiParent = this;
+            CatalogoClientes.Show();
+        }
+
+        private void consultaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaCliente ConsultaClientes = new frmConsultaCliente();
+            ConsultaClientes.MdiParent = this;
+            ConsultaClientes.Show();
         }
     }
 }
