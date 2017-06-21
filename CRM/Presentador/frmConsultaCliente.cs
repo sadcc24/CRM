@@ -19,7 +19,7 @@ namespace Presentador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmBusquedaCliente consultacli = new frmBusquedaCliente();
+            frmConsultaCliente consultacli = new frmConsultaCliente();
             consultacli.MdiParent = this;
             consultacli.Show();
         }

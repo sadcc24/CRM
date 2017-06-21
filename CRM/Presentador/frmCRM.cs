@@ -40,9 +40,7 @@ namespace Presentador
 
         private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmVentas ventas = new frmVentas();
-            ventas.MdiParent = this;
-            ventas.Show();
+
         }
     }
 }
