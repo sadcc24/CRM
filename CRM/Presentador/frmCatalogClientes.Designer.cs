@@ -124,10 +124,11 @@
             this.button2.TabIndex = 105;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // frmCatalogC
+            // frmCatalogClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(598, 415);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.button1);
@@ -137,7 +138,8 @@
             this.Controls.Add(this.btnPrimerReg);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.grdCliente);
-            this.Name = "frmCatalogC";
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Name = "frmCatalogClientes";
             this.Text = "Catalogo de Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.grdCliente)).EndInit();
             this.ResumeLayout(false);
