@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevoluciones));
-            this.dgvDevoluciones = new System.Windows.Forms.DataGridView();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnUltimoReg = new System.Windows.Forms.Button();
@@ -37,16 +36,9 @@
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnPrimerReg = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.dgvDevoluciones = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevoluciones)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvDevoluciones
-            // 
-            this.dgvDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDevoluciones.Location = new System.Drawing.Point(33, 60);
-            this.dgvDevoluciones.Name = "dgvDevoluciones";
-            this.dgvDevoluciones.Size = new System.Drawing.Size(836, 305);
-            this.dgvDevoluciones.TabIndex = 23;
             // 
             // btnAyuda
             // 
@@ -69,6 +61,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(51, 49);
             this.btnActualizar.TabIndex = 55;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnUltimoReg
             // 
@@ -126,6 +119,15 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // dgvDevoluciones
+            // 
+            this.dgvDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDevoluciones.Location = new System.Drawing.Point(33, 60);
+            this.dgvDevoluciones.Name = "dgvDevoluciones";
+            this.dgvDevoluciones.Size = new System.Drawing.Size(836, 305);
+            this.dgvDevoluciones.TabIndex = 23;
+            this.dgvDevoluciones.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevoluciones_CellDoubleClick);
+            // 
             // frmDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,7 +152,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvDevoluciones;
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnUltimoReg;
@@ -158,5 +159,6 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimerReg;
         private System.Windows.Forms.Button btnNuevo;
+        public System.Windows.Forms.DataGridView dgvDevoluciones;
     }
 }

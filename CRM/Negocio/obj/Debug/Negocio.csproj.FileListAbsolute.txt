@@ -3,3 +3,8 @@ C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\Negoci
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\obj\Debug\Negocio.dll
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\obj\Debug\Negocio.pdb
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\Datos.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\MRP_BD.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\Datos.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\Entidades.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\Entidades.pdb

@@ -21,7 +21,7 @@ namespace Datos
             cnn.insertSQL(queryInsert);
         }
 
-        public object Select(string querySelect)
+        public DataTable Select(string querySelect)
         {
             DataTable consulta = cnn.getSQL(querySelect);
             return consulta;

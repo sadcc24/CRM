@@ -57,3 +57,10 @@ C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentad
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.frmvendoresc.resources
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.Properties.Resources.resources
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Datos.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\MRP_BD.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Datos.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Negocio.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Negocio.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Entidades.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Entidades.pdb

@@ -430,6 +430,14 @@
       <Project>{f4fc3536-e533-4f04-a8d9-002b734c3860}</Project>
       <Name>Datos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{394048bd-aa9c-4e09-8a72-babe7a27a24a}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{611f8f69-f666-4896-a968-7f597b1e0260}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
