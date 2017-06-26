@@ -2,3 +2,4 @@ C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\BD\bin\Debug\BD.dll
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\BD\bin\Debug\BD.pdb
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\BD\obj\Debug\BD.dll
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\BD\obj\Debug\BD.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\BD\obj\Debug\BD.csprojResolveAssemblyReference.cache

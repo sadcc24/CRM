@@ -143,6 +143,7 @@
             this.Name = "frmDevoluciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Devoluciones";
+            this.Load += new System.EventHandler(this.frmDevoluciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevoluciones)).EndInit();
             this.ResumeLayout(false);
 

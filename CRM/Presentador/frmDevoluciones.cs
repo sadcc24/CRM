@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Datos;
 
 namespace Presentador
 {
@@ -21,6 +22,12 @@ namespace Presentador
         {
             frmDevRegistro devRegistro = new frmDevRegistro();
             devRegistro.Show();
+        }
+
+        private void frmDevoluciones_Load(object sender, EventArgs e)
+        {
+            ConnectionDBLocal cnn = new ConnectionDBLocal();
+            dgvDevoluciones.DataSource = cnn.Select("SELECT * FROM VENDEDOR");
         }
     }
 }

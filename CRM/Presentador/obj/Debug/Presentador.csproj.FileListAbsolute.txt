@@ -1,7 +1,6 @@
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Presentador.exe
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Presentador.pdb
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.csprojResolveAssemblyReference.cache
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmCampania.resources
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmCancelacionCXC.resources
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmCatalogClientes.resources
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmClientes.resources
