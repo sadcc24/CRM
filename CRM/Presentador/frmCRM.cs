@@ -104,5 +104,13 @@ namespace Presentador
             consultavendedor.MdiParent = this;
             consultavendedor.Show();
         }
+
+        private void tiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            frmIngresotipocampania Tipocamapnia = new frmIngresotipocampania();
+            Tipocamapnia.MdiParent = this;
+            Tipocamapnia.Show();
+        }
     }
 }

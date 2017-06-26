@@ -4,3 +4,9 @@ C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\obj\Debug\Datos.dl
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\obj\Debug\Datos.pdb
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\bin\Debug\MRP_BD.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Datos\bin\Debug\Datos.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Datos\bin\Debug\Datos.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Datos\bin\Debug\MRP_BD.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Datos\obj\Debug\Datos.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Datos\obj\Debug\Datos.pdb

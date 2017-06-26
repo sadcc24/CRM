@@ -117,6 +117,12 @@
     <Compile Include="frmHistoricoCxC.Designer.cs">
       <DependentUpon>frmHistoricoCxC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIngresotipocampania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresotipocampania.Designer.cs">
+      <DependentUpon>frmIngresotipocampania.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaPrecios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHistoricoCxC.resx">
       <DependentUpon>frmHistoricoCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIngresotipocampania.resx">
+      <DependentUpon>frmIngresotipocampania.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaPrecios.resx">
       <DependentUpon>frmListaPrecios.cs</DependentUpon>

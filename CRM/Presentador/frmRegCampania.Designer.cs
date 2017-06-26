@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtcosto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtestatud = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
@@ -51,13 +51,13 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox3
+            // txtcosto
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(165, 307);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 27);
-            this.textBox3.TabIndex = 133;
+            this.txtcosto.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcosto.Location = new System.Drawing.Point(165, 307);
+            this.txtcosto.Name = "txtcosto";
+            this.txtcosto.Size = new System.Drawing.Size(141, 27);
+            this.txtcosto.TabIndex = 133;
             // 
             // label6
             // 
@@ -69,13 +69,13 @@
             this.label6.TabIndex = 132;
             this.label6.Text = "Costo:";
             // 
-            // textBox2
+            // txtestatud
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(165, 271);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 27);
-            this.textBox2.TabIndex = 131;
+            this.txtestatud.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtestatud.Location = new System.Drawing.Point(165, 271);
+            this.txtestatud.Name = "txtestatud";
+            this.txtestatud.Size = new System.Drawing.Size(141, 27);
+            this.txtestatud.TabIndex = 131;
             // 
             // label5
             // 
@@ -142,13 +142,13 @@
             this.label4.TabIndex = 124;
             this.label4.Text = "Tipo Campañia:";
             // 
-            // textBox1
+            // txtdescripcion
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(165, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 27);
-            this.textBox1.TabIndex = 123;
+            this.txtdescripcion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdescripcion.Location = new System.Drawing.Point(165, 105);
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(292, 27);
+            this.txtdescripcion.TabIndex = 123;
             // 
             // label1
             // 
@@ -183,10 +183,10 @@
             this.btnReporte.BackColor = System.Drawing.SystemColors.Control;
             this.btnReporte.BackgroundImage = global::Presentador.Properties.Resources.reporte_0;
             this.btnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReporte.Location = new System.Drawing.Point(406, 17);
+            this.btnReporte.Location = new System.Drawing.Point(404, 12);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(51, 49);
-            this.btnReporte.TabIndex = 119;
+            this.btnReporte.TabIndex = 140;
             this.btnReporte.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
@@ -194,10 +194,10 @@
             this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.BackgroundImage = global::Presentador.Properties.Resources.eliminar;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.Location = new System.Drawing.Point(352, 17);
+            this.btnEliminar.Location = new System.Drawing.Point(347, 12);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(51, 49);
-            this.btnEliminar.TabIndex = 118;
+            this.btnEliminar.TabIndex = 139;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // btnActualizar
@@ -205,10 +205,10 @@
             this.btnActualizar.BackColor = System.Drawing.SystemColors.Control;
             this.btnActualizar.BackgroundImage = global::Presentador.Properties.Resources.refresh;
             this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnActualizar.Location = new System.Drawing.Point(298, 17);
+            this.btnActualizar.Location = new System.Drawing.Point(290, 12);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(51, 49);
-            this.btnActualizar.TabIndex = 117;
+            this.btnActualizar.TabIndex = 138;
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // btnBuscar
@@ -216,21 +216,23 @@
             this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.btnBuscar.BackgroundImage = global::Presentador.Properties.Resources.buscar;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(245, 17);
+            this.btnBuscar.Image = global::Presentador.Properties.Resources.guardar;
+            this.btnBuscar.Location = new System.Drawing.Point(123, 12);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(51, 49);
-            this.btnBuscar.TabIndex = 116;
+            this.btnBuscar.TabIndex = 137;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.BackgroundImage = global::Presentador.Properties.Resources.cancelar_1;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancelar.Location = new System.Drawing.Point(165, 17);
+            this.btnCancelar.Location = new System.Drawing.Point(233, 12);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(51, 49);
-            this.btnCancelar.TabIndex = 115;
+            this.btnCancelar.TabIndex = 136;
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnEditar
@@ -238,10 +240,10 @@
             this.btnEditar.BackColor = System.Drawing.SystemColors.Control;
             this.btnEditar.BackgroundImage = global::Presentador.Properties.Resources.editar;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Location = new System.Drawing.Point(112, 17);
+            this.btnEditar.Location = new System.Drawing.Point(176, 12);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(51, 49);
-            this.btnEditar.TabIndex = 114;
+            this.btnEditar.TabIndex = 135;
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnNuevo
@@ -249,32 +251,18 @@
             this.btnNuevo.BackColor = System.Drawing.SystemColors.Control;
             this.btnNuevo.BackgroundImage = global::Presentador.Properties.Resources.nuevo;
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnNuevo.Location = new System.Drawing.Point(59, 17);
+            this.btnNuevo.Location = new System.Drawing.Point(70, 12);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(51, 49);
-            this.btnNuevo.TabIndex = 113;
+            this.btnNuevo.TabIndex = 134;
             this.btnNuevo.UseVisualStyleBackColor = false;
             // 
-            // frmRegCampana
+            // frmRegCampania
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(507, 351);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtnombre);
-            this.Controls.Add(this.Nombre);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -282,7 +270,21 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
-            this.Name = "frmRegCampana";
+            this.Controls.Add(this.txtcosto);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtestatud);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtdescripcion);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.Nombre);
+            this.Name = "frmRegCampania";
             this.Text = "Registo Campañia";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,9 +293,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtcosto;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtestatud;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -301,7 +303,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label Nombre;
