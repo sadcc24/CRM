@@ -88,7 +88,8 @@ namespace Presentador
 
         private void frmCRM_Load(object sender, EventArgs e)
         {
-
+            this.BackgroundImage = global::Presentador.Properties.Resources.LogoCRM3;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
         }
 
         private void cuentasPorCobrarToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -111,6 +112,11 @@ namespace Presentador
             frmIngresotipocampania Tipocamapnia = new frmIngresotipocampania();
             Tipocamapnia.MdiParent = this;
             Tipocamapnia.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -83,7 +83,7 @@
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(127, 279);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(139, 291);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(112, 30);
             this.btnIniciarSesion.TabIndex = 4;
@@ -123,7 +123,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(363, 325);
+            this.ClientSize = new System.Drawing.Size(382, 356);
             this.Controls.Add(this.pbCRM);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);

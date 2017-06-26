@@ -9,8 +9,8 @@ namespace Datos
 {
     public class ConnectionDBLocal
     {
-        
-           MRP_BD cnn = new MRP_BD("","", "", @"");
+
+        MRP_BD cnn = new MRP_BD("", "", "", @"");
 
         public void Delete(string queryDelete)
         {
@@ -22,7 +22,7 @@ namespace Datos
              cnn.insertSQL(queryInsert);
         }
 
-        public object Select(string querySelect)
+        public DataTable Select(string querySelect)
         {
             DataTable consulta = cnn.getSQL(querySelect);
             return consulta;
