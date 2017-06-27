@@ -43,6 +43,7 @@
     <Compile Include="nTipoLista.cs" />
     <Compile Include="nDevoluciones.cs" />
     <Compile Include="nLogin.cs" />
+    <Compile Include="nVendedores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
