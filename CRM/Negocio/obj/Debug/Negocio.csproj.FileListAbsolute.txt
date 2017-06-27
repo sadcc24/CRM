@@ -8,3 +8,23 @@ C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\bin\Debug\Entida
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\obj\Debug\Negocio.dll
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\bin\Debug\Negocio.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\bin\Debug\Datos.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\bin\Debug\Entidades.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\bin\Debug\MRP_BD.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\bin\Debug\Datos.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\bin\Debug\Entidades.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\obj\Debug\Negocio.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Negocio.dll
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Datos.dll
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Entidades.dll
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\MRP_BD.dll
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Datos.pdb
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Entidades.pdb
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.dll
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.pdb

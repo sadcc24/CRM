@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Presentador
 {
-    public partial class frmListaPreciosReg : Form
+    public partial class frmIngresoEstadoCliente : Form
     {
-        public frmListaPreciosReg()
+        public frmIngresoEstadoCliente()
         {
             InitializeComponent();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

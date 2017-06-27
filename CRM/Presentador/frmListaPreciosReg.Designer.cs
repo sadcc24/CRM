@@ -152,6 +152,7 @@
             this.btnGuardar.Size = new System.Drawing.Size(51, 49);
             this.btnGuardar.TabIndex = 80;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
@@ -174,6 +175,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(51, 49);
             this.btnNuevo.TabIndex = 78;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmListaPreciosReg
             // 

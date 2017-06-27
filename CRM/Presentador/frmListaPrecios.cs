@@ -16,5 +16,12 @@ namespace Presentador
         {
             InitializeComponent();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmListaPreciosReg PreciosReg = new frmListaPreciosReg();
+            PreciosReg.MdiParent = this.ParentForm;
+            PreciosReg.Show();
+        }
     }
 }

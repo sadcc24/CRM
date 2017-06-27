@@ -31,7 +31,12 @@ namespace Presentador
         {
             
             ConnectionDBLocal conlocal = new ConnectionDBLocal();
-            conlocal.Delete("DELETE dbo.TIPO_CAMPANIA WHERE idtipocampania ='"+txtnomtipocampania.Text + "'");
+            dtvtipocampanias.DataSource = conlocal.Select("select * from TIPO_CAMPANIA");
+            conlocal.Delete("DELETE dbo.TIPO_CAMPANIA WHERE idtipocampania ='"+ txtnomtipocampania.Text + "'");
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
         }
     }
 }
