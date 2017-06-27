@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grdCliente = new System.Windows.Forms.DataGridView();
+            this.dgvclientes = new System.Windows.Forms.DataGridView();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnUltimoReg = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnPrimerReg = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCliente)).BeginInit();
+            this.btnnuevo = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvclientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // grdCliente
+            // dgvclientes
             // 
-            this.grdCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdCliente.Location = new System.Drawing.Point(12, 97);
-            this.grdCliente.Name = "grdCliente";
-            this.grdCliente.Size = new System.Drawing.Size(555, 305);
-            this.grdCliente.TabIndex = 104;
+            this.dgvclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvclientes.Location = new System.Drawing.Point(12, 97);
+            this.dgvclientes.Name = "dgvclientes";
+            this.dgvclientes.Size = new System.Drawing.Size(555, 305);
+            this.dgvclientes.TabIndex = 104;
             // 
             // btnAyuda
             // 
@@ -113,16 +113,17 @@
             this.btnPrimerReg.TabIndex = 106;
             this.btnPrimerReg.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnnuevo
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.BackgroundImage = global::Presentador.Properties.Resources.nuevo;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Location = new System.Drawing.Point(44, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 49);
-            this.button2.TabIndex = 105;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnnuevo.BackColor = System.Drawing.SystemColors.Control;
+            this.btnnuevo.BackgroundImage = global::Presentador.Properties.Resources.nuevo;
+            this.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnnuevo.Location = new System.Drawing.Point(44, 12);
+            this.btnnuevo.Name = "btnnuevo";
+            this.btnnuevo.Size = new System.Drawing.Size(51, 49);
+            this.btnnuevo.TabIndex = 105;
+            this.btnnuevo.UseVisualStyleBackColor = false;
+            this.btnnuevo.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmCatalogClientes
             // 
@@ -136,12 +137,13 @@
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnPrimerReg);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.grdCliente);
+            this.Controls.Add(this.btnnuevo);
+            this.Controls.Add(this.dgvclientes);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "frmCatalogClientes";
             this.Text = "Catalogo de Clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.grdCliente)).EndInit();
+            this.Load += new System.EventHandler(this.frmCatalogClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvclientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,7 +156,7 @@
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimerReg;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView grdCliente;
+        private System.Windows.Forms.Button btnnuevo;
+        private System.Windows.Forms.DataGridView dgvclientes;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
 
 namespace Presentador
 {
@@ -15,6 +16,22 @@ namespace Presentador
         public frmCatalogClientes()
         {
             InitializeComponent();
+        }
+
+        private void frmCatalogClientes_Load(object sender, EventArgs e)
+        {
+            nCClientes clientes = new nCClientes();
+            dgvclientes.DataSource = clientes.getAllClientes();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmClientes ClRegistro = new frmClientes;
+            ClRegistro.MdiParent = this.ParentForm;
+            ClRegistro.Show();
+
+
         }
     }
 }

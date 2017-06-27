@@ -132,5 +132,10 @@ namespace Presentador
             TipoListaPrecio.MdiParent = this;
             TipoListaPrecio.Show();
         }
+
+        private void modulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

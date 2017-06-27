@@ -38,6 +38,7 @@
             this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDePreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@
             this.cuentasPorCobrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,7 @@
             this.modulosToolStripMenuItem.Name = "modulosToolStripMenuItem";
             this.modulosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.modulosToolStripMenuItem.Text = "Modulos";
+            this.modulosToolStripMenuItem.Click += new System.EventHandler(this.modulosToolStripMenuItem_Click);
             // 
             // facturasToolStripMenuItem
             // 
@@ -141,6 +142,13 @@
             this.listaDePreciosToolStripMenuItem.Text = "Lista de Precios";
             this.listaDePreciosToolStripMenuItem.Click += new System.EventHandler(this.listaDePreciosToolStripMenuItem_Click);
             // 
+            // tipoToolStripMenuItem1
+            // 
+            this.tipoToolStripMenuItem1.Name = "tipoToolStripMenuItem1";
+            this.tipoToolStripMenuItem1.Size = new System.Drawing.Size(182, 22);
+            this.tipoToolStripMenuItem1.Text = "Tipo Lista de Precios";
+            this.tipoToolStripMenuItem1.Click += new System.EventHandler(this.tipoToolStripMenuItem1_Click);
+            // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -155,14 +163,14 @@
             // 
             this.ventasToolStripMenuItem1.Image = global::Presentador.Properties.Resources.ventas_image;
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.ventasToolStripMenuItem1.Text = "Ventas";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
             // vendedoresToolStripMenuItem
             // 
             this.vendedoresToolStripMenuItem.Name = "vendedoresToolStripMenuItem";
-            this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.vendedoresToolStripMenuItem.Text = "Vendedores";
             this.vendedoresToolStripMenuItem.Click += new System.EventHandler(this.vendedoresToolStripMenuItem_Click);
             // 
@@ -182,7 +190,7 @@
             this.consultaToolStripMenuItem,
             this.tipoToolStripMenuItem});
             this.campaniasToolStripMenuItem.Name = "campaniasToolStripMenuItem";
-            this.campaniasToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.campaniasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.campaniasToolStripMenuItem.Text = "Campanias";
             this.campaniasToolStripMenuItem.Click += new System.EventHandler(this.campaniasToolStripMenuItem_Click);
             // 
@@ -214,7 +222,7 @@
             this.consultaToolStripMenuItem1,
             this.catalogoToolStripMenuItem});
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             // 
             // ingresoToolStripMenuItem1
@@ -268,13 +276,6 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // tipoToolStripMenuItem1
-            // 
-            this.tipoToolStripMenuItem1.Name = "tipoToolStripMenuItem1";
-            this.tipoToolStripMenuItem1.Size = new System.Drawing.Size(182, 22);
-            this.tipoToolStripMenuItem1.Text = "Tipo Lista de Precios";
-            this.tipoToolStripMenuItem1.Click += new System.EventHandler(this.tipoToolStripMenuItem1_Click);
             // 
             // frmCRM
             // 
