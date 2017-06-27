@@ -125,5 +125,12 @@ namespace Presentador
             Tipocamapnia.MdiParent = this;
             Tipocamapnia.Show();
         }
+
+        private void tipoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmTipoListaPrecio TipoListaPrecio = new frmTipoListaPrecio();
+            TipoListaPrecio.MdiParent = this;
+            TipoListaPrecio.Show();
+        }
     }
 }

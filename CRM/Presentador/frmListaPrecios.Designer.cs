@@ -124,6 +124,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(51, 49);
             this.btnNuevo.TabIndex = 50;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmListaPrecios
             // 
