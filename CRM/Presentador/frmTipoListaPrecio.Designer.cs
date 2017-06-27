@@ -39,6 +39,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,6 +71,7 @@
             this.btnAyuda.Size = new System.Drawing.Size(51, 49);
             this.btnAyuda.TabIndex = 87;
             this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnEditar
             // 
@@ -161,12 +163,24 @@
             this.txtID.Size = new System.Drawing.Size(79, 23);
             this.txtID.TabIndex = 91;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackgroundImage = global::Presentador.Properties.Resources.help;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Location = new System.Drawing.Point(420, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 92;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmTipoListaPrecio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(437, 215);
+            this.ClientSize = new System.Drawing.Size(570, 215);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -180,6 +194,7 @@
             this.Controls.Add(this.btnNuevo);
             this.Name = "frmTipoListaPrecio";
             this.Text = "Registro de Tipo de Lista de Precios";
+            this.Load += new System.EventHandler(this.frmTipoListaPrecio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +212,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -100,5 +100,15 @@ namespace Presentador
                 MessageBox.Show("Actualizacion Fallida", "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void frmTipoListaPrecio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

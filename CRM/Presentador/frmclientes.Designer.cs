@@ -52,6 +52,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtsaldo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtidcliente = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtemail
@@ -178,6 +180,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(51, 49);
             this.btnEliminar.TabIndex = 95;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -213,6 +216,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(51, 49);
             this.btnCancelar.TabIndex = 92;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -270,12 +274,31 @@
             this.label3.TabIndex = 97;
             this.label3.Text = "Saldo";
             // 
+            // txtidcliente
+            // 
+            this.txtidcliente.Location = new System.Drawing.Point(169, 77);
+            this.txtidcliente.Name = "txtidcliente";
+            this.txtidcliente.Size = new System.Drawing.Size(141, 20);
+            this.txtidcliente.TabIndex = 101;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(96, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 19);
+            this.label8.TabIndex = 102;
+            this.label8.Text = "id";
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(663, 245);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtidcliente);
             this.Controls.Add(this.txtsubtotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtsaldo);
@@ -303,6 +326,7 @@
             this.Name = "frmClientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
+            this.Click += new System.EventHandler(this.frmClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +357,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtsaldo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtidcliente;
+        private System.Windows.Forms.Label label8;
     }
 }

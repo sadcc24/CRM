@@ -194,6 +194,7 @@
             this.btnReporte.Size = new System.Drawing.Size(51, 49);
             this.btnReporte.TabIndex = 114;
             this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // txtidvendedor
             // 

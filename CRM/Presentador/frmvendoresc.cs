@@ -61,5 +61,10 @@ namespace Presentador
             }
 
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
