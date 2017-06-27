@@ -115,3 +115,4 @@ C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\MRP_BD.dll
 C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Datos.pdb
 C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Entidades.pdb
 C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Negocio.pdb
+C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmTipoListaPrecioReg.resources
