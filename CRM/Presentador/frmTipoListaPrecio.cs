@@ -51,5 +51,15 @@ namespace Presentador
             frmTLPR.MdiParent = this.ParentForm;
             frmTLPR.Show();
         }
+
+        private void frmTipoListaPrecio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

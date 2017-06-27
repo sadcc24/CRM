@@ -81,5 +81,10 @@ namespace Presentador
             nDevoluciones allDev = new nDevoluciones();
             dgvDevoluciones.DataSource = allDev.getAllDev();
         }
+
+        private void dgvDevoluciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
