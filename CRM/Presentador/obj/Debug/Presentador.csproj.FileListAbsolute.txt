@@ -3,7 +3,6 @@ C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentad
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\Presentador.exe
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\Presentador.pdb
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.csprojResolveAssemblyReference.cache
-C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.frmCampania.resources
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.frmCancelacionCXC.resources
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.frmCatalogClientes.resources
 C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.frmClientes.resources
@@ -65,3 +64,11 @@ C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Pr
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.exe
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\Datos.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\Entidades.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\Negocio.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\MRP_BD.dll
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\Datos.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\Entidades.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\bin\Debug\Negocio.pdb
+C:\Users\Consultor\Documents\CRM-SAD2017\CRM\CRM\Presentador\obj\Debug\Presentador.frmIngresotipocampania.resources

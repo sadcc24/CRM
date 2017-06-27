@@ -118,5 +118,12 @@ namespace Presentador
         {
             Application.Exit();
         }
+
+        private void tipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIngresotipocampania Tipocamapnia = new frmIngresotipocampania();
+            Tipocamapnia.MdiParent = this;
+            Tipocamapnia.Show();
+        }
     }
 }
