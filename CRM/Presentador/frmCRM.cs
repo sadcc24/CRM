@@ -101,7 +101,7 @@ namespace Presentador
 
         private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaVendedores consultavendedor = new frmConsultaVendedores();
+            frmCatalogoVendedores consultavendedor = new frmCatalogoVendedores();
             consultavendedor.MdiParent = this;
             consultavendedor.Show();
         }
