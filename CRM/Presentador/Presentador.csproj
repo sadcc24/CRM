@@ -189,6 +189,12 @@
     <Compile Include="frmTipoListaPrecio.Designer.cs">
       <DependentUpon>frmTipoListaPrecio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTipoListaPrecioReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoListaPrecioReg.Designer.cs">
+      <DependentUpon>frmTipoListaPrecioReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoListaPrecio.resx">
       <DependentUpon>frmTipoListaPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoListaPrecioReg.resx">
+      <DependentUpon>frmTipoListaPrecioReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserRegister.resx">
       <DependentUpon>frmUserRegister.cs</DependentUpon>

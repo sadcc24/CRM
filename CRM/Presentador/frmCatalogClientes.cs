@@ -27,7 +27,7 @@ namespace Presentador
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmClientes ClRegistro = new frmClientes;
+            frmClientes ClRegistro = new frmClientes();
             ClRegistro.MdiParent = this.ParentForm;
             ClRegistro.Show();
 

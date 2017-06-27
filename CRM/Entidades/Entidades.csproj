@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="eCClientes.cs" />
     <Compile Include="eDevoluciones.cs" />
+    <Compile Include="eListaPrecio.cs" />
     <Compile Include="eLogin.cs" />
     <Compile Include="eRegisterUser.cs" />
     <Compile Include="eTipoLista.cs" />
