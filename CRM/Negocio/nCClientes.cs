@@ -47,7 +47,7 @@ namespace Negocio
         {
             try
             {
-                cnn.Delete(string.Format("DELETE FROM CLIENTES WHERE idcliente = {0}", idcliente));
+                cnn.Delete(string.Format("DELETE FROM CLIENTES WHERE idcliente = {0}", uuidcliente));
                 return true;
             }
             catch (Exception)

@@ -59,10 +59,5 @@ namespace Presentador
             nListaPrecio ListaPrecios = new nListaPrecio();
             dgvListaPrecios.DataSource = ListaPrecios.getAllListaPrecio();
         }
-
-
-
-
-
     }
 }

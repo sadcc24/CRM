@@ -52,14 +52,17 @@ namespace Presentador
             frmTLPR.Show();
         }
 
-        private void frmTipoListaPrecio_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            nTipoLista allTipoLista = new nTipoLista();
+            dgvTipoListaPrecios.DataSource = allTipoLista.getAllTipoLista();
         }
     }
 }

@@ -60,6 +60,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(51, 49);
             this.btnActualizar.TabIndex = 63;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnUltimoReg
             // 
@@ -124,12 +125,13 @@
             this.dgvTipoListaPrecios.Name = "dgvTipoListaPrecios";
             this.dgvTipoListaPrecios.Size = new System.Drawing.Size(829, 274);
             this.dgvTipoListaPrecios.TabIndex = 57;
-            this.dgvTipoListaPrecios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoListaPrecios_CellContentDoubleClick);
+            this.dgvTipoListaPrecios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoListaPrecios_CellContentDoubleClick);
             // 
             // frmTipoListaPrecio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(896, 368);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnActualizar);
@@ -139,6 +141,7 @@
             this.Controls.Add(this.btnPrimerReg);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvTipoListaPrecios);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "frmTipoListaPrecio";
             this.Text = "frmTipoListaPrecio";
             this.Load += new System.EventHandler(this.frmTipoListaPrecio_Load);

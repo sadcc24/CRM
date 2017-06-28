@@ -131,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(908, 377);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnActualizar);
@@ -144,6 +145,7 @@
             this.Name = "frmListaPrecios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Precios";
+            this.Load += new System.EventHandler(this.frmListaPrecios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaPrecios)).EndInit();
             this.ResumeLayout(false);
 

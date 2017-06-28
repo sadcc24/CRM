@@ -14,9 +14,9 @@ namespace Negocio
         ConnectionDBLocal cnn = new ConnectionDBLocal();
         public DataTable getAllListaPrecio()
         {
-            DataTable vendedores = new DataTable();
-            vendedores = cnn.Select(@"SELECT * FROM LISTA_PRECIO");
-            return vendedores;
+            DataTable ListaPrecio = new DataTable();
+            ListaPrecio = cnn.Select(@"SELECT idlistaprecio as ID_Lista_Precio, idtipolista as Id_TIpo_Lista, descripcion as Descripcion, precio as Precio, idproducto as Id_Producto FROM LISTA_PRECIO");
+            return ListaPrecio;
         }
 
         public bool insertLisaPrecio(eListaPrecio precios)

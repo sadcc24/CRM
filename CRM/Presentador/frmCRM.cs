@@ -128,7 +128,7 @@ namespace Presentador
 
         private void tipoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmTipoListaPrecioReg TipoListaPrecio = new frmTipoListaPrecioReg();
+            frmTipoListaPrecio TipoListaPrecio = new frmTipoListaPrecio();
             TipoListaPrecio.MdiParent = this;
             TipoListaPrecio.Show();
         }
