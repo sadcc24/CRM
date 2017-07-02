@@ -227,6 +227,7 @@
             this.Controls.Add(this.btnNuevo);
             this.Name = "frmCancelacionCXC";
             this.Text = "FRMCANCELACION";
+            this.Load += new System.EventHandler(this.frmCancelacionCXC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
+
 
 namespace Presentador
 {
@@ -15,6 +17,22 @@ namespace Presentador
         public frmtipocampania()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+            frmRegCampania CRegistro = new frmRegCampania();
+            CRegistro.MdiParent = this.ParentForm;
+            CRegistro.Show();
+
+        }
+
+        private void frmtipocampania_Load(object sender, EventArgs e)
+        {
+            nCampanias campanias = new nCampanias();
+            dgvcampanias.DataSource = campanias.getAllCampanias();
         }
     }
 }

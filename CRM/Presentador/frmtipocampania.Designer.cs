@@ -36,8 +36,8 @@
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnPrimerReg = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.grdCliente = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCliente)).BeginInit();
+            this.dgvcampanias = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcampanias)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAyuda
@@ -116,14 +116,15 @@
             this.button2.Size = new System.Drawing.Size(51, 49);
             this.button2.TabIndex = 90;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // grdCliente
+            // dgvcampanias
             // 
-            this.grdCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdCliente.Location = new System.Drawing.Point(61, 103);
-            this.grdCliente.Name = "grdCliente";
-            this.grdCliente.Size = new System.Drawing.Size(447, 305);
-            this.grdCliente.TabIndex = 89;
+            this.dgvcampanias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcampanias.Location = new System.Drawing.Point(61, 103);
+            this.dgvcampanias.Name = "dgvcampanias";
+            this.dgvcampanias.Size = new System.Drawing.Size(447, 305);
+            this.dgvcampanias.TabIndex = 89;
             // 
             // frmtipocampania
             // 
@@ -138,11 +139,12 @@
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnPrimerReg);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.grdCliente);
+            this.Controls.Add(this.dgvcampanias);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmtipocampania";
             this.Text = "Tipo campania Consulta";
-            ((System.ComponentModel.ISupportInitialize)(this.grdCliente)).EndInit();
+            this.Load += new System.EventHandler(this.frmtipocampania_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcampanias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,6 +158,6 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimerReg;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView grdCliente;
+        private System.Windows.Forms.DataGridView dgvcampanias;
     }
 }

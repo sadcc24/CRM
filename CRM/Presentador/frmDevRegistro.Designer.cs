@@ -207,6 +207,7 @@
             this.cbtipodev.Name = "cbtipodev";
             this.cbtipodev.Size = new System.Drawing.Size(255, 27);
             this.cbtipodev.TabIndex = 79;
+            this.cbtipodev.SelectedIndexChanged += new System.EventHandler(this.cbtipodev_SelectedIndexChanged);
             // 
             // cbempresa
             // 
@@ -217,6 +218,7 @@
             this.cbempresa.Name = "cbempresa";
             this.cbempresa.Size = new System.Drawing.Size(255, 27);
             this.cbempresa.TabIndex = 80;
+            this.cbempresa.SelectedIndexChanged += new System.EventHandler(this.cbempresa_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -237,6 +239,7 @@
             this.cbsede.Name = "cbsede";
             this.cbsede.Size = new System.Drawing.Size(255, 27);
             this.cbsede.TabIndex = 82;
+            this.cbsede.SelectedIndexChanged += new System.EventHandler(this.cbsede_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -257,6 +260,7 @@
             this.cbproveedor.Name = "cbproveedor";
             this.cbproveedor.Size = new System.Drawing.Size(255, 27);
             this.cbproveedor.TabIndex = 84;
+            this.cbproveedor.SelectedIndexChanged += new System.EventHandler(this.cbproveedor_SelectedIndexChanged);
             // 
             // label7
             // 

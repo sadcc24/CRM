@@ -188,5 +188,25 @@ namespace Presentador
                 MessageBox.Show("Eliminacion Fallida", "Eliminacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void cbempresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbtipodev_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbproveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbsede_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

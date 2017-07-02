@@ -16,5 +16,10 @@ namespace Presentador
         {
             InitializeComponent();
         }
+
+        private void frmCancelacionCXC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

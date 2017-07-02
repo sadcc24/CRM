@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="eCamapnias.cs" />
     <Compile Include="eCClientes.cs" />
     <Compile Include="eDevoluciones.cs" />
     <Compile Include="eListaPrecio.cs" />

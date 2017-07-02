@@ -44,7 +44,6 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.txtIdTipoLista = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtIdListaPrecio = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtPrecio
@@ -208,21 +207,12 @@
             this.label4.TabIndex = 92;
             this.label4.Text = " Id Tipo Lista:";
             // 
-            // txtIdListaPrecio
-            // 
-            this.txtIdListaPrecio.Location = new System.Drawing.Point(31, 95);
-            this.txtIdListaPrecio.Name = "txtIdListaPrecio";
-            this.txtIdListaPrecio.Size = new System.Drawing.Size(37, 20);
-            this.txtIdListaPrecio.TabIndex = 93;
-            this.txtIdListaPrecio.Visible = false;
-            // 
             // frmListaPreciosReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(487, 317);
-            this.Controls.Add(this.txtIdListaPrecio);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtIdTipoLista);
             this.Controls.Add(this.txtPrecio);
@@ -242,6 +232,7 @@
             this.Name = "frmListaPreciosReg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Precios - Registro";
+            this.Load += new System.EventHandler(this.frmListaPreciosReg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +254,5 @@
         public System.Windows.Forms.TextBox txtIdTipoLista;
         public System.Windows.Forms.TextBox txtDescripcion;
         public System.Windows.Forms.TextBox txtPrecio;
-        public System.Windows.Forms.TextBox txtIdListaPrecio;
     }
 }

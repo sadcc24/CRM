@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvclientes = new System.Windows.Forms.DataGridView();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnUltimoReg = new System.Windows.Forms.Button();
@@ -36,23 +35,16 @@
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnPrimerReg = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
+            this.dgvclientes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvclientes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvclientes
-            // 
-            this.dgvclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvclientes.Location = new System.Drawing.Point(12, 97);
-            this.dgvclientes.Name = "dgvclientes";
-            this.dgvclientes.Size = new System.Drawing.Size(555, 305);
-            this.dgvclientes.TabIndex = 104;
             // 
             // btnAyuda
             // 
             this.btnAyuda.BackColor = System.Drawing.SystemColors.Control;
             this.btnAyuda.BackgroundImage = global::Presentador.Properties.Resources.help;
             this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAyuda.Location = new System.Drawing.Point(360, 12);
+            this.btnAyuda.Location = new System.Drawing.Point(405, 12);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(51, 49);
             this.btnAyuda.TabIndex = 111;
@@ -63,7 +55,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.BackgroundImage = global::Presentador.Properties.Resources.refresh;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(96, 12);
+            this.button1.Location = new System.Drawing.Point(141, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 49);
             this.button1.TabIndex = 110;
@@ -75,7 +67,7 @@
             this.btnUltimoReg.BackColor = System.Drawing.SystemColors.Control;
             this.btnUltimoReg.BackgroundImage = global::Presentador.Properties.Resources.go_to_last;
             this.btnUltimoReg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUltimoReg.Location = new System.Drawing.Point(306, 12);
+            this.btnUltimoReg.Location = new System.Drawing.Point(351, 12);
             this.btnUltimoReg.Name = "btnUltimoReg";
             this.btnUltimoReg.Size = new System.Drawing.Size(51, 49);
             this.btnUltimoReg.TabIndex = 109;
@@ -86,7 +78,7 @@
             this.btnSiguiente.BackColor = System.Drawing.SystemColors.Control;
             this.btnSiguiente.BackgroundImage = global::Presentador.Properties.Resources.go_next;
             this.btnSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSiguiente.Location = new System.Drawing.Point(256, 12);
+            this.btnSiguiente.Location = new System.Drawing.Point(301, 12);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(51, 49);
             this.btnSiguiente.TabIndex = 108;
@@ -97,7 +89,7 @@
             this.btnAnterior.BackColor = System.Drawing.SystemColors.Control;
             this.btnAnterior.BackgroundImage = global::Presentador.Properties.Resources.anterior;
             this.btnAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAnterior.Location = new System.Drawing.Point(203, 12);
+            this.btnAnterior.Location = new System.Drawing.Point(248, 12);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(51, 49);
             this.btnAnterior.TabIndex = 107;
@@ -108,7 +100,7 @@
             this.btnPrimerReg.BackColor = System.Drawing.SystemColors.Control;
             this.btnPrimerReg.BackgroundImage = global::Presentador.Properties.Resources.go_to_first;
             this.btnPrimerReg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPrimerReg.Location = new System.Drawing.Point(148, 12);
+            this.btnPrimerReg.Location = new System.Drawing.Point(193, 12);
             this.btnPrimerReg.Name = "btnPrimerReg";
             this.btnPrimerReg.Size = new System.Drawing.Size(51, 49);
             this.btnPrimerReg.TabIndex = 106;
@@ -119,12 +111,21 @@
             this.btnnuevo.BackColor = System.Drawing.SystemColors.Control;
             this.btnnuevo.BackgroundImage = global::Presentador.Properties.Resources.nuevo;
             this.btnnuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnnuevo.Location = new System.Drawing.Point(44, 12);
+            this.btnnuevo.Location = new System.Drawing.Point(89, 12);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(51, 49);
             this.btnnuevo.TabIndex = 105;
             this.btnnuevo.UseVisualStyleBackColor = false;
             this.btnnuevo.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dgvclientes
+            // 
+            this.dgvclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvclientes.Location = new System.Drawing.Point(12, 99);
+            this.dgvclientes.Name = "dgvclientes";
+            this.dgvclientes.Size = new System.Drawing.Size(554, 274);
+            this.dgvclientes.TabIndex = 112;
+            this.dgvclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvclientes_CellContentClick_1);
             // 
             // frmCatalogClientes
             // 
@@ -132,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(598, 415);
+            this.Controls.Add(this.dgvclientes);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUltimoReg);
@@ -139,7 +141,6 @@
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnPrimerReg);
             this.Controls.Add(this.btnnuevo);
-            this.Controls.Add(this.dgvclientes);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "frmCatalogClientes";
             this.Text = "Catalogo de Clientes";
@@ -158,6 +159,6 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimerReg;
         private System.Windows.Forms.Button btnnuevo;
-        private System.Windows.Forms.DataGridView dgvclientes;
+        public System.Windows.Forms.DataGridView dgvclientes;
     }
 }
