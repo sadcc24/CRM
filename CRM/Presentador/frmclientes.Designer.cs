@@ -52,6 +52,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbempresa = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvmostrarclientes = new System.Windows.Forms.DataGridView();
+            this.lblidcliente = new System.Windows.Forms.Label();
+            this.cbidcliente = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmostrarclientes)).BeginInit();
             this.SuspendLayout();
             // 
             // txtemail
@@ -215,6 +220,7 @@
             this.btnEditar.Size = new System.Drawing.Size(51, 49);
             this.btnEditar.TabIndex = 91;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -285,12 +291,57 @@
             this.cbempresa.Size = new System.Drawing.Size(141, 21);
             this.cbempresa.TabIndex = 103;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(211, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 27);
+            this.button1.TabIndex = 104;
+            this.button1.Text = "Mostrar Clientes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // dgvmostrarclientes
+            // 
+            this.dgvmostrarclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvmostrarclientes.Location = new System.Drawing.Point(12, 310);
+            this.dgvmostrarclientes.Name = "dgvmostrarclientes";
+            this.dgvmostrarclientes.Size = new System.Drawing.Size(548, 155);
+            this.dgvmostrarclientes.TabIndex = 105;
+            this.dgvmostrarclientes.Visible = false;
+            this.dgvmostrarclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmostrarclientes_CellContentClick);
+            // 
+            // lblidcliente
+            // 
+            this.lblidcliente.AutoSize = true;
+            this.lblidcliente.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidcliente.Location = new System.Drawing.Point(18, 226);
+            this.lblidcliente.Name = "lblidcliente";
+            this.lblidcliente.Size = new System.Drawing.Size(71, 19);
+            this.lblidcliente.TabIndex = 107;
+            this.lblidcliente.Text = "Id Cliente";
+            this.lblidcliente.Visible = false;
+            // 
+            // cbidcliente
+            // 
+            this.cbidcliente.Enabled = false;
+            this.cbidcliente.FormattingEnabled = true;
+            this.cbidcliente.Location = new System.Drawing.Point(128, 224);
+            this.cbidcliente.Name = "cbidcliente";
+            this.cbidcliente.Size = new System.Drawing.Size(141, 21);
+            this.cbidcliente.TabIndex = 106;
+            this.cbidcliente.Visible = false;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(572, 262);
+            this.ClientSize = new System.Drawing.Size(572, 477);
+            this.Controls.Add(this.lblidcliente);
+            this.Controls.Add(this.cbidcliente);
+            this.Controls.Add(this.dgvmostrarclientes);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbempresa);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -319,6 +370,7 @@
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClientes_Load);
             this.Click += new System.EventHandler(this.frmClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmostrarclientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,5 +401,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbempresa;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvmostrarclientes;
+        private System.Windows.Forms.Label lblidcliente;
+        private System.Windows.Forms.ComboBox cbidcliente;
     }
 }

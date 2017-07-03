@@ -145,7 +145,9 @@ namespace Presentador
 
         private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmCatalogClientes CatalogoClientes = new frmCatalogClientes();
+
+            frmClientes CatalogoClientes = new frmClientes();
+            ///frmCatalogClientes CatalogoClientes = new frmCatalogClientes();
             CatalogoClientes.MdiParent = this;
             CatalogoClientes.Show();
         }

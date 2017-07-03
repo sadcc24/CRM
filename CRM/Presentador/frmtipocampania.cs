@@ -21,8 +21,6 @@ namespace Presentador
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-
             frmRegCampania CRegistro = new frmRegCampania();
             CRegistro.MdiParent = this.ParentForm;
             CRegistro.Show();
