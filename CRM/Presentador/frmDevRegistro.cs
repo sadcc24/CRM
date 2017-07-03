@@ -476,5 +476,25 @@ namespace Presentador
                 dgvDetalleFactura.DataSource = devFacturas.detalleDevolucion(txtiddev.Text);
             }
         }
+
+        private void cbempresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbtipodev_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbproveedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbsede_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

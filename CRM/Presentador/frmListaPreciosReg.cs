@@ -75,16 +75,16 @@ namespace Presentador
         private void btnEditar_Click(object sender, EventArgs e)
         {
             eListaPrecio editarListaPrecio = new eListaPrecio();
-            string idLP = txtIdListaPrecio.Text;
+            //string idLP = txtIdListaPrecio.Text;
             editarListaPrecio.idproducto = txtProducto.Text;
             editarListaPrecio.idtipolista = txtIdTipoLista.Text;
             editarListaPrecio.descripcion = txtDescripcion.Text;
             editarListaPrecio.precio = txtPrecio.Text;
 
             nListaPrecio updatedLP = new nListaPrecio();
-            bool result = updatedLP.updateListaPrecio(editarListaPrecio, idLP);
+           // bool result = updatedLP.updateListaPrecio(editarListaPrecio, idLP);
 
-            if (result != false)
+        //    if (result != false)
             {
                 MessageBox.Show("Actualizacion Exitosa", "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -96,9 +96,9 @@ namespace Presentador
                 txtPrecio.Clear();
                 txtProducto.Clear();
                 txtIdTipoLista.Clear();
-            }
-            else
-            {
+           // }
+           // else
+          //  {
                 MessageBox.Show("Actualizacion Fallida", "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -107,21 +107,26 @@ namespace Presentador
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             nListaPrecio deleteLp = new nListaPrecio();
-            bool result = deleteLp.deleteListaPrecio(txtIdListaPrecio.Text);
+          //  bool result = deleteLp.deleteListaPrecio(txtIdListaPrecio.Text);
 
-            if (result != false)
-            {
+           // if (result != false)
+            //{
                 MessageBox.Show("Registro Eliminado", "Eliminacion Lista Precio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtIdListaPrecio.Clear();
-                txtIdTipoLista.Clear();
-                txtDescripcion.Clear();
-                txtPrecio.Clear();
-                txtProducto.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Fallo Eliminacion Reigstro", "Fallo Eliminacion Lista Precio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+             //   txtIdListaPrecio.Clear();
+          //      txtIdTipoLista.Clear();
+           //     txtDescripcion.Clear();
+           //     txtPrecio.Clear();
+             //   txtProducto.Clear();
+         //   }
+          //  else
+          //  {
+           //     MessageBox.Show("Fallo Eliminacion Reigstro", "Fallo Eliminacion Lista Precio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+          //  }
+        }
+
+        private void frmListaPreciosReg_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

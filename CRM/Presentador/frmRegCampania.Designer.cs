@@ -28,20 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtcosto = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtestatud = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Empresa = new System.Windows.Forms.Label();
+            this.dtpfechafinal = new System.Windows.Forms.DateTimePicker();
+            this.dtpfechainicial = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbtipocampania = new System.Windows.Forms.ComboBox();
+            this.cbempresa = new System.Windows.Forms.ComboBox();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -51,57 +49,32 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtcosto
+            // Empresa
             // 
-            this.txtcosto.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcosto.Location = new System.Drawing.Point(165, 307);
-            this.txtcosto.Name = "txtcosto";
-            this.txtcosto.Size = new System.Drawing.Size(141, 27);
-            this.txtcosto.TabIndex = 133;
+            this.Empresa.AutoSize = true;
+            this.Empresa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Empresa.Location = new System.Drawing.Point(81, 275);
+            this.Empresa.Name = "Empresa";
+            this.Empresa.Size = new System.Drawing.Size(69, 19);
+            this.Empresa.TabIndex = 132;
+            this.Empresa.Text = "Empresa:";
+            this.Empresa.Click += new System.EventHandler(this.Empresa_Click);
             // 
-            // label6
+            // dtpfechafinal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(81, 315);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 19);
-            this.label6.TabIndex = 132;
-            this.label6.Text = "Costo:";
+            this.dtpfechafinal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpfechafinal.Location = new System.Drawing.Point(165, 233);
+            this.dtpfechafinal.Name = "dtpfechafinal";
+            this.dtpfechafinal.Size = new System.Drawing.Size(238, 27);
+            this.dtpfechafinal.TabIndex = 129;
             // 
-            // txtestatud
+            // dtpfechainicial
             // 
-            this.txtestatud.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtestatud.Location = new System.Drawing.Point(165, 271);
-            this.txtestatud.Name = "txtestatud";
-            this.txtestatud.Size = new System.Drawing.Size(141, 27);
-            this.txtestatud.TabIndex = 131;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(70, 279);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 19);
-            this.label5.TabIndex = 130;
-            this.label5.Text = "Estatus:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(165, 233);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(238, 27);
-            this.dateTimePicker2.TabIndex = 129;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(165, 191);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(238, 27);
-            this.dateTimePicker1.TabIndex = 128;
+            this.dtpfechainicial.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpfechainicial.Location = new System.Drawing.Point(165, 191);
+            this.dtpfechainicial.Name = "dtpfechainicial";
+            this.dtpfechainicial.Size = new System.Drawing.Size(238, 27);
+            this.dtpfechainicial.TabIndex = 128;
             // 
             // label3
             // 
@@ -122,25 +95,6 @@
             this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 126;
             this.label2.Text = "Fecha Inicio:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(165, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(292, 27);
-            this.comboBox1.TabIndex = 125;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 153);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 19);
-            this.label4.TabIndex = 124;
-            this.label4.Text = "Tipo Campañia:";
             // 
             // txtdescripcion
             // 
@@ -178,6 +132,34 @@
             this.Nombre.TabIndex = 120;
             this.Nombre.Text = "Nombre:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(49, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 19);
+            this.label4.TabIndex = 124;
+            this.label4.Text = "Tipo Campañia:";
+            // 
+            // cbtipocampania
+            // 
+            this.cbtipocampania.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbtipocampania.FormattingEnabled = true;
+            this.cbtipocampania.Location = new System.Drawing.Point(165, 146);
+            this.cbtipocampania.Name = "cbtipocampania";
+            this.cbtipocampania.Size = new System.Drawing.Size(292, 27);
+            this.cbtipocampania.TabIndex = 125;
+            this.cbtipocampania.SelectedIndexChanged += new System.EventHandler(this.cbtipocampania_SelectedIndexChanged);
+            // 
+            // cbempresa
+            // 
+            this.cbempresa.FormattingEnabled = true;
+            this.cbempresa.Location = new System.Drawing.Point(165, 276);
+            this.cbempresa.Name = "cbempresa";
+            this.cbempresa.Size = new System.Drawing.Size(292, 21);
+            this.cbempresa.TabIndex = 141;
+            // 
             // btnReporte
             // 
             this.btnReporte.BackColor = System.Drawing.SystemColors.Control;
@@ -188,6 +170,7 @@
             this.btnReporte.Size = new System.Drawing.Size(51, 49);
             this.btnReporte.TabIndex = 140;
             this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnEliminar
             // 
@@ -256,13 +239,15 @@
             this.btnNuevo.Size = new System.Drawing.Size(51, 49);
             this.btnNuevo.TabIndex = 134;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmRegCampania
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(507, 351);
+            this.ClientSize = new System.Drawing.Size(507, 316);
+            this.Controls.Add(this.cbempresa);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -270,15 +255,12 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.txtcosto);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtestatud);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Empresa);
+            this.Controls.Add(this.dtpfechafinal);
+            this.Controls.Add(this.dtpfechainicial);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbtipocampania);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.label1);
@@ -286,23 +268,18 @@
             this.Controls.Add(this.Nombre);
             this.Name = "frmRegCampania";
             this.Text = "Registo Campañia";
+            this.Load += new System.EventHandler(this.frmRegCampania_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtcosto;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtestatud;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label Empresa;
+        private System.Windows.Forms.DateTimePicker dtpfechafinal;
+        private System.Windows.Forms.DateTimePicker dtpfechainicial;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtnombre;
@@ -314,5 +291,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbtipocampania;
+        private System.Windows.Forms.ComboBox cbempresa;
     }
 }

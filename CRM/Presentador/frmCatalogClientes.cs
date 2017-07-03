@@ -38,5 +38,15 @@ namespace Presentador
         {
             
         }
+
+        private void dgvclientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvclientes_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

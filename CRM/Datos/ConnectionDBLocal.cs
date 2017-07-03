@@ -10,7 +10,7 @@ namespace Datos
     public class ConnectionDBLocal
     {
 
-        MRP_BD cnn = new MRP_BD("", "", "", @"");
+        MRP_BD cnn = new MRP_BD("sa", "pursu3.attrib", "erpseminario", @"HECTOR-CARDONA\DESARROLLO");
 
         public void Delete(string queryDelete)
         {
