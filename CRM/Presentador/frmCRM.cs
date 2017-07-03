@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Presentador
 {
     public partial class frmCRM : Form
+
     {
+        public string user { get; set; }
         public frmCRM()
         {
             InitializeComponent();
@@ -90,6 +93,8 @@ namespace Presentador
         {
             this.BackgroundImage = global::Presentador.Properties.Resources.LogoCRM3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            toolStripStatusLabel3.Text = "Usuario: " + user;
+            toolStripStatusLabel4.Text = DateTime.Now.ToString();
         }
 
         private void cuentasPorCobrarToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -137,5 +142,7 @@ namespace Presentador
         {
 
         }
+
+     
     }
 }

@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="nCClientes.cs" />
+    <Compile Include="nDetalleFactura.cs" />
+    <Compile Include="nFactura.cs" />
     <Compile Include="nListaPrecio.cs" />
     <Compile Include="nTipoLista.cs" />
     <Compile Include="nDevoluciones.cs" />

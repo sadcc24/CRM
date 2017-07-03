@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaPreciosReg));
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,9 +41,14 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.txtIdTipoLista = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdListaPrecio = new System.Windows.Forms.TextBox();
+            this.cbProducto = new System.Windows.Forms.ComboBox();
+            this.cbTipoLista = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.cbEmpresa = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtPrecio
@@ -65,26 +69,15 @@
             this.txtDescripcion.Size = new System.Drawing.Size(276, 27);
             this.txtDescripcion.TabIndex = 89;
             // 
-            // txtProducto
-            // 
-            this.txtProducto.Enabled = false;
-            this.txtProducto.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(150, 166);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(276, 27);
-            this.txtProducto.TabIndex = 88;
-            this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 243);
+            this.label3.Location = new System.Drawing.Point(12, 243);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 19);
+            this.label3.Size = new System.Drawing.Size(109, 19);
             this.label3.TabIndex = 87;
-            this.label3.Text = "Precio:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Text = "Precio Unitario:";
             // 
             // label2
             // 
@@ -95,7 +88,6 @@
             this.label2.Size = new System.Drawing.Size(89, 19);
             this.label2.TabIndex = 86;
             this.label2.Text = "Descripcion:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -189,15 +181,6 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // txtIdTipoLista
-            // 
-            this.txtIdTipoLista.Enabled = false;
-            this.txtIdTipoLista.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdTipoLista.Location = new System.Drawing.Point(150, 133);
-            this.txtIdTipoLista.Name = "txtIdTipoLista";
-            this.txtIdTipoLista.Size = new System.Drawing.Size(144, 27);
-            this.txtIdTipoLista.TabIndex = 91;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -216,18 +199,82 @@
             this.txtIdListaPrecio.TabIndex = 93;
             this.txtIdListaPrecio.Visible = false;
             // 
+            // cbProducto
+            // 
+            this.cbProducto.Enabled = false;
+            this.cbProducto.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProducto.FormattingEnabled = true;
+            this.cbProducto.Location = new System.Drawing.Point(150, 166);
+            this.cbProducto.Name = "cbProducto";
+            this.cbProducto.Size = new System.Drawing.Size(276, 27);
+            this.cbProducto.TabIndex = 94;
+            // 
+            // cbTipoLista
+            // 
+            this.cbTipoLista.Enabled = false;
+            this.cbTipoLista.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoLista.FormattingEnabled = true;
+            this.cbTipoLista.Location = new System.Drawing.Point(150, 132);
+            this.cbTipoLista.Name = "cbTipoLista";
+            this.cbTipoLista.Size = new System.Drawing.Size(132, 27);
+            this.cbTipoLista.TabIndex = 95;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(513, 129);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 19);
+            this.label5.TabIndex = 96;
+            this.label5.Text = "Estado:";
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.Enabled = false;
+            this.cbEstado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(585, 129);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(121, 27);
+            this.cbEstado.TabIndex = 97;
+            // 
+            // cbEmpresa
+            // 
+            this.cbEmpresa.Enabled = false;
+            this.cbEmpresa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmpresa.FormattingEnabled = true;
+            this.cbEmpresa.Location = new System.Drawing.Point(585, 188);
+            this.cbEmpresa.Name = "cbEmpresa";
+            this.cbEmpresa.Size = new System.Drawing.Size(121, 27);
+            this.cbEmpresa.TabIndex = 98;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(505, 188);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 19);
+            this.label6.TabIndex = 99;
+            this.label6.Text = "Empresa:";
+            // 
             // frmListaPreciosReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(487, 317);
+            this.ClientSize = new System.Drawing.Size(838, 360);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbEmpresa);
+            this.Controls.Add(this.cbEstado);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbTipoLista);
+            this.Controls.Add(this.cbProducto);
             this.Controls.Add(this.txtIdListaPrecio);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtIdTipoLista);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -242,6 +289,7 @@
             this.Name = "frmListaPreciosReg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Precios - Registro";
+            this.Load += new System.EventHandler(this.frmListaPreciosReg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,11 +306,15 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnNuevo;
-        public System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txtIdTipoLista;
         public System.Windows.Forms.TextBox txtDescripcion;
         public System.Windows.Forms.TextBox txtPrecio;
         public System.Windows.Forms.TextBox txtIdListaPrecio;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.ComboBox cbProducto;
+        public System.Windows.Forms.ComboBox cbTipoLista;
+        public System.Windows.Forms.ComboBox cbEstado;
+        public System.Windows.Forms.ComboBox cbEmpresa;
     }
 }

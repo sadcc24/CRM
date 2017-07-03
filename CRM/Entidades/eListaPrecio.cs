@@ -8,14 +8,19 @@ namespace Entidades
 {
     public class eListaPrecio
     {
-        public string idlistaprecio { get; set; }
+        public int idlistaprecio { get; set; }
 
-        public string idtipolista { get; set; }
+        public int idtipolista { get; set; }
 
         public string descripcion { get; set; }
 
         public string precio { get; set; }
 
-        public string idproducto { get; set; }
+        public int estado { get; set; }
+
+        public int empresa { get; set; }
+
+        public int producto { get; set; }
+
     }
 }
