@@ -116,8 +116,6 @@ C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Datos.pdb
 C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Entidades.pdb
 C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Negocio.pdb
 C:\Users\Luis Fer\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmTipoListaPrecioReg.resources
-C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.exe
-C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Presentador.exe
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Presentador.pdb
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Datos.dll
@@ -156,3 +154,5 @@ C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmUser
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmvendoresc.resources
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.Properties.Resources.resources
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.exe
+C:\Users\Luis\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
