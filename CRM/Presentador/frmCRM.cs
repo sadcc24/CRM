@@ -143,6 +143,11 @@ namespace Presentador
 
         }
 
-     
+        private void cajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCaja caja = new frmCaja();
+            caja.MdiParent = this;
+            caja.Show();
+        }
     }
 }

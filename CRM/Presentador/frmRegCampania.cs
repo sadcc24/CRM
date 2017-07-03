@@ -115,7 +115,7 @@ namespace Presentador
 
 
             cbtipocampania.DataSource = getcamp.getAllTipoCampanias();
-            cbtipocampania.ValueMember = "idtipocampania";
+            cbtipocampania.ValueMember = "ID_Campanias";
             cbtipocampania.DisplayMember = "nombre";
 
 

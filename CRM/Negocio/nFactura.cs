@@ -17,7 +17,7 @@ namespace Negocio
         {
             DataTable ListaPrecio = new DataTable();
             ListaPrecio = cnn.Select(@"SELECT
-                                dbo.FACTURA.idfactura
+                                dbo.FACTURA.idfactura,
                                 dbo.CLIENTE.nombre as [Nombre Cliente],
                                 dbo.FACTURA.total,
                                 dbo.MONEDA.nombre_moneda as [Nombre Moneda],

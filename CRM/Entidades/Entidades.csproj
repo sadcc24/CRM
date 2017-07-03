@@ -40,12 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="eCamapnias.cs" />
     <Compile Include="eCClientes.cs" />
     <Compile Include="eDetalleFactura.cs" />
     <Compile Include="eDevoluciones.cs" />
     <Compile Include="eFactura.cs" />
+    <Compile Include="eHistorico.cs" />
+    <Compile Include="eInsertDevolucion.cs" />
     <Compile Include="eListaPrecio.cs" />
     <Compile Include="eLogin.cs" />
+    <Compile Include="eMovimientoDev.cs" />
     <Compile Include="eRegisterUser.cs" />
     <Compile Include="eTipoLista.cs" />
     <Compile Include="eVendedor.cs" />
