@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="nCaja.cs" />
+    <Compile Include="nCampanias.cs" />
     <Compile Include="nCClientes.cs" />
     <Compile Include="nListaPrecio.cs" />
     <Compile Include="nTipoLista.cs" />

@@ -17,7 +17,7 @@ namespace Presentador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCRM());
+            Application.Run(new frmLogin());
         }
     }
 }
