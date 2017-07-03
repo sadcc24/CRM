@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class eCamapnias
     {
-
+        public string idcampania { get; set; }
         public int TipoCampania { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }

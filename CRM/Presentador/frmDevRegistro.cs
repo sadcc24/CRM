@@ -208,5 +208,10 @@ namespace Presentador
         {
 
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -58,6 +58,8 @@ namespace Presentador
             string factura = this.dgvDevoluciones.CurrentRow.Cells[8].Value.ToString();
             regdev.cbfactura.Text = factura;
 
+            
+
 
             regdev.dtpfechadev.Enabled = true;
             regdev.txtmotivodev.Enabled = true;

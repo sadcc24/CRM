@@ -147,7 +147,7 @@ namespace Presentador
         {
 
             frmClientes CatalogoClientes = new frmClientes();
-            ///frmCatalogClientes CatalogoClientes = new frmCatalogClientes();
+            //frmCatalogClientes CatalogoClientes = new frmCatalogClientes();
             CatalogoClientes.MdiParent = this;
             CatalogoClientes.Show();
         }
