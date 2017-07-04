@@ -88,14 +88,16 @@ namespace Presentador
 
                             nDevoluciones compare = new nDevoluciones();
                             cantidad = compare.compareCantidadFact(txtFactura.Text);
-                            if (cantidad.Rows[i]["cantidad"].ToString() == idev.cantidad.ToString())
-                            {
-                                 compare.deleteProductoDetalle(this.dgvDetalleFactura.Rows[i].Cells[2].Value.ToString(), txtFactura.Text);
-                            }
-                            else
-                            {
-                                 compare.editProductoDetalle(this.dgvDetalleFactura.Rows[i].Cells[0].Value.ToString(), this.dgvDetalleFactura.Rows[i].Cells[2].Value.ToString(), txtFactura.Text);
-                            }
+
+                            compare.deleteProductoDetalle(this.dgvDetalleFactura.Rows[i].Cells[2].Value.ToString(), txtFactura.Text);
+                            //if (cantidad.Rows[i]["cantidad"].ToString() == idev.cantidad.ToString())
+                            //{
+                                 
+                            //}
+                            //else
+                            //{
+                            //     compare.editProductoDetalle(this.dgvDetalleFactura.Rows[i].Cells[0].Value.ToString(), this.dgvDetalleFactura.Rows[i].Cells[2].Value.ToString(), txtFactura.Text);
+                            //}
 
                             nDevoluciones insert = new nDevoluciones();
                             result2 = insert.insertDetatalleDev(idev);

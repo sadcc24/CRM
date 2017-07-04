@@ -12,5 +12,8 @@ namespace Entidades
         public string apellido { get; set; }
         public string email { get; set; }
         public int telefono { get; set; }
+        public string direcccion { get; set; }
+
+        public int idempersa { get; set; }
     }
 }

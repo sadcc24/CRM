@@ -27,5 +27,10 @@ namespace Presentador
             frmvendoresc vendedores = new frmvendoresc();
             vendedores.Show();
         }
+
+        private void frmConsultaVendedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
