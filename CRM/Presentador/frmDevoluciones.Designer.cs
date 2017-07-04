@@ -126,7 +126,6 @@
             this.dgvDevoluciones.Name = "dgvDevoluciones";
             this.dgvDevoluciones.Size = new System.Drawing.Size(836, 305);
             this.dgvDevoluciones.TabIndex = 23;
-            this.dgvDevoluciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevoluciones_CellContentClick);
             this.dgvDevoluciones.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDevoluciones_CellDoubleClick);
             // 
             // frmDevoluciones

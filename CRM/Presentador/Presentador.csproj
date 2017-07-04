@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaja.Designer.cs">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCancelacionCXC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="frmCatalogoVendedores.Designer.cs">
       <DependentUpon>frmCatalogoVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteCXC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteCXC.Designer.cs">
+      <DependentUpon>frmClienteCXC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
@@ -172,6 +184,12 @@
     <Compile Include="frmConsultatipocampania.Designer.cs">
       <DependentUpon>frmConsultatipocampania.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegCaja.Designer.cs">
+      <DependentUpon>frmRegCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegCampania.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,9 +244,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SelectingClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectingClient.Designer.cs">
+      <DependentUpon>SelectingClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartUp.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmCaja.resx">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCancelacionCXC.resx">
       <DependentUpon>frmCancelacionCXC.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoVendedores.resx">
       <DependentUpon>frmCatalogoVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClienteCXC.resx">
+      <DependentUpon>frmClienteCXC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
@@ -286,6 +316,9 @@
     <EmbeddedResource Include="frmPrincipalConceptosCxC.resx">
       <DependentUpon>frmPrincipalConceptosCxC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRegCaja.resx">
+      <DependentUpon>frmRegCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegCampania.resx">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +346,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectingClient.resx">
+      <DependentUpon>SelectingClient.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

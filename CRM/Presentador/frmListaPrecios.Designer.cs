@@ -47,7 +47,7 @@
             this.dgvListaPrecios.Name = "dgvListaPrecios";
             this.dgvListaPrecios.Size = new System.Drawing.Size(829, 274);
             this.dgvListaPrecios.TabIndex = 36;
-            this.dgvListaPrecios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaPrecios_CellContentClick);
+            this.dgvListaPrecios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaPrecios_CellDoubleClick);
             // 
             // btnAyuda
             // 
@@ -70,6 +70,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(51, 49);
             this.btnActualizar.TabIndex = 55;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnUltimoReg
             // 

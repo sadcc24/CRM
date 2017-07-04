@@ -14,15 +14,18 @@ namespace Entidades
 
         public int tipodev { get; set; }
 
-        public int empresa { get; set; }
+        public string tipodocumento { get; set; }
 
-        public int sede { get; set; }
+        public int idcliente { get; set; }
 
-        public int proveedor { get; set; }
+        public int idmoneda { get; set; }
 
         public int producto { get; set; }
 
-        public int factura { get; set; }
+        public int idvendedor { get; set; }
+
+        public int idfactura { get; set; }
+        public int idestado { get; set; }
         
     }
 }

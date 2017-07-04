@@ -47,6 +47,7 @@
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.Size = new System.Drawing.Size(821, 307);
             this.dgvFacturas.TabIndex = 7;
+            this.dgvFacturas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacturas_CellContentDoubleClick);
             // 
             // btnAyuda
             // 
@@ -69,6 +70,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(51, 49);
             this.btnActualizar.TabIndex = 55;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnUltimoReg
             // 
@@ -143,6 +145,7 @@
             this.Name = "frmFacturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturas";
+            this.Load += new System.EventHandler(this.frmFacturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
             this.ResumeLayout(false);
 
