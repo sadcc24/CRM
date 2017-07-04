@@ -278,21 +278,7 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-<<<<<<< HEAD
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnActualizar.BackgroundImage = global::Presentador.Properties.Resources.refresh;
-            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnActualizar.Location = new System.Drawing.Point(546, 12);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(51, 49);
-            this.btnActualizar.TabIndex = 67;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-=======
->>>>>>> 41210a513aab4cdfab31185f5a9b36835ef7dcbb
+
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
