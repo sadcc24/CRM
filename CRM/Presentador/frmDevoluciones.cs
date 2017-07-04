@@ -47,6 +47,34 @@ namespace Presentador
             string motivoDev = this.dgvDevoluciones.CurrentRow.Cells[2].Value.ToString();
             regdev.txtDescripcion.Text = motivoDev;
             string tipodev = this.dgvDevoluciones.CurrentRow.Cells[3].Value.ToString();
+<<<<<<< HEAD
+            regdev.cbtipodev.Text = tipodev;
+            string empresa = this.dgvDevoluciones.CurrentRow.Cells[4].Value.ToString();
+            regdev.cbtipodev.Text = empresa;
+            string sede = this.dgvDevoluciones.CurrentRow.Cells[5].Value.ToString();
+            regdev.cbsede.Text = sede;
+            string proveed = this.dgvDevoluciones.CurrentRow.Cells[6].Value.ToString();
+            regdev.cbproveedor.Text = proveed;
+
+            string prod = this.dgvDevoluciones.CurrentRow.Cells[7].Value.ToString();
+            regdev.cbproducto.Text = prod;
+
+            string factura = this.dgvDevoluciones.CurrentRow.Cells[8].Value.ToString();
+            regdev.cbfactura.Text = factura;
+
+            
+
+
+            regdev.dtpfechadev.Enabled = true;
+            regdev.txtmotivodev.Enabled = true;
+            regdev.cbtipodev.Enabled = true;
+            regdev.cbempresa.Enabled = true;
+            regdev.cbsede.Enabled = true;
+            regdev.cbproveedor.Enabled = true;
+            regdev.cbproducto.Enabled = true;
+            regdev.cbfactura.Enabled = true;
+            regdev.btnEditar.Enabled = true;
+=======
             regdev.cbTipoDevolucion.Text = tipodev;
             string doc = this.dgvDevoluciones.CurrentRow.Cells[4].Value.ToString();
             regdev.txttipodevolucion.Text = doc+ ".";
@@ -62,6 +90,7 @@ namespace Presentador
             regdev.txtFactura.Visible = false;
             regdev.txtFacturadev.Visible = true;
             regdev.btnGuardar.Enabled = false;
+>>>>>>> 41210a513aab4cdfab31185f5a9b36835ef7dcbb
             regdev.btnEliminar.Enabled = true;
             regdev.btnEditar.Enabled = true;
 

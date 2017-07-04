@@ -114,6 +114,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(51, 49);
             this.btnActualizar.TabIndex = 85;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
