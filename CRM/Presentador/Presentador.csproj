@@ -112,6 +112,12 @@
     <Compile Include="frmCRM.Designer.cs">
       <DependentUpon>frmCRM.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetalleFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleFactura.Designer.cs">
+      <DependentUpon>frmDetalleFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDevoluciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCRM.resx">
       <DependentUpon>frmCRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalleFactura.resx">
+      <DependentUpon>frmDetalleFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDevoluciones.resx">
       <DependentUpon>frmDevoluciones.cs</DependentUpon>

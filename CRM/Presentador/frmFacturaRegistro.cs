@@ -44,6 +44,11 @@ namespace Presentador
             cbMoneda.DataSource = getFac.getAllMoneda();
             cbMoneda.ValueMember = "idmoneda";
             cbMoneda.DisplayMember = "nombre_moneda";
+
+            nDetalleFactura nDetlleFac = new nDetalleFactura();
+            dgvDetalleFactura.DataSource = nDetlleFac.getAllDetalleFac(tbIdFac.Text);
+
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -53,8 +58,8 @@ namespace Presentador
             cbTipoPago.Enabled = true;
             cbEstado.Enabled = true;
             cbMoneda.Enabled = true;
-            tbTipoDocumento.Enabled = true;
-            tbFecha.Enabled = true;
+            //tbTipoDocumento.Enabled = true;
+            dtpFecha.Enabled = true;
             tbTotal.Enabled = true;
         }
 
@@ -67,18 +72,28 @@ namespace Presentador
             datosFac.total = Convert.ToInt16(tbTotal.Text);
             datosFac.subtotal = Convert.ToInt16(tbTotal.Text);
             datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
-            datosFac.fecha = tbFecha.Text;
-            datosFac.tipodocumento = tbTipoDocumento.Text;
+            datosFac.fecha = dtpFecha.Value;
+            datosFac.tipodocumento = "DPI";
             datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
             datosFac.idestado = Convert.ToInt16(cbEstado.SelectedValue);
             datosFac.idtipopago = Convert.ToInt16(cbTipoPago.SelectedValue);
 
             nFactura listaFac = new nFactura();
             bool result = listaFac.insertFactura(datosFac);
+            
 
             if (result != false)
             {
-                MessageBox.Show("Registro Insertado", "Insercion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                nFactura getid = new nFactura();
+                dgvFac.DataSource = getid.getLastIdFactura();
+                string idfac = this.dgvFac.CurrentRow.Cells[0].Value.ToString();
+
+                //DataTable id = new DataTable();                
+                //id = getid.getFacturaid();
+                //eDetalleFactura idet = new eDetalleFactura();
+                //idet.idfactura = Convert.ToInt32(id.Rows[0].ToString());
+
+                MessageBox.Show("Registro Insertado "+ idfac, "Insercion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -88,8 +103,8 @@ namespace Presentador
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            tbFecha.Clear();
-            tbTipoDocumento.Clear();
+            //tbFecha.Clear();
+            //tbTipoDocumento.Clear();
             tbTotal.Clear();
         }
 
@@ -101,8 +116,8 @@ namespace Presentador
             if (result != false)
             {
                 MessageBox.Show("Registro Eliminado", "Eliminacion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbFecha.Clear();
-                tbTipoDocumento.Clear();
+                //tbFecha.Clear();
+                //tbTipoDocumento.Clear();
                 tbTotal.Clear();
             }
             else
@@ -122,8 +137,8 @@ namespace Presentador
             datosFac.total = Convert.ToInt16(tbTotal.Text);
             datosFac.subtotal = Convert.ToInt16(tbTotal.Text);
             datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
-            datosFac.fecha = tbFecha.Text;
-            datosFac.tipodocumento = tbTipoDocumento.Text;
+            datosFac.fecha = dtpFecha.Value;
+            //datosFac.tipodocumento = tbTipoDocumento.Text;
             datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
             datosFac.idestado = Convert.ToInt16(cbEstado.SelectedValue);
             datosFac.idtipopago = Convert.ToInt16(cbTipoPago.SelectedValue);
@@ -146,6 +161,18 @@ namespace Presentador
             {
                 MessageBox.Show("Actualizacion Fallida", "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnAgregarProductos_Click(object sender, EventArgs e)
+        {
+            frmDetalleFactura detalleFactura = new frmDetalleFactura();
+            eDetalleFactura detFac = new eDetalleFactura();
+            detalleFactura.MdiParent = this.ParentForm;
+            
+            detFac.idfactura = Convert.ToInt16(this.dgvFac.CurrentRow.Cells[0].Value.ToString());
+            detalleFactura.idfactura = detFac.idfactura;
+
+            detalleFactura.Show();
         }
     }
 }
