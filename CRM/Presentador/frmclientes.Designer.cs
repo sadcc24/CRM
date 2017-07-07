@@ -56,6 +56,7 @@
             this.dgvmostrarclientes = new System.Windows.Forms.DataGridView();
             this.lblidcliente = new System.Windows.Forms.Label();
             this.cbidcliente = new System.Windows.Forms.ComboBox();
+            this.txtidcliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmostrarclientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -332,12 +333,21 @@
             this.cbidcliente.TabIndex = 106;
             this.cbidcliente.Visible = false;
             // 
+            // txtidcliente
+            // 
+            this.txtidcliente.Location = new System.Drawing.Point(22, 41);
+            this.txtidcliente.Name = "txtidcliente";
+            this.txtidcliente.Size = new System.Drawing.Size(35, 20);
+            this.txtidcliente.TabIndex = 108;
+            this.txtidcliente.Visible = false;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(572, 477);
+            this.Controls.Add(this.txtidcliente);
             this.Controls.Add(this.lblidcliente);
             this.Controls.Add(this.cbidcliente);
             this.Controls.Add(this.dgvmostrarclientes);
@@ -377,16 +387,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnEliminar;
@@ -395,15 +399,21 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.TextBox txtsaldo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbestado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbempresa;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvmostrarclientes;
         private System.Windows.Forms.Label lblidcliente;
-        private System.Windows.Forms.ComboBox cbidcliente;
+        public System.Windows.Forms.TextBox txtemail;
+        public System.Windows.Forms.TextBox txtdireccion;
+        public System.Windows.Forms.TextBox txttelefono;
+        public System.Windows.Forms.TextBox txtapellido;
+        public System.Windows.Forms.TextBox txtnombre;
+        public System.Windows.Forms.TextBox txtsaldo;
+        public System.Windows.Forms.ComboBox cbestado;
+        public System.Windows.Forms.ComboBox cbempresa;
+        public System.Windows.Forms.ComboBox cbidcliente;
+        public System.Windows.Forms.TextBox txtidcliente;
     }
 }

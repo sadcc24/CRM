@@ -61,6 +61,7 @@
             this.button1.Size = new System.Drawing.Size(51, 49);
             this.button1.TabIndex = 95;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnUltimoReg
             // 
@@ -121,17 +122,19 @@
             // dgvcampanias
             // 
             this.dgvcampanias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcampanias.Location = new System.Drawing.Point(61, 103);
+            this.dgvcampanias.Location = new System.Drawing.Point(12, 85);
             this.dgvcampanias.Name = "dgvcampanias";
-            this.dgvcampanias.Size = new System.Drawing.Size(447, 305);
+            this.dgvcampanias.Size = new System.Drawing.Size(686, 327);
             this.dgvcampanias.TabIndex = 89;
+            this.dgvcampanias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcampanias_CellContentClick);
+            this.dgvcampanias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcampanias_CellDoubleClick_1);
             // 
             // frmtipocampania
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(568, 438);
+            this.ClientSize = new System.Drawing.Size(710, 438);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUltimoReg);
@@ -158,6 +161,6 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimerReg;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dgvcampanias;
+        public System.Windows.Forms.DataGridView dgvcampanias;
     }
 }

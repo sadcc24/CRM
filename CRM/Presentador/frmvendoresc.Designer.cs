@@ -45,6 +45,10 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.txtidvendedor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbempresas = new System.Windows.Forms.ComboBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtemail
@@ -75,7 +79,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(380, 98);
+            this.label4.Location = new System.Drawing.Point(388, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 19);
             this.label4.TabIndex = 102;
@@ -172,6 +176,7 @@
             this.btnEditar.Size = new System.Drawing.Size(51, 49);
             this.btnEditar.TabIndex = 109;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -204,12 +209,51 @@
             this.txtidvendedor.TabIndex = 115;
             this.txtidvendedor.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(384, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 19);
+            this.label2.TabIndex = 116;
+            this.label2.Text = "Empresa:";
+            // 
+            // cbempresas
+            // 
+            this.cbempresas.FormattingEnabled = true;
+            this.cbempresas.Location = new System.Drawing.Point(488, 182);
+            this.cbempresas.Name = "cbempresas";
+            this.cbempresas.Size = new System.Drawing.Size(143, 21);
+            this.cbempresas.TabIndex = 117;
+            // 
+            // txtdireccion
+            // 
+            this.txtdireccion.Location = new System.Drawing.Point(122, 163);
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(222, 20);
+            this.txtdireccion.TabIndex = 118;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 19);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "Direccion:";
+            // 
             // frmvendoresc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(760, 223);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtdireccion);
+            this.Controls.Add(this.cbempresas);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtidvendedor);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnEliminar);
@@ -229,6 +273,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmvendoresc";
             this.Text = "Ingreso de Vendedores";
+            this.Load += new System.EventHandler(this.frmvendoresc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +296,9 @@
         public System.Windows.Forms.TextBox txttelefono;
         public System.Windows.Forms.TextBox txtapellido;
         public System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox cbempresas;
+        public System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.Label label3;
     }
 }

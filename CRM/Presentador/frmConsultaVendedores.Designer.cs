@@ -143,6 +143,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultaVendedores";
             this.Text = "Vendedores";
+            this.Load += new System.EventHandler(this.frmConsultaVendedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdCliente)).EndInit();
             this.ResumeLayout(false);
 
