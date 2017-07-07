@@ -23,9 +23,13 @@ namespace Presentador
         {
             nFactura getFac = new nFactura();
 
-            cbCliente.DataSource = getFac.getAllCliente();
-            cbCliente.ValueMember = "idcliente";
-            cbCliente.DisplayMember = "nombre";
+            dgvCliente.DataSource = getFac.getAllCliente();
+
+            //cbCliente.DataSource = getFac.getAllCliente();
+            //cbCliente.ValueMember = "idcliente";
+            //cbCliente.DisplayMember = "nombre";
+
+            
 
 
             cbVendedor.DataSource = getFac.getAllVendedor();
@@ -47,13 +51,14 @@ namespace Presentador
 
             nDetalleFactura nDetlleFac = new nDetalleFactura();
             dgvDetalleFactura.DataSource = nDetlleFac.getAllDetalleFac(tbIdFac.Text);
+            
 
 
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            cbCliente.Enabled = true;
+            //cbCliente.Enabled = true;
             cbVendedor.Enabled = true;
             cbTipoPago.Enabled = true;
             cbEstado.Enabled = true;
@@ -66,7 +71,7 @@ namespace Presentador
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             eFactura datosFac = new eFactura ();
-            datosFac.idcliente = Convert.ToInt16(cbCliente.SelectedValue);
+            datosFac.idcliente = Convert.ToInt16(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
             datosFac.idvendedor = Convert.ToInt16(cbVendedor.SelectedValue);
             datosFac.idmoneda = Convert.ToInt16(cbMoneda.SelectedValue);
             datosFac.total = Convert.ToInt16(tbTotal.Text);
@@ -84,8 +89,8 @@ namespace Presentador
 
             if (result != false)
             {
-                nFactura getid = new nFactura();
-                dgvFac.DataSource = getid.getLastIdFactura();
+
+                dgvFac.DataSource = listaFac.getLastIdFactura();
                 string idfac = this.dgvFac.CurrentRow.Cells[0].Value.ToString();
 
                 //DataTable id = new DataTable();                
@@ -93,7 +98,7 @@ namespace Presentador
                 //eDetalleFactura idet = new eDetalleFactura();
                 //idet.idfactura = Convert.ToInt32(id.Rows[0].ToString());
 
-                MessageBox.Show("Registro Insertado "+ idfac, "Insercion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Registro Insertado ", "Insercion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -131,7 +136,7 @@ namespace Presentador
         {
             eFactura datosFac = new eFactura();
             string idfac = tbIdFac.Text;
-            datosFac.idcliente = Convert.ToInt16(cbCliente.SelectedValue);
+            datosFac.idcliente = Convert.ToInt16(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
             datosFac.idvendedor = Convert.ToInt16(cbVendedor.SelectedValue);
             datosFac.idmoneda = Convert.ToInt16(cbMoneda.SelectedValue);
             datosFac.total = Convert.ToInt16(tbTotal.Text);
@@ -168,11 +173,38 @@ namespace Presentador
             frmDetalleFactura detalleFactura = new frmDetalleFactura();
             eDetalleFactura detFac = new eDetalleFactura();
             detalleFactura.MdiParent = this.ParentForm;
-            
+
             detFac.idfactura = Convert.ToInt16(this.dgvFac.CurrentRow.Cells[0].Value.ToString());
             detalleFactura.idfactura = detFac.idfactura;
-
             detalleFactura.Show();
+            
+            
         }
+
+        
+
+        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string saldo = this.dgvCliente.CurrentRow.Cells[4].Value.ToString();
+            double saldototal = Convert.ToDouble(saldo);
+            if (saldototal >= 1000)
+            {
+                MessageBox.Show("El cliente debe mas de 1000, no se le dara credito", "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnGuardar.Enabled = false;
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            nDetalleFactura nDetlleFac = new nDetalleFactura();
+            dgvDetalleFactura.DataSource = nDetlleFac.getAllDetalleFac(tbIdFac.Text);
+
+            
+
+         }
     }
 }

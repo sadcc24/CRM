@@ -42,8 +42,8 @@ namespace Negocio
         {
             try
             {
-                //string query = string.Format("INSERT INTO DETALLE_FACTURA(cantidad,preciounitario) VALUES({0},{1})", det.cantidad, det.preciounitario);
-                cnn.Insert(string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5})", idfact, det.cantidad,det.idbodega, det.idproducto, det.preciounitario, det.comision));
+                //string query = string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6})", idfact, det.cantidad, det.idbodega, det.idproducto, det.preciounitario, det.comision,det.impuesto);
+                cnn.Insert(string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6} )", idfact, det.cantidad,det.idbodega, det.idproducto, det.preciounitario, det.comision , det.impuesto));
                 return true;
             }
             catch (Exception ex)
@@ -65,6 +65,22 @@ namespace Negocio
         {
             DataTable typeDev = new DataTable();
             typeDev = cnn.Select("SELECT idproducto,descripcion,cantidad FROM PRODUCTO where activo = 1");
+            return typeDev;
+
+        }
+
+        public DataTable getListaPrecios(string listPreci)
+        {
+            DataTable typeDev = new DataTable();
+            typeDev = cnn.Select(string.Format("SELECT idlistaprecio,descripcion,preciounitario FROM LISTAPRECIOS where idproducto = {0}", listPreci));
+            return typeDev;
+
+        }
+
+        public DataTable getComision(string idProd)
+        {
+            DataTable typeDev = new DataTable();
+            typeDev = cnn.Select(string.Format("SELECT porcentajecomosion FROM PRODUCTO INNER JOIN COMISION ON COMISION.idproducto = PRODUCTO.idproducto WHERE COMISION.idproducto = {0}", idProd));
             return typeDev;
 
         }

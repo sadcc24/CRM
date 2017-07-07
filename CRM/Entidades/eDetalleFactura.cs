@@ -20,8 +20,8 @@ namespace Entidades
 
         public string preciounitario { get; set; }
 
-        public int comision { get; set; }
+        public double comision { get; set; }
 
-        public int impuesto { get; set; }
+        public double impuesto { get; set; }
     }
 }
