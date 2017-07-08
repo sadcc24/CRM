@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="eCamapnias.cs" />
     <Compile Include="eCClientes.cs" />
+    <Compile Include="eCXC.cs" />
     <Compile Include="eDetalleFactura.cs" />
     <Compile Include="eDevoluciones.cs" />
     <Compile Include="eFactura.cs" />

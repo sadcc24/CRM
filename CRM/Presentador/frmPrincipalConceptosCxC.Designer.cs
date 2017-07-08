@@ -34,13 +34,9 @@
             this.btnPrimerReg = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.forma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvconceptos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvconceptos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUltimoReg
@@ -97,6 +93,7 @@
             this.btnActualizar.Size = new System.Drawing.Size(51, 49);
             this.btnActualizar.TabIndex = 31;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnNuevo
             // 
@@ -110,38 +107,15 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // dataGridView1
+            // dgvconceptos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.descripcion,
-            this.tipo,
-            this.forma});
-            this.dataGridView1.Location = new System.Drawing.Point(17, 93);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(458, 389);
-            this.dataGridView1.TabIndex = 38;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo Concepto";
-            this.codigo.Name = "codigo";
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo de Conepto";
-            this.tipo.Name = "tipo";
-            // 
-            // forma
-            // 
-            this.forma.HeaderText = "Es Froma de Pagp";
-            this.forma.Name = "forma";
+            this.dgvconceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvconceptos.Location = new System.Drawing.Point(17, 93);
+            this.dgvconceptos.Name = "dgvconceptos";
+            this.dgvconceptos.Size = new System.Drawing.Size(458, 389);
+            this.dgvconceptos.TabIndex = 38;
+            this.dgvconceptos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvconceptos_CellContentClick);
+            this.dgvconceptos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvconceptos_CellContentDoubleClick);
             // 
             // label1
             // 
@@ -160,7 +134,7 @@
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(492, 494);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvconceptos);
             this.Controls.Add(this.btnUltimoReg);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);
@@ -169,7 +143,8 @@
             this.Controls.Add(this.btnNuevo);
             this.Name = "frmPrincipalConceptosCxC";
             this.Text = "ConceptosCxC";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmPrincipalConceptosCxC_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvconceptos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,11 +157,7 @@
         private System.Windows.Forms.Button btnPrimerReg;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn forma;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.DataGridView dgvconceptos;
     }
 }

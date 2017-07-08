@@ -35,12 +35,15 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtcuotas = new System.Windows.Forms.TextBox();
+            this.txtnombrecxc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txttipopago = new System.Windows.Forms.TextBox();
+            this.txtidconcepto = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtestado = new System.Windows.Forms.TextBox();
+            this.cmbMovimientos = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnReporte
@@ -64,6 +67,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(51, 49);
             this.btnEliminar.TabIndex = 61;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -97,6 +101,7 @@
             this.btnEditar.Size = new System.Drawing.Size(51, 49);
             this.btnEditar.TabIndex = 57;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -108,6 +113,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(51, 49);
             this.btnNuevo.TabIndex = 56;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBuscar
             // 
@@ -120,73 +126,107 @@
             this.btnBuscar.Size = new System.Drawing.Size(51, 49);
             this.btnBuscar.TabIndex = 59;
             this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(178, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 20);
-            this.textBox2.TabIndex = 64;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(178, 162);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 21);
-            this.comboBox1.TabIndex = 65;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(178, 210);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(175, 21);
-            this.comboBox2.TabIndex = 66;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 19);
-            this.label1.TabIndex = 67;
-            this.label1.Text = "Descripción:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 19);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "Tipo de Concepto:";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 209);
+            this.label3.Location = new System.Drawing.Point(62, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 19);
+            this.label3.Size = new System.Drawing.Size(89, 19);
             this.label3.TabIndex = 69;
-            this.label3.Text = "Es Forma de Pago:";
+            this.label3.Text = "Descripcion:";
+            // 
+            // txtcuotas
+            // 
+            this.txtcuotas.Enabled = false;
+            this.txtcuotas.Location = new System.Drawing.Point(166, 141);
+            this.txtcuotas.Name = "txtcuotas";
+            this.txtcuotas.Size = new System.Drawing.Size(175, 20);
+            this.txtcuotas.TabIndex = 70;
+            // 
+            // txtnombrecxc
+            // 
+            this.txtnombrecxc.Enabled = false;
+            this.txtnombrecxc.Location = new System.Drawing.Point(166, 99);
+            this.txtnombrecxc.Name = "txtnombrecxc";
+            this.txtnombrecxc.Size = new System.Drawing.Size(175, 20);
+            this.txtnombrecxc.TabIndex = 64;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(87, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 19);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Nombre:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txttipopago
+            // 
+            this.txttipopago.Location = new System.Drawing.Point(390, 100);
+            this.txttipopago.Name = "txttipopago";
+            this.txttipopago.Size = new System.Drawing.Size(10, 20);
+            this.txttipopago.TabIndex = 71;
+            this.txttipopago.Text = "1";
+            this.txttipopago.Visible = false;
+            // 
+            // txtidconcepto
+            // 
+            this.txtidconcepto.Location = new System.Drawing.Point(390, 126);
+            this.txtidconcepto.Name = "txtidconcepto";
+            this.txtidconcepto.Size = new System.Drawing.Size(10, 20);
+            this.txtidconcepto.TabIndex = 72;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(61, 178);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 19);
+            this.label4.TabIndex = 74;
+            this.label4.Text = "Movimiento:";
+            // 
+            // txtestado
+            // 
+            this.txtestado.Location = new System.Drawing.Point(381, 209);
+            this.txtestado.Name = "txtestado";
+            this.txtestado.Size = new System.Drawing.Size(10, 20);
+            this.txtestado.TabIndex = 77;
+            this.txtestado.Text = "ACTIVO";
+            this.txtestado.Visible = false;
+            // 
+            // cmbMovimientos
+            // 
+            this.cmbMovimientos.FormattingEnabled = true;
+            this.cmbMovimientos.Items.AddRange(new object[] {
+            "DEBE",
+            "HABER"});
+            this.cmbMovimientos.Location = new System.Drawing.Point(166, 179);
+            this.cmbMovimientos.Name = "cmbMovimientos";
+            this.cmbMovimientos.Size = new System.Drawing.Size(177, 21);
+            this.cmbMovimientos.TabIndex = 78;
+            this.cmbMovimientos.SelectedIndexChanged += new System.EventHandler(this.cmbMovimientos_SelectedIndexChanged);
             // 
             // frmConceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(428, 281);
+            this.ClientSize = new System.Drawing.Size(428, 285);
+            this.Controls.Add(this.cmbMovimientos);
+            this.Controls.Add(this.txtestado);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtidconcepto);
+            this.Controls.Add(this.txttipopago);
+            this.Controls.Add(this.txtcuotas);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtnombrecxc);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -195,7 +235,8 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Name = "frmConceptos";
-            this.Text = "frmConceptos";
+            this.Text = "Conceptos";
+            this.Load += new System.EventHandler(this.frmConceptos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,12 +250,15 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txttipopago;
+        public System.Windows.Forms.TextBox txtcuotas;
+        public System.Windows.Forms.TextBox txtnombrecxc;
+        public System.Windows.Forms.TextBox txtidconcepto;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txtestado;
+        public System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ComboBox cmbMovimientos;
     }
 }
