@@ -12,16 +12,16 @@ namespace Entidades
 
         public int idfactura { get; set; }
 
-        public int cantidad { get; set; }
+        public string cantidad { get; set; }
 
         public int idbodega { get; set; }
 
         public int idproducto { get; set; }
 
-        public int preciounitario { get; set; }
+        public string preciounitario { get; set; }
 
-        public int comision { get; set; }
+        public double comision { get; set; }
 
-        public int impuesto { get; set; }
+        public double impuesto { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace Entidades
 
         public int impuesto { get; set; }
 
-        public string fecha { get; set; }
+        public DateTime fecha { get; set; }
 
         public string tipodocumento { get; set; }
 

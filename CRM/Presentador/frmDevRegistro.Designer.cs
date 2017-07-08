@@ -278,6 +278,7 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;

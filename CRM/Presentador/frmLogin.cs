@@ -41,6 +41,7 @@ namespace Presentador
                 {
                     frmCRM crm = new frmCRM();
                     crm.user = elogin.user;
+                    
                     crm.Show();
                     this.Hide();
                 }

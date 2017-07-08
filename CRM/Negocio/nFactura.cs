@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +26,6 @@ namespace Negocio
                                 dbo.TIPOPAGOFACTURA.nombre as [Tipo Pago Factura],
                                 dbo.FACTURA.subtotal,
                                 dbo.FACTURA.fechafactura as [Fecha Factura],
-                                dbo.FACTURA.impuesto,
                                 dbo.FACTURA.tipodocumento as [Tipo Documento]
                                 FROM dbo.CLIENTE
                                 INNER JOIN dbo.FACTURA ON dbo.FACTURA.idcliente = dbo.CLIENTE.idcliente
@@ -40,7 +39,7 @@ namespace Negocio
         public DataTable getAllCliente()
         {
             DataTable proveedor = new DataTable();
-            proveedor = cnn.Select("SELECT idcliente,nombre FROM CLIENTE WHERE idestado = 1");
+            proveedor = cnn.Select("SELECT idcliente,nombre,apellido,telefono,saldo FROM CLIENTE WHERE idestado = 1");
             return proveedor;
         }
 
@@ -74,6 +73,13 @@ namespace Negocio
             return typeDev;
         }
 
+        public DataTable getLastIdFactura()
+        {
+            DataTable typeDev = new DataTable();
+            typeDev = cnn.Select("SELECT IDENT_CURRENT('FACTURA') as IDFact;");
+            return typeDev;
+        }
+
 
 
 
@@ -81,8 +87,8 @@ namespace Negocio
         {
             try
             {
-                //string query = string.Format("INSERT INTO DETALLE_DEVOLUCIONES VALUES({0},'{1}',{2},{3},{4},{5},{6},{7})", dev.fechaDevolucion, dev.motivodev, dev.tipodev, dev.empresa, dev.sede, dev.proveedor, dev.producto, dev.factura);
-                cnn.Insert(string.Format("INSERT INTO FACTURA VALUES('{0}','{1}',{2},{3},{4},{5},{6},{7})", fac.idcliente, fac.idvendedor, fac.idmoneda, fac.total, fac.subtotal, fac.impuesto, fac.fecha, fac.tipodocumento , fac.idestado ,fac.idtipopago));
+                //string query = string.Format("INSERT INTO FACTURA VALUES({0},{1},{2},{3},{4},{5},'{6}','{7}',{8},{9})", fac.idcliente, fac.idvendedor, fac.idmoneda, fac.total, fac.subtotal, fac.impuesto, fac.fecha, fac.tipodocumento, fac.idestado, fac.idtipopago);
+                cnn.Insert(string.Format("INSERT INTO FACTURA(idcliente,idvendedor,idmoneda,total,subtotal,fechafactura,tipodocumento,idestado,idtipopago) VALUES({0},{1},{2},{3},{4},'{5}','{6}',{7},{8})", fac.idcliente, fac.idvendedor, fac.idmoneda, fac.total, fac.subtotal, fac.fecha, fac.tipodocumento , fac.idestado ,fac.idtipopago));
                 return true;
             }
             catch (Exception ex)
@@ -122,3 +128,4 @@ namespace Negocio
 
     }
 }
+

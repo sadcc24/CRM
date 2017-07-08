@@ -32,11 +32,11 @@ namespace Presentador
             string idFact = this.dgvFacturas.CurrentRow.Cells[0].Value.ToString();
             facRegistro.tbIdFac.Text = idFact;
 
-            string TipoDocumento = this.dgvFacturas.CurrentRow.Cells[10].Value.ToString();
-            facRegistro.tbTipoDocumento.Text = TipoDocumento;
+            //string TipoDocumento = this.dgvFacturas.CurrentRow.Cells[10].Value.ToString();
+            //facRegistro.tbTipoDocumento.Text = TipoDocumento;
 
             string Fecha = this.dgvFacturas.CurrentRow.Cells[8].Value.ToString();
-            facRegistro.tbFecha.Text = Fecha;
+            facRegistro.dtpFecha.Text = Fecha;
 
             string Total = this.dgvFacturas.CurrentRow.Cells[7].Value.ToString();
             facRegistro.tbTotal.Text = Total;

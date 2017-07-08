@@ -43,6 +43,7 @@
     <Compile Include="nCaja.cs" />
     <Compile Include="nCampanias.cs" />
     <Compile Include="nCClientes.cs" />
+    <Compile Include="nComision.cs" />
     <Compile Include="nDetalleFactura.cs" />
     <Compile Include="nFactura.cs" />
     <Compile Include="nListaPrecio.cs" />

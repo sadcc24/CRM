@@ -17,7 +17,7 @@ namespace Negocio
         {
             DataTable DataDev = new DataTable();
 
-            DataDev = cnn.Select(string.Format(@"SSELECT
+            DataDev = cnn.Select(string.Format(@"SELECT
                                 dbo.PRODUCTO.descripcion,
                                 dbo.BODEGA.nombre_bodega,
                                 dbo.DETALLE_FACTURA.cantidad,
@@ -29,6 +29,60 @@ namespace Negocio
                                 dbo.DETALLE_FACTURA.idfactura = '{0}'", detalleFact));
 
             return DataDev;
+        }
+
+        public DataTable getFacturaid()
+        {
+            DataTable id = new DataTable();
+            id = cnn.Select(string.Format("SELECT SCOPE_IDENTITY()"));
+            return id;
+        }
+
+        public bool insertDetalle(eDetalleFactura det,int idfact)
+        {
+            try
+            {
+                //string query = string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6})", idfact, det.cantidad, det.idbodega, det.idproducto, det.preciounitario, det.comision,det.impuesto);
+                cnn.Insert(string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6} )", idfact, det.cantidad,det.idbodega, det.idproducto, det.preciounitario, det.comision , det.impuesto));
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                return false;
+            }
+        }
+
+        public DataTable getAllBodega()
+        {
+            DataTable typeDev = new DataTable();
+            typeDev = cnn.Select("SELECT idbodega, nombre_bodega FROM BODEGA WHERE activo = 1");
+            return typeDev;
+
+        }
+
+        public DataTable getAllProductos()
+        {
+            DataTable typeDev = new DataTable();
+            typeDev = cnn.Select("SELECT idproducto,descripcion,cantidad FROM PRODUCTO where activo = 1");
+            return typeDev;
+
+        }
+
+        public DataTable getListaPrecios(string listPreci)
+        {
+            DataTable typeDev = new DataTable();
+            typeDev = cnn.Select(string.Format("SELECT idlistaprecio,descripcion,preciounitario FROM LISTAPRECIOS where idproducto = {0}", listPreci));
+            return typeDev;
+
+        }
+
+        public DataTable getComision(string idProd)
+        {
+            DataTable typeDev = new DataTable();
+            typeDev = cnn.Select(string.Format("SELECT porcentajecomosion FROM PRODUCTO INNER JOIN COMISION ON COMISION.idproducto = PRODUCTO.idproducto WHERE COMISION.idproducto = {0}", idProd));
+            return typeDev;
+
         }
     }
 }

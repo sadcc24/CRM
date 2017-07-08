@@ -47,6 +47,7 @@ namespace Presentador
             string motivoDev = this.dgvDevoluciones.CurrentRow.Cells[2].Value.ToString();
             regdev.txtDescripcion.Text = motivoDev;
             string tipodev = this.dgvDevoluciones.CurrentRow.Cells[3].Value.ToString();
+
             regdev.cbTipoDevolucion.Text = tipodev;
             string doc = this.dgvDevoluciones.CurrentRow.Cells[4].Value.ToString();
             regdev.txttipodevolucion.Text = doc+ ".";
@@ -62,6 +63,7 @@ namespace Presentador
             regdev.txtFactura.Visible = false;
             regdev.txtFacturadev.Visible = true;
             regdev.btnGuardar.Enabled = false;
+
             regdev.btnEliminar.Enabled = true;
             regdev.btnEditar.Enabled = true;
 

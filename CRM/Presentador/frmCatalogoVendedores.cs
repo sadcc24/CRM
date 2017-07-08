@@ -43,15 +43,26 @@ namespace Presentador
             regvend.txtnombre.Text = nombre;
             string apellido = this.dgvVendedores.CurrentRow.Cells[2].Value.ToString();
             regvend.txtapellido.Text = apellido;
-            string email = this.dgvVendedores.CurrentRow.Cells[3].Value.ToString();
-            regvend.txtemail.Text = email;
-            string telefono = this.dgvVendedores.CurrentRow.Cells[4].Value.ToString();
+            string telefono = this.dgvVendedores.CurrentRow.Cells[3].Value.ToString();
             regvend.txttelefono.Text = telefono;
+            string direccion = this.dgvVendedores.CurrentRow.Cells[4].Value.ToString();
+            regvend.txtdireccion.Text = direccion;
 
+            string email = this.dgvVendedores.CurrentRow.Cells[5].Value.ToString();
+            regvend.txtemail.Text = email;
+
+            string empresa = this.dgvVendedores.CurrentRow.Cells[6].Value.ToString();
+            regvend.cbempresas.Text = empresa;
             regvend.MdiParent = this.ParentForm;
             regvend.Show();
 
 
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            nVendedores vendedor = new nVendedores();
+            dgvVendedores.DataSource = vendedor.getAllVendedores();
         }
     }
 }
