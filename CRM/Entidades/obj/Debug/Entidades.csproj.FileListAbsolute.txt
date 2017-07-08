@@ -18,3 +18,8 @@ C:\Users\Luis\Documents\GitHub\CRM\CRM\Entidades\bin\Debug\Entidades.pdb
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.dll
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Entidades\bin\Debug\Entidades.dll
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.dll
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.pdb

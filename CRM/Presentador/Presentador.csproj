@@ -70,6 +70,12 @@
     <Compile Include="frmCatalogClientes.Designer.cs">
       <DependentUpon>frmCatalogClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCatalogoComision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogoComision.Designer.cs">
+      <DependentUpon>frmCatalogoComision.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCatalogoVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="frmCobrosProximos.Designer.cs">
       <DependentUpon>frmCobrosProximos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComision.Designer.cs">
+      <DependentUpon>frmComision.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConceptos.cs">
       <SubType>Form</SubType>
@@ -268,6 +280,9 @@
     <EmbeddedResource Include="frmCatalogClientes.resx">
       <DependentUpon>frmCatalogClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogoComision.resx">
+      <DependentUpon>frmCatalogoComision.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoVendedores.resx">
       <DependentUpon>frmCatalogoVendedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCobrosProximos.resx">
       <DependentUpon>frmCobrosProximos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComision.resx">
+      <DependentUpon>frmComision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConceptos.resx">
       <DependentUpon>frmConceptos.cs</DependentUpon>

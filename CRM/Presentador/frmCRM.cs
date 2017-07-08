@@ -107,7 +107,7 @@ namespace Presentador
 
         private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaVendedores consultavendedor = new frmConsultaVendedores();
+            frmCatalogoVendedores consultavendedor = new frmCatalogoVendedores();
             consultavendedor.MdiParent = this;
             consultavendedor.Show();
         }
@@ -150,6 +150,20 @@ namespace Presentador
             caja.MdiParent = this;
             caja.Show();
         }
+
+        private void comisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            frmCatalogoComision comision = new frmCatalogoComision();
+            comision.MdiParent = this;
+            comision.Show();
+        }
+ 
+
+
+
+        }
     }
-}
+
 
