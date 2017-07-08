@@ -19,16 +19,41 @@ namespace Negocio
         public DataTable getAllCampanias()
         {
             DataTable Campanias = new DataTable();
-            Campanias = cnn.Select(@"SELECT idcampania as ID_Campania, idtipocampania as Id_TipoCampania, nombre as Nombre, descripcion as DescripcionCampania, fechainicial as Fecha_inicio, fechafinal as Fecha_Final,idempresa as Id_Empresa FROM CAMPANIA");
+            Campanias = cnn.Select(@"SELECT
+                                           dbo.CAMPANIA.idcampania as ID_Campania,                                
+                                    dbo.TIPOCAMPANIA.nombre AS Tipo_campania,
+                                    dbo.CAMPANIA.nombre as Nombre_Campania,
+                                    dbo.CAMPANIA.descripcion as Descripcion,
+                                    dbo.CAMPANIA.fechainicial as fecha_inicial,
+                                    dbo.CAMPANIA.fechafinal as fecha_final,
+                                    dbo.EMPRESA.nombre_empresa as Empresa
+                                  
+                                    FROM dbo.CAMPANIA
+                                    INNER JOIN dbo.EMPRESA ON dbo.CAMPANIA.idempresa = dbo.EMPRESA.idempresa
+                                    INNER JOIN dbo.TIPOCAMPANIA ON dbo.CAMPANIA.idtipocampania = dbo.TIPOCAMPANIA.idtipocampania");
             return Campanias;
         }
 
+    
 
 
 
+    public bool deletecampania(string idcam)
+    {
+        try
+        {
+            cnn.Delete(string.Format(@"DELETE CAMPANIA WHERE idcampania = {0}", idcam));
+            return true;
+        }
+        catch (Exception ex)
+        {
+
+            return false;
+        }
+    }
 
 
-        public DataTable getAllTipoCampanias()
+    public DataTable getAllTipoCampanias()
         {
             DataTable tipocamapanias = new DataTable();
             tipocamapanias = cnn.Select("SELECT idtipocampania as ID_Campanias,nombre,descripcion FROM TIPOCAMPANIA");

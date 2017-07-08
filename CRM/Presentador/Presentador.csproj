@@ -196,12 +196,6 @@
     <Compile Include="frmRegCampania.Designer.cs">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRepCampaniasCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRepCampaniasCliente.Designer.cs">
-      <DependentUpon>frmRepCampaniasCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmtipocampania.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,9 +315,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegCampania.resx">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRepCampaniasCliente.resx">
-      <DependentUpon>frmRepCampaniasCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtipocampania.resx">
       <DependentUpon>frmtipocampania.cs</DependentUpon>
@@ -526,6 +517,9 @@
       <Project>{611f8f69-f666-4896-a968-7f597b1e0260}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loggin1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

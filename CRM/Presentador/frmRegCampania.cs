@@ -97,9 +97,9 @@ namespace Presentador
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            frmRepCampaniasCliente RCcliente = new frmRepCampaniasCliente();
-            RCcliente.MdiParent = this.ParentForm;
-            RCcliente.Show();
+            //frmRepCampaniasCliente RCcliente = new frmRepCampaniasCliente();
+         //   RCcliente.MdiParent = this.ParentForm;
+          //  RCcliente.Show();
 
         }
 
@@ -124,6 +124,34 @@ namespace Presentador
         private void cbtipocampania_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbempresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string iddev = txtidcampania.Text;
+            nCampanias updatedev = new nCampanias();
+            bool result = updatedev.deletecampania(iddev);
+
+
+            if (result != false)
+            {
+                MessageBox.Show("Eliminacion Exitosa", "Eliminacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //nCampanias allDev = new nCampanias();
+                //frmDevoluciones frmdev = new frmDevoluciones();
+                //frmdev.dgvDevoluciones.DataSource = allDev.getAllDev();
+
+                //txtmotivodev.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Eliminacion Fallida", "Eliminacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -149,5 +149,28 @@ namespace Presentador
             caja.MdiParent = this;
             caja.Show();
         }
+
+        private void ingresarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           frmCatalogClientes CatalogoClientes = new frmCatalogClientes();
+           CatalogoClientes.MdiParent = this;
+            CatalogoClientes.Show();
+
+            //frmClientes CatalogoClientes = new frmClientes();
+            //CatalogoClientes.MdiParent = this;
+            //CatalogoClientes.Show();
+        }
+
+        private void camapaniasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void campaniasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmtipocampania CatalogoClientes = new frmtipocampania();
+            CatalogoClientes.MdiParent = this;
+            CatalogoClientes.Show();
+        }
     }
 }

@@ -61,6 +61,7 @@
             this.button1.Size = new System.Drawing.Size(51, 49);
             this.button1.TabIndex = 95;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnUltimoReg
             // 
@@ -125,6 +126,8 @@
             this.dgvcampanias.Name = "dgvcampanias";
             this.dgvcampanias.Size = new System.Drawing.Size(447, 305);
             this.dgvcampanias.TabIndex = 89;
+            this.dgvcampanias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcampanias_CellContentClick);
+            this.dgvcampanias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcampanias_CellDoubleClick);
             // 
             // frmtipocampania
             // 

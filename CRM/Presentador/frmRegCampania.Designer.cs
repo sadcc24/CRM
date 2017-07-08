@@ -47,6 +47,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.txtidcampania = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Empresa
@@ -159,6 +160,7 @@
             this.cbempresa.Name = "cbempresa";
             this.cbempresa.Size = new System.Drawing.Size(292, 21);
             this.cbempresa.TabIndex = 141;
+            this.cbempresa.SelectedIndexChanged += new System.EventHandler(this.cbempresa_SelectedIndexChanged);
             // 
             // btnReporte
             // 
@@ -182,6 +184,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(51, 49);
             this.btnEliminar.TabIndex = 139;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -241,12 +244,22 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // txtidcampania
+            // 
+            this.txtidcampania.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidcampania.Location = new System.Drawing.Point(165, 312);
+            this.txtidcampania.Name = "txtidcampania";
+            this.txtidcampania.Size = new System.Drawing.Size(42, 27);
+            this.txtidcampania.TabIndex = 142;
+            this.txtidcampania.Visible = false;
+            // 
             // frmRegCampania
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(507, 316);
+            this.ClientSize = new System.Drawing.Size(507, 372);
+            this.Controls.Add(this.txtidcampania);
             this.Controls.Add(this.cbempresa);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnEliminar);
@@ -276,13 +289,9 @@
 
         #endregion
         private System.Windows.Forms.Label Empresa;
-        private System.Windows.Forms.DateTimePicker dtpfechafinal;
-        private System.Windows.Forms.DateTimePicker dtpfechainicial;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnEliminar;
@@ -292,7 +301,12 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbtipocampania;
-        private System.Windows.Forms.ComboBox cbempresa;
+        public System.Windows.Forms.DateTimePicker dtpfechafinal;
+        public System.Windows.Forms.DateTimePicker dtpfechainicial;
+        public System.Windows.Forms.TextBox txtdescripcion;
+        public System.Windows.Forms.TextBox txtnombre;
+        public System.Windows.Forms.ComboBox cbtipocampania;
+        public System.Windows.Forms.ComboBox cbempresa;
+        public System.Windows.Forms.TextBox txtidcampania;
     }
 }
