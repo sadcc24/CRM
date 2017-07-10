@@ -168,7 +168,7 @@ namespace Negocio
         {
             try
             {
-                string query = string.Format("UPDATE DETALLE_DEVOLUCION SET cantidad = {0} WHERE idproducto = {1} AND iddevolucion = {2}", cantidad, uuidProducto, uuiddev);
+                //string query = string.Format("UPDATE DETALLE_DEVOLUCION SET cantidad = {0} WHERE idproducto = {1} AND iddevolucion = {2}", cantidad, uuidProducto, uuiddev);
                 cnn.Update(string.Format("UPDATE DETALLE_DEVOLUCION SET cantidad = {0} WHERE idproducto = {1} AND iddevolucion = {2}", cantidad, uuidProducto, uuiddev));
                 return true;
             }
@@ -260,7 +260,7 @@ namespace Negocio
         {
             try
             {
-                string query = string.Format("INSERT INTO DEVOLUCIONES VALUES('{0}','{1}',{2},{3},{4},{5},{6},{7},{8})", dev.fechaDevolucion, dev.motivodev, dev.tipodev, dev.tipodocumento, dev.idcliente, dev.idmoneda, dev.idvendedor, dev.idfactura, dev.idestado);
+                //string query = string.Format("INSERT INTO DEVOLUCIONES VALUES('{0}','{1}',{2},{3},{4},{5},{6},{7},{8})", dev.fechaDevolucion, dev.motivodev, dev.tipodev, dev.tipodocumento, dev.idcliente, dev.idmoneda, dev.idvendedor, dev.idfactura, dev.idestado);
                 cnn.Insert(string.Format("INSERT INTO DEVOLUCIONES VALUES('{0}','{1}',{2},'{3}',{4},{5},{6},{7},{8})", dev.fechaDevolucion, dev.motivodev, dev.tipodev, dev.tipodocumento, dev.idcliente, dev.idmoneda, dev.idvendedor, dev.idfactura, dev.idestado));
                 return true;
             }

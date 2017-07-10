@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class eFactura
+    public class eCuentaXCobrar
     {
-        public int idfactura { get; set; }
+        public int idcuentaxcobrar { get; set; }
 
-        public int idcliente { get; set; }
+        public int idtipocxc { get; set; }
 
         public int idvendedor { get; set; }
+
+        public int idfactura { get; set; }
+
+        public string fecha { get; set; }
 
         public int idmoneda { get; set; }
 
@@ -20,16 +24,12 @@ namespace Entidades
 
         public double subtotal { get; set; }
 
-        public double impuesto { get; set; }
-
-        public string fecha { get; set; }
-
-        public string tipodocumento { get; set; }
+        public int idcliente { get; set; }
 
         public int idestado { get; set; }
 
-        public int idtipopago { get; set; }
+        public int iddetallepago { get; set; }
 
-        
+        public int iddevolucion { get; set; }
     }
 }
