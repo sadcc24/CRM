@@ -159,7 +159,8 @@
             this.cbempresa.Location = new System.Drawing.Point(165, 276);
             this.cbempresa.Name = "cbempresa";
             this.cbempresa.Size = new System.Drawing.Size(292, 21);
-            this.cbempresa.TabIndex = 125;
+            this.cbempresa.TabIndex = 141;
+            this.cbempresa.SelectedIndexChanged += new System.EventHandler(this.cbempresa_SelectedIndexChanged);
             // 
             // btnReporte
             // 
@@ -195,7 +196,6 @@
             this.btnActualizar.Size = new System.Drawing.Size(51, 49);
             this.btnActualizar.TabIndex = 138;
             this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBuscar
             // 
@@ -220,7 +220,6 @@
             this.btnCancelar.Size = new System.Drawing.Size(51, 49);
             this.btnCancelar.TabIndex = 136;
             this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -232,7 +231,6 @@
             this.btnEditar.Size = new System.Drawing.Size(51, 49);
             this.btnEditar.TabIndex = 135;
             this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -249,19 +247,18 @@
             // txtidcampania
             // 
             this.txtidcampania.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidcampania.Location = new System.Drawing.Point(2, 288);
+            this.txtidcampania.Location = new System.Drawing.Point(165, 312);
             this.txtidcampania.Name = "txtidcampania";
-            this.txtidcampania.Size = new System.Drawing.Size(27, 27);
+            this.txtidcampania.Size = new System.Drawing.Size(42, 27);
             this.txtidcampania.TabIndex = 142;
             this.txtidcampania.Visible = false;
-            this.txtidcampania.TextChanged += new System.EventHandler(this.txtidcampania_TextChanged);
             // 
             // frmRegCampania
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(507, 316);
+            this.ClientSize = new System.Drawing.Size(507, 372);
             this.Controls.Add(this.txtidcampania);
             this.Controls.Add(this.cbempresa);
             this.Controls.Add(this.btnReporte);
@@ -304,12 +301,12 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txtidcampania;
         public System.Windows.Forms.DateTimePicker dtpfechafinal;
         public System.Windows.Forms.DateTimePicker dtpfechainicial;
         public System.Windows.Forms.TextBox txtdescripcion;
         public System.Windows.Forms.TextBox txtnombre;
         public System.Windows.Forms.ComboBox cbtipocampania;
         public System.Windows.Forms.ComboBox cbempresa;
+        public System.Windows.Forms.TextBox txtidcampania;
     }
 }

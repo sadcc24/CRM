@@ -38,3 +38,13 @@ C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Entidades.pdb
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.dll
 C:\Users\Luis\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Negocio.dll
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Datos.dll
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Entidades.dll
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\MRP_BD.dll
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Datos.pdb
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\bin\Debug\Entidades.pdb
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.dll
+C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Negocio\obj\Debug\Negocio.pdb
