@@ -35,12 +35,24 @@ namespace Presentador
             detFac.idbodega = Convert.ToInt32(cbBodega.SelectedValue);
             string producto = this.dgvProductos.CurrentRow.Cells[0].Value.ToString();
             detFac.idproducto = Convert.ToInt16(producto);
+            
 
             nDetalleFactura insertDetFac = new nDetalleFactura();
             bool result = insertDetFac.insertDetalle(detFac, idfactura);
 
             if (result != false)
             {
+                int cantProd = Convert.ToInt16(tbCantidad.Text);
+                int idprod = Convert.ToInt16(producto);
+                int cantidadActual = Convert.ToInt16(this.dgvProductos.CurrentRow.Cells[2].Value.ToString());
+                int cantidadModificar = cantidadActual - cantProd;
+                bool result2 = insertDetFac.updateProducto(cantidadModificar, idprod);
+                if (result != false)
+                {
+                    nDetalleFactura DetFact = new nDetalleFactura();
+                    dgvProductos.DataSource = DetFact.getAllProductos();
+                    //MessageBox.Show("Actualizado exitoso productos", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 MessageBox.Show("Ingreso Exitoso", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -88,6 +100,7 @@ namespace Presentador
 
         private void tbCantidad_TextChanged(object sender, EventArgs e)
         {
+
             if (tbCantidad.Text.Equals(""))
             {
                 
@@ -96,6 +109,21 @@ namespace Presentador
             {
                 double total = Convert.ToDouble(tbCantidad.Text) * Convert.ToDouble(this.dgvListaPrecio.CurrentRow.Cells[2].Value.ToString());
                 tbTotal.Text = Convert.ToString(total);
+
+                string cantidadprod = this.dgvProductos.CurrentRow.Cells[2].Value.ToString();
+
+                int cantSeleccionada = Convert.ToInt16(tbCantidad.Text);
+                int cantExistencia = Convert.ToInt16(cantidadprod);
+
+                if (cantSeleccionada > cantExistencia)
+                {
+                    MessageBox.Show("No hay mas productos", "No hay productos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnGuardar.Enabled = false;
+                }
+                else
+                {
+                    btnGuardar.Enabled = true;
+                }
             }
             
         }

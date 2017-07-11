@@ -87,8 +87,8 @@ namespace Negocio
         {
             try
             {
-                //string query = string.Format("INSERT INTO FACTURA VALUES({0},{1},{2},{3},{4},{5},'{6}','{7}',{8},{9})", fac.idcliente, fac.idvendedor, fac.idmoneda, fac.total, fac.subtotal, fac.impuesto, fac.fecha, fac.tipodocumento, fac.idestado, fac.idtipopago);
-                cnn.Insert(string.Format("INSERT INTO FACTURA(idcliente,idvendedor,idmoneda,total,subtotal,fechafactura,tipodocumento,idestado,idtipopago) VALUES({0},{1},{2},{3},{4},'{5}','{6}',{7},{8})", fac.idcliente, fac.idvendedor, fac.idmoneda, fac.total, fac.subtotal, fac.fecha, fac.tipodocumento , fac.idestado ,fac.idtipopago));
+                //string query = string.Format("INSERT INTO FACTURA(idcliente,idvendedor,idmoneda,fechafactura,tipodocumento,idestado,idtipopago) VALUES({0},{1},{2},'{3}','{4}',{5},{6})", fac.idcliente, fac.idvendedor, fac.idmoneda, fac.fecha, fac.tipodocumento, fac.idestado, fac.idtipopago);
+                cnn.Insert(string.Format("INSERT INTO FACTURA(idcliente,idvendedor,idmoneda,fechafactura,tipodocumento,idestado,idtipopago) VALUES({0},{1},{2},'{3}','{4}',{5},{6})", fac.idcliente, fac.idvendedor, fac.idmoneda,  fac.fecha, fac.tipodocumento , fac.idestado ,fac.idtipopago));
                 return true;
             }
             catch (Exception ex)
@@ -117,6 +117,36 @@ namespace Negocio
             try
             {
                 cnn.Delete(string.Format(@"DELETE FACTURA WHERE idfactura = {0}", idfac));
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
+        public bool updateSaldo(eFactura fac, string idfac)
+        {
+            try
+            {
+                //UPDATE FACTURA set total = 10, subtotal = (10/1.12), impuesto = (10*0.12)where idfactura = 48
+                cnn.Update(string.Format("UPDATE FACTURA SET total = {0}, subtotal = {1}, impuesto = {2} WHERE idfactura = {3}", fac.total, fac.subtotal, fac.impuesto,  idfac));
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
+        public bool updateClienteSaldo(double saldoCliente, int idcliente)
+        {
+            try
+            {
+                
+                cnn.Update(string.Format("UPDATE CLIENTE SET saldo = {0} WHERE idcliente = {1}", saldoCliente, idcliente));
                 return true;
             }
             catch (Exception ex)

@@ -84,5 +84,20 @@ namespace Negocio
             return typeDev;
 
         }
+
+        public bool updateProducto(int cantidad, int idproducto)
+        {
+            try
+            {
+                //string query = string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6})", idfact, det.cantidad, det.idbodega, det.idproducto, det.preciounitario, det.comision,det.impuesto);
+                cnn.Insert(string.Format("UPDATE PRODUCTO SET cantidad = {0} WHERE idproducto = {1}", cantidad, idproducto));
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                return false;
+            }
+        }
     }
 }

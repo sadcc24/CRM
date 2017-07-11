@@ -22,7 +22,7 @@ namespace Presentador
         private void frmFacturaRegistro_Load(object sender, EventArgs e)
         {
             nFactura getFac = new nFactura();
-
+            dgvDetalleFactura.AllowUserToAddRows = false;
             dgvCliente.DataSource = getFac.getAllCliente();
 
             //cbCliente.DataSource = getFac.getAllCliente();
@@ -65,7 +65,7 @@ namespace Presentador
             cbMoneda.Enabled = true;
             //tbTipoDocumento.Enabled = true;
             dtpFecha.Enabled = true;
-            tbTotal.Enabled = true;
+            cbTipoDoc.Enabled = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -74,12 +74,12 @@ namespace Presentador
             datosFac.idcliente = Convert.ToInt16(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
             datosFac.idvendedor = Convert.ToInt16(cbVendedor.SelectedValue);
             datosFac.idmoneda = Convert.ToInt16(cbMoneda.SelectedValue);
-            datosFac.total = Convert.ToInt16(tbTotal.Text);
-            datosFac.subtotal = Convert.ToInt16(tbTotal.Text);
-            datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
-            datosFac.fecha = dtpFecha.Value;
-            datosFac.tipodocumento = "DPI";
-            datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
+            //datosFac.total = Convert.ToInt16(tbTotal.Text);
+            //datosFac.subtotal = Convert.ToInt16(tbTotal.Text);
+            //datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
+            datosFac.fecha = dtpFecha.Value.ToShortDateString();
+            datosFac.tipodocumento = cbTipoDoc.Text;
+            //datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
             datosFac.idestado = Convert.ToInt16(cbEstado.SelectedValue);
             datosFac.idtipopago = Convert.ToInt16(cbTipoPago.SelectedValue);
 
@@ -92,6 +92,39 @@ namespace Presentador
 
                 dgvFac.DataSource = listaFac.getLastIdFactura();
                 string idfac = this.dgvFac.CurrentRow.Cells[0].Value.ToString();
+                tbIdFac.Text = idfac;
+                if (cbTipoDoc.Text.Equals("Factura"))
+                {
+                    eCuentaXCobrar cuentaxcobrar = new eCuentaXCobrar();
+                    cuentaxcobrar.idtipocxc = 1;
+                    cuentaxcobrar.idvendedor = Convert.ToInt16(cbVendedor.SelectedValue);
+                    cuentaxcobrar.idfactura = Convert.ToInt16(idfac);
+                    cuentaxcobrar.fecha = dtpFecha.Value.ToShortDateString();
+                    cuentaxcobrar.idmoneda = Convert.ToInt16(cbMoneda.SelectedValue);
+                    cuentaxcobrar.total = 1;
+                    cuentaxcobrar.subtotal = 1;
+                    cuentaxcobrar.idcliente = Convert.ToInt16(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
+                    cuentaxcobrar.idestado = Convert.ToInt16(cbEstado.SelectedValue);
+
+                    nCuentaXCobrar cuenxcobr = new nCuentaXCobrar();
+                    bool result1 = cuenxcobr.insertCuentaxCobrar(cuentaxcobrar);
+                    dgvCXC.DataSource = cuenxcobr.getLastIdCXC();
+                    tbCxC.Text =  this.dgvCXC.CurrentRow.Cells[0].Value.ToString();
+
+
+                }
+
+                
+
+                //if (result1 != false)
+                //{
+                //    MessageBox.Show("Registro Insertado ", "Insercion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Fallo Registro Insertado cuentaxcobrar", "Fallo Insercion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
+
 
                 //DataTable id = new DataTable();                
                 //id = getid.getFacturaid();
@@ -102,7 +135,7 @@ namespace Presentador
             }
             else
             {
-                MessageBox.Show("Fallo Registro Insertado", "Fallo Insercion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Fallo Registro Insertado factura", "Fallo Insercion Factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -142,8 +175,8 @@ namespace Presentador
             datosFac.total = Convert.ToInt16(tbTotal.Text);
             datosFac.subtotal = Convert.ToInt16(tbTotal.Text);
             datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
-            datosFac.fecha = dtpFecha.Value;
-            //datosFac.tipodocumento = tbTipoDocumento.Text;
+            datosFac.fecha = dtpFecha.Value.ToShortDateString();
+            datosFac.tipodocumento = cbTipoDoc.Text;
             datosFac.impuesto = Convert.ToInt16(tbTotal.Text);
             datosFac.idestado = Convert.ToInt16(cbEstado.SelectedValue);
             datosFac.idtipopago = Convert.ToInt16(cbTipoPago.SelectedValue);
@@ -174,8 +207,9 @@ namespace Presentador
             eDetalleFactura detFac = new eDetalleFactura();
             detalleFactura.MdiParent = this.ParentForm;
 
-            detFac.idfactura = Convert.ToInt16(this.dgvFac.CurrentRow.Cells[0].Value.ToString());
-            detalleFactura.idfactura = detFac.idfactura;
+            //detFac.idfactura = Convert.ToInt16(this.dgvFac.CurrentRow.Cells[0].Value.ToString());
+            //tbIdFac.Text = Convert.ToString(detFac.idfactura);
+            detalleFactura.idfactura = Convert.ToInt16(tbIdFac.Text);
             detalleFactura.Show();
             
             
@@ -201,10 +235,71 @@ namespace Presentador
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             nDetalleFactura nDetlleFac = new nDetalleFactura();
+            //string idFac = this.dgvFac.CurrentRow.Cells[0].Value.ToString();
+            //tbIdFac.Text = idFac;
             dgvDetalleFactura.DataSource = nDetlleFac.getAllDetalleFac(tbIdFac.Text);
+            double precio = 0;
+            double cantidad = 0;
+            double total = 0;
+            double total1 = 0;
+            for (int i = 0; i < dgvDetalleFactura.RowCount; i++)
+            {
+
+                
+                precio = Convert.ToDouble(this.dgvDetalleFactura.Rows[i].Cells[3].Value.ToString());
+                cantidad = Convert.ToDouble(this.dgvDetalleFactura.Rows[i].Cells[2].Value.ToString());
+                total = precio * cantidad;
+                total1 = total1 + total;
+
+                //total = 0;
+                MessageBox.Show("" + total1, "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+
+
+            }
+            double iva =  1- (1 / 1.12);
+            double subtotal = (total1 / 1.12);
+            double impu = (total1 * iva);
+
+            eFactura efac = new eFactura();
+            efac.total = total1;
+            efac.subtotal = subtotal;
+            efac.impuesto = impu;
+
+            nFactura nfactur =new nFactura();
+            string fac =  tbIdFac.Text;
+            nfactur.updateSaldo(efac, fac);
+            tbTotal.Text = Convert.ToString(total1);
+
+            double idcliente = Convert.ToDouble(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
+            double saldoCliente = Convert.ToDouble(this.dgvCliente.CurrentRow.Cells[4].Value.ToString());
+            double totalSaldo = saldoCliente + total1;
+            int cliente  =  Convert.ToInt16(idcliente);
+            nfactur.updateClienteSaldo(totalSaldo, cliente);
+
+            dgvCliente.DataSource = nfactur.getAllCliente();
+
 
             
+            //Actualizar cuentas por cobrar
+            nCuentaXCobrar cuentaxc = new nCuentaXCobrar();
+            dgvCXC.DataSource = cuentaxc.getidcuentasxcobrar(fac);
+            tbCxC.Text = this.dgvCXC.CurrentRow.Cells[0].Value.ToString();
+            
+            int idcue = Convert.ToInt16(tbCxC.Text);
+            cuentaxc.updateSaldoCuenta(total1, subtotal, idcue);
 
-         }
+
+
+
+
+
+
+
+
+
+        }
+
+       
     }
 }

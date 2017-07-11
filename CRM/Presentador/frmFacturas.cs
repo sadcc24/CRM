@@ -38,8 +38,9 @@ namespace Presentador
             string Fecha = this.dgvFacturas.CurrentRow.Cells[8].Value.ToString();
             facRegistro.dtpFecha.Text = Fecha;
 
-            string Total = this.dgvFacturas.CurrentRow.Cells[7].Value.ToString();
+            string Total = this.dgvFacturas.CurrentRow.Cells[2].Value.ToString();
             facRegistro.tbTotal.Text = Total;
+
 
 
 
