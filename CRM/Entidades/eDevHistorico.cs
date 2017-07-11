@@ -6,17 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class eHistorico
+    public class eDevHistorico
     {
-        public int idcuentacxc { get; set; }
+        public int idcuentaporcobrar { get; set; }
         public int idcliente { get; set; }
-
         public int idtipocxc { get; set; }
-
-        public string Fecha { get; set; }
-
-        public string cantidadPagada { get; set; }
-
-        public double saldo { get; set; }
+        public string fechapago { get; set; }
+        public string  cantidadpagada { get; set; }
+        public string saldorestante { get; set; }
     }
 }

@@ -146,9 +146,21 @@ namespace Presentador
 
         private void cajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             frmCaja caja = new frmCaja();
             caja.MdiParent = this;
             caja.Show();
+        }
+
+        private void cancelacionCuentaACobrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCancelacionCXC cancel = new frmCancelacionCXC();
+            cancel.MdiParent = this;
+            cancel.Show();
         }
     }
 }

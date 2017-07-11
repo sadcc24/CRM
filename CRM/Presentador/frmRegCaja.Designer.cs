@@ -28,79 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txttipodevolucion = new System.Windows.Forms.ComboBox();
+            this.cbTransaccion = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.btnAyuda = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.txtCaja = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txttipodevolucion
+            // cbTransaccion
             // 
-            this.txttipodevolucion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttipodevolucion.FormattingEnabled = true;
-            this.txttipodevolucion.Items.AddRange(new object[] {
+            this.cbTransaccion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTransaccion.FormattingEnabled = true;
+            this.cbTransaccion.Items.AddRange(new object[] {
             "Factura"});
-            this.txttipodevolucion.Location = new System.Drawing.Point(168, 124);
-            this.txttipodevolucion.Name = "txttipodevolucion";
-            this.txttipodevolucion.Size = new System.Drawing.Size(174, 27);
-            this.txttipodevolucion.TabIndex = 92;
-            this.txttipodevolucion.SelectedIndexChanged += new System.EventHandler(this.txttipodevolucion_SelectedIndexChanged);
+            this.cbTransaccion.Location = new System.Drawing.Point(194, 124);
+            this.cbTransaccion.Name = "cbTransaccion";
+            this.cbTransaccion.Size = new System.Drawing.Size(174, 27);
+            this.cbTransaccion.TabIndex = 92;
+            this.cbTransaccion.SelectedIndexChanged += new System.EventHandler(this.txttipodevolucion_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 129);
+            this.label1.Location = new System.Drawing.Point(12, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 19);
+            this.label1.Size = new System.Drawing.Size(177, 19);
             this.label1.TabIndex = 93;
-            this.label1.Text = "Cuenta por Cobrar:";
+            this.label1.Text = "Documentos/Transaccion:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 184);
+            this.label2.Location = new System.Drawing.Point(131, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 19);
             this.label2.TabIndex = 94;
             this.label2.Text = "Estado:";
             // 
-            // comboBox1
+            // cbEstado
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Factura"});
-            this.comboBox1.Location = new System.Drawing.Point(168, 180);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 27);
-            this.comboBox1.TabIndex = 95;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(139, 247);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 23);
-            this.button1.TabIndex = 96;
-            this.button1.Text = "Cancelacion Cuenta Por Cobrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cbEstado.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(194, 176);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(174, 27);
+            this.cbEstado.TabIndex = 95;
             // 
             // btnAyuda
             // 
             this.btnAyuda.BackColor = System.Drawing.SystemColors.Control;
             this.btnAyuda.BackgroundImage = global::Presentador.Properties.Resources.help;
             this.btnAyuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAyuda.Location = new System.Drawing.Point(351, 22);
+            this.btnAyuda.Location = new System.Drawing.Point(304, 22);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(51, 49);
             this.btnAyuda.TabIndex = 91;
@@ -111,22 +96,12 @@
             this.btnEditar.BackColor = System.Drawing.SystemColors.Control;
             this.btnEditar.BackgroundImage = global::Presentador.Properties.Resources.editar;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Location = new System.Drawing.Point(87, 22);
+            this.btnEditar.Location = new System.Drawing.Point(138, 22);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(51, 49);
             this.btnEditar.TabIndex = 90;
             this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnActualizar.BackgroundImage = global::Presentador.Properties.Resources.refresh;
-            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnActualizar.Location = new System.Drawing.Point(297, 22);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(51, 49);
-            this.btnActualizar.TabIndex = 89;
-            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCancelar
             // 
@@ -149,48 +124,33 @@
             this.btnGuardar.Size = new System.Drawing.Size(51, 49);
             this.btnGuardar.TabIndex = 87;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnEliminar
+            // txtCaja
             // 
-            this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.BackgroundImage = global::Presentador.Properties.Resources.eliminar;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.Location = new System.Drawing.Point(139, 22);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(51, 49);
-            this.btnEliminar.TabIndex = 86;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNuevo.BackgroundImage = global::Presentador.Properties.Resources.nuevo;
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnNuevo.Location = new System.Drawing.Point(35, 22);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(51, 49);
-            this.btnNuevo.TabIndex = 85;
-            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.txtCaja.Location = new System.Drawing.Point(16, 88);
+            this.txtCaja.Name = "txtCaja";
+            this.txtCaja.Size = new System.Drawing.Size(100, 20);
+            this.txtCaja.TabIndex = 96;
+            this.txtCaja.Visible = false;
             // 
             // frmRegCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 296);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtCaja);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txttipodevolucion);
+            this.Controls.Add(this.cbTransaccion);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnNuevo);
             this.Name = "frmRegCaja";
             this.Text = "Registro de Documentos";
+            this.Load += new System.EventHandler(this.frmRegCaja_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,15 +160,12 @@
 
         private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnNuevo;
-        public System.Windows.Forms.ComboBox txttipodevolucion;
+        public System.Windows.Forms.ComboBox cbTransaccion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.ComboBox cbEstado;
+        public System.Windows.Forms.TextBox txtCaja;
     }
 }

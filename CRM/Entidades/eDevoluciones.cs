@@ -26,6 +26,7 @@ namespace Entidades
 
         public int idfactura { get; set; }
         public int idestado { get; set; }
+        public string totaldevolucion { get; set; }
         
     }
 }

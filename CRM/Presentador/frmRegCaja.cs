@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,51 @@ namespace Presentador
             cancelacion.MdiParent = this.ParentForm;
             cancelacion.Show();
             this.Hide();
+        }
+
+        private void frmRegCaja_Load(object sender, EventArgs e)
+        {
+            nDevoluciones transa = new nDevoluciones();
+            cbEstado.DataSource = transa.getEstado();
+            cbEstado.ValueMember = "idestado";
+            cbEstado.DisplayMember = "estado";
+
+            cbTransaccion.DataSource = transa.transacciones();
+            cbTransaccion.ValueMember = "idtransaccion";
+            cbTransaccion.DisplayMember = "docref";
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            nDevoluciones insert = new nDevoluciones();
+            bool result = insert.insertTransaccion(cbEstado.SelectedValue.ToString(), cbTransaccion.SelectedValue.ToString());
+
+            if (result != false)
+            {
+                MessageBox.Show("Insercion Exitosa", "Caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+            }
+            else
+            {
+                MessageBox.Show("Fallo Insercion", "Caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            nDevoluciones editCaja = new nDevoluciones();
+            bool result = editCaja.updateTrx(txtCaja.Text, cbEstado.SelectedValue.ToString());
+
+
+            if (result != false)
+            {
+                MessageBox.Show("Update Exitosa", "Caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Fallo Update", "Caja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -34,6 +34,56 @@ namespace Negocio
             return DataDev;
         } 
 
+        public DataTable getTipocxc()
+        {
+            DataTable cliente = new DataTable();
+            cliente = cnn.Select(@"select idtipocxc,nombre from TIPO_CXC");
+
+            return cliente;
+        }
+
+        public DataTable getEstado()
+        {
+            DataTable estado = new DataTable();
+            estado = cnn.Select("SELECT idestado,estado FROM ESTADO");
+            return estado;
+        }
+
+        public DataTable transacciones()
+        {
+            DataTable trx = new DataTable();
+            trx = cnn.Select("SELECT idtransaccion,docref FROM TRANSACCION");
+            return trx;
+        }
+
+        public bool insertTransaccion(string uuidEstado, string uuidTrx)
+        {
+            try
+            {
+                cnn.Insert(string.Format("INSERT INTO CAJA VALUES({0},NULL,{1})",uuidEstado,uuidTrx));
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
+        public bool updateTrx(string uuidCaja,string uuidEstado)
+        {
+            try
+            {
+                cnn.Update(string.Format(@"UPDATE CAJA SET idestado = {0} where idcaja = {1}",uuidEstado,uuidCaja));
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
         public DataTable getClients()
         {
             DataTable cliente = new DataTable();
@@ -56,10 +106,10 @@ namespace Negocio
         {
             DataTable cxc = new DataTable();
             cxc = cnn.Select(string.Format(@"SELECT idcuentaporcobrar,CXC.idcliente, 
-            CLI.nombre,pagocuota FROM CUENTAS_POR_COBRAR AS CXC
+            CLI.nombre, cantidadCuotas,cantidadPago FROM CUENTAS_POR_COBRAR AS CXC
             INNER JOIN CLIENTE AS CLI
             ON CLI.idcliente = CXC.idcliente 
-            WHERE CXC.idcliente ={0}", idCliente));
+            WHERE CXC.idcliente = {0}", idCliente));
             return cxc;
         }
 
@@ -180,11 +230,39 @@ namespace Negocio
             
         }
 
-        public DataTable historicocxc(string uuiddoc)
+        public DataTable historicocxc(string uuiddoc, string idcliente)
         {
             DataTable historico = new DataTable();
-            historico = cnn.Select(string.Format(@"SELECT * from HISTORICA_CXC WHERE idcuentaporcobrar = {0}",uuiddoc));
+            historico = cnn.Select(string.Format(@"SELECT hcxc.idhistoricocxc as [ID], 
+            hcxc.idcuentaporcobrar as [ID Cuenta por Cobrar],
+            CXC.descripcion as [Cuenta por Cobrar], hcxc.idcliente as [ID Cliente],
+
+            hcxc.idtipocxc as ID,
+            tcxc.nombre as [TIPO],
+            hcxc.fechapago as Fecha,
+            hcxc.cantidadpagada as [Cantidad Pagada],
+            hcxc.saldorestante as Saldo
+            from HISTORICA_CXC as hcxc
+            inner join CUENTAS_POR_COBRAR as CXC
+            on CXC.idcuentaporcobrar = hcxc.idcuentaporcobrar
+            inner join TIPO_CXC as tcxc
+            on tcxc.idtipocxc = hcxc.idtipocxc
+            WHERE hcxc.idcuentaporcobrar = {0} AND hcxc.idcliente = {1} order by fechapago ASC ", uuiddoc, idcliente));
             return historico;
+        }
+
+        public bool deleteHistorico (string uuidHistorico)
+        {
+            try
+            {
+                cnn.Delete(string.Format(@"DELETE HISTORICA_CXC WHERE idhistoricocxc = {0}",uuidHistorico));
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
         }
 
         public void insertMovimientoInventario(eMovimientoDev mdev)
@@ -192,6 +270,63 @@ namespace Negocio
             cnn.Insert(string.Format("INSERT INTO DETALLEMOVIMIENTOINVENTARIO VALUES({0},{1},{2},{3},{4},{5})", mdev.idbodega,mdev.idmovimiento,mdev.idproducto,mdev.cantidad,mdev.costo,mdev.precio));
         }
 
+
+
+        public DataTable checkdatacxc(string uuidFactura)
+        {
+            DataTable check = new DataTable();
+            check = cnn.Select(string.Format(@"
+                IF EXISTS (SELECT * FROM CUENTAS_POR_COBRAR WHERE  idfactura = {0})
+                BEGIN
+                  SELECT 'TRUE' AS RESULT
+                END
+                ELSE
+                BEGIN
+                  SELECT 'FALSE' AS RESULT 
+                END",uuidFactura));
+            return check;
+        }
+
+
+        public bool devolucioncxc(string uuidFactura, string uuidDevolucion)
+        {
+            try
+            {
+                cnn.Update(string.Format(@"UPDATE CUENTAS_POR_COBRAR SET iddevolucion={0} WHERE idfactura ={1}", uuidDevolucion, uuidFactura));
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
+
+
+        public DataTable checkSaldo(string uuidCliente)
+        {
+            DataTable saldo = new DataTable();
+            saldo = cnn.Select(string.Format(@"SELECT TOP(1) saldorestante, fechapago,idcliente,cantidadpagada From HISTORICA_CXC where idcliente = {0} order by fechapago DESC", uuidCliente));
+            return saldo;
+        }
+
+        public DataTable getidcxc(string uuidFactura, string uuidDevolucion)
+        {
+            DataTable result = new DataTable();
+            result = cnn.Select(string.Format(@"SELECT idcuentaporcobrar,idcliente FROM CUENTAS_POR_COBRAR WHERE  idfactura ={0} AND iddevolucion ={1}", uuidFactura, uuidDevolucion));
+            return result;
+        }
+
+        public void updateHistorico(eDevHistorico d,string fecha, string uuidCliente)
+        {
+            cnn.Update(string.Format(@"UPDATE HISTORICA_CXC SET saldorestante = {0} WHERE idcliente = {1} AND fechapago = {2}",d.saldorestante,uuidCliente,fecha));
+        }
+
+        public void insertHistorico(eDevHistorico dev)
+        {
+            //string query = (string.Format(@"INSERT INTO HISTORICA_CXC VALUES({0},{1},{2},{3},{4},{5})", dev.idcuentaporcobrar, dev.idcliente, dev.idtipocxc, dev.fechapago, dev.cantidadpagada, dev.saldorestante));
+            cnn.Insert(string.Format(@"INSERT INTO HISTORICA_CXC VALUES({0},{1},{2},'{3}',{4},{5})",dev.idcuentaporcobrar,dev.idcliente,dev.idtipocxc,dev.fechapago,dev.cantidadpagada,dev.saldorestante));
+        }
         //public DataTable getAllProveedor()
         //{
         //    DataTable proveedor = new DataTable();
@@ -261,7 +396,7 @@ namespace Negocio
             try
             {
                 string query = string.Format("INSERT INTO DEVOLUCIONES VALUES('{0}','{1}',{2},{3},{4},{5},{6},{7},{8})", dev.fechaDevolucion, dev.motivodev, dev.tipodev, dev.tipodocumento, dev.idcliente, dev.idmoneda, dev.idvendedor, dev.idfactura, dev.idestado);
-                cnn.Insert(string.Format("INSERT INTO DEVOLUCIONES VALUES('{0}','{1}',{2},'{3}',{4},{5},{6},{7},{8})", dev.fechaDevolucion, dev.motivodev, dev.tipodev, dev.tipodocumento, dev.idcliente, dev.idmoneda, dev.idvendedor, dev.idfactura, dev.idestado));
+                cnn.Insert(string.Format("INSERT INTO DEVOLUCIONES VALUES('{0}','{1}',{2},'{3}',{4},{5},{6},{7},{8},{9})", dev.fechaDevolucion, dev.motivodev, dev.tipodev, dev.tipodocumento, dev.idcliente, dev.idmoneda, dev.idvendedor, dev.idfactura, dev.idestado,dev.totaldevolucion));
                 return true;
             }
             catch (Exception ex)
@@ -301,12 +436,16 @@ namespace Negocio
         //}
 
 
-        public bool deletedevolucion(string iddev)
+        public bool deletedevolucion(string iddev, string uuidFactura)
         {
             try
             {
+                string query = string.Format(@"UPDATE CUENTAS_POR_COBRAR SET iddevolucion= NULL WHERE idfactura ={0}", uuidFactura);
+                cnn.Update(string.Format(@"UPDATE CUENTAS_POR_COBRAR SET iddevolucion= NULL WHERE idfactura ={0}", uuidFactura));
                 cnn.Delete(string.Format(@"DELETE DETALLE_DEVOLUCION WHERE iddevolucion = {0}", iddev));
                 cnn.Delete(string.Format(@"DELETE DEVOLUCIONES WHERE iddevolucion = {0}", iddev));
+                
+
                 return true;
             }
             catch (Exception ex)
