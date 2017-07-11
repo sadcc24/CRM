@@ -10,7 +10,7 @@ namespace Datos
     public class ConnectionDBLocal
     {
 
-        MRP_BD cnn = new MRP_BD("alex", "123", "sad 17", @"JIAN\SQLEXPRESS");
+        MRP_BD cnn = new MRP_BD("", "", "", @"");
 
         public void Delete(string queryDelete)
         {

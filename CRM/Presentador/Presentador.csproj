@@ -65,6 +65,18 @@
     <Compile Include="frmCatalogClientes.Designer.cs">
       <DependentUpon>frmCatalogClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCatalogoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogoClientes.Designer.cs">
+      <DependentUpon>frmCatalogoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatalogoComision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogoComision.Designer.cs">
+      <DependentUpon>frmCatalogoComision.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCatalogoVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,17 +89,17 @@
     <Compile Include="frmClienteCXC.Designer.cs">
       <DependentUpon>frmClienteCXC.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmClientes.Designer.cs">
-      <DependentUpon>frmClientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCobrosProximos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCobrosProximos.Designer.cs">
       <DependentUpon>frmCobrosProximos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComision.Designer.cs">
+      <DependentUpon>frmComision.cs</DependentUpon>
     </Compile>
     <Compile Include="frmConceptos.cs">
       <SubType>Form</SubType>
@@ -197,12 +209,6 @@
     <Compile Include="frmRegCampania.Designer.cs">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRepCampaniasCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRepCampaniasCliente.Designer.cs">
-      <DependentUpon>frmRepCampaniasCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmtipocampania.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,17 +269,23 @@
     <EmbeddedResource Include="frmCatalogClientes.resx">
       <DependentUpon>frmCatalogClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogoClientes.resx">
+      <DependentUpon>frmCatalogoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogoComision.resx">
+      <DependentUpon>frmCatalogoComision.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoVendedores.resx">
       <DependentUpon>frmCatalogoVendedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClienteCXC.resx">
       <DependentUpon>frmClienteCXC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClientes.resx">
-      <DependentUpon>frmClientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCobrosProximos.resx">
       <DependentUpon>frmCobrosProximos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComision.resx">
+      <DependentUpon>frmComision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConceptos.resx">
       <DependentUpon>frmConceptos.cs</DependentUpon>
@@ -325,9 +337,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegCampania.resx">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRepCampaniasCliente.resx">
-      <DependentUpon>frmRepCampaniasCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtipocampania.resx">
       <DependentUpon>frmtipocampania.cs</DependentUpon>
