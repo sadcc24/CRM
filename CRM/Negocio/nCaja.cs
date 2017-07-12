@@ -11,7 +11,7 @@ namespace Negocio
 {
     public class nCaja
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
 
         public DataTable Caja()
         {

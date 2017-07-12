@@ -162,6 +162,13 @@ namespace Presentador
             cancel.MdiParent = this;
             cancel.Show();
         }
+
+        private void registroUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegisterUser cancel = new frmRegisterUser();
+            cancel.MdiParent = this;
+            cancel.Show();
+        }
     }
 }
 

@@ -22,3 +22,4 @@ C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Entidades\bin\Debug\Entidades.
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.dll
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache

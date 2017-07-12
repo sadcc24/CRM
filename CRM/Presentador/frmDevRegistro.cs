@@ -85,7 +85,39 @@ namespace Presentador
 
 
 
-                            //INSERCION DE MOVIMIENTO INVENTARIO DE DEVOLUCION VENTA
+                            //CAMBIO DE EXISTENCIA EN INVENTARIO
+                            nDevoluciones existencia = new nDevoluciones();
+                            DataTable cantidadProd = new DataTable();
+                            cantidadProd = existencia.getExistenciaProd(idev.idbodega.ToString(), idev.idproducto.ToString());
+
+                            double CantidadExist = Convert.ToDouble(cantidadProd.Rows[0]["CANTIDAD"].ToString());
+
+                            double Cantidanew = idev.cantidad + CantidadExist;
+
+                            //update existencia
+                            existencia.updateExistencia(idev.idbodega.ToString(), idev.idproducto.ToString(), Cantidanew.ToString());
+
+
+                            nDevoluciones productodetail = new nDevoluciones();
+                            DataTable detail = new DataTable();
+                            detail = productodetail.getProductDetail(idev.idproducto.ToString());
+
+
+
+                            eMovimientoDev movimiento = new eMovimientoDev();
+                            //obtiene idmovimiento
+                            DataTable mov = new DataTable();
+                            mov = productodetail.getMovimiento();
+
+                            movimiento.idbodega = idev.idbodega;
+                            movimiento.idmovimiento = Convert.ToInt32(mov.Rows[0]["idmovimiento"].ToString());
+                            movimiento.idproducto = idev.idproducto;
+                            movimiento.cantidad = idev.cantidad;
+                            movimiento.costo = detail.Rows[0]["costo"].ToString();
+                            movimiento.precio = detail.Rows[0]["precio"].ToString();
+
+                            productodetail.insertMovimientoInventario(movimiento);
+
                             //eMovimientoDev movdev = new eMovimientoDev();
                             //movdev.cantidad = idev.cantidad;
                             //movdev.idproducto = idev.idproducto;
@@ -124,6 +156,12 @@ namespace Presentador
 
 
                     }
+
+                    //movimiento inventario
+
+
+
+
                     //Cuenta por cobrar
                     DataTable checkData = new DataTable();
                     nDevoluciones check = new nDevoluciones();
@@ -152,8 +190,11 @@ namespace Presentador
                             h.cantidadpagada = saldo.Rows[0]["cantidadpagada"].ToString();
                             h.saldorestante = Convert.ToString(Total);
 
-                            check.updateHistorico(h, idcxc.Rows[0]["fechapago"].ToString(), idcxc.Rows[0]["idcliente"].ToString());
+                            check.updateHistorico(h, saldo.Rows[0]["fechapago"].ToString(), idcxc.Rows[0]["idcliente"].ToString());
 
+                            //update Factura
+                            nDevoluciones factura = new nDevoluciones();
+                            factura.updateFactura(dev.idfactura.ToString());
 
                         }
                         else
@@ -166,6 +207,9 @@ namespace Presentador
                             h.cantidadpagada = "0";
                             h.saldorestante = dev.totaldevolucion;
                             check.insertHistorico(h);
+                            //factura update
+                            nDevoluciones factura = new nDevoluciones();
+                            factura.updateFactura(dev.idfactura.ToString());
                         }
 
 

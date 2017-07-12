@@ -14,9 +14,11 @@ namespace Entidades
 
         public string rol { get; set; }
 
-        public bool status { get; set; }
+        public int status { get; set; }
 
         public string pregunta { get; set; }
+
+        public string respuesta = "CRM";
 
     }
 }
