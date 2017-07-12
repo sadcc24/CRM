@@ -41,6 +41,9 @@ namespace Presentador
             string Total = this.dgvFacturas.CurrentRow.Cells[2].Value.ToString();
             facRegistro.tbTotal.Text = Total;
 
+            //string tipopago = this.dgvFacturas.CurrentRow.Cells[6].Value.ToString();
+            //facRegistro.cbTipoPago.SelectedText = tipopago;
+
 
 
 

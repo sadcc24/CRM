@@ -11,7 +11,58 @@ namespace Negocio
 {
     public class nDevoluciones
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
+
+        public DataTable getExistenciaProd(string uuidbodega, string uuidproducto)
+        {
+            DataTable exist = new DataTable();
+            exist = cnn.Select(string.Format(@"SELECT * FROM EXISTENCIA WHERE idbodega = {0} AND idproducto={1}",uuidbodega,uuidproducto));
+            return exist;
+        }
+
+        public void updateFactura (string uuidFactura)
+        {
+            cnn.Update(string.Format(@"UPDATE FACTURA SET idestado = 0 where idfactura ={0}",uuidFactura));
+        }
+
+        public void insertMovimiento(eMovimientoDev mov)
+        {
+            cnn.Insert(string.Format(@"INSERT INTO DETALLEMOVIMIENTOINVENTARIO VALUES({0},{1},{2},{3},{4},)",mov.idbodega,mov.idmovimiento,mov.idproducto,mov.cantidad,mov.costo,mov.precio));
+        }
+
+        public DataTable getMovimiento()
+        {
+            DataTable exist = new DataTable();
+            exist = cnn.Select(string.Format(@"SELECT idmovimiento FROM MOVIMIENTOSINVENTARIO AS MI
+            INNER JOIN TIPOMOVIMIENTO AS TM
+            ON TM.idtipomovimiento = MI.idtipomovimiento
+            WHERE TM.descripcion ='Devolucion por Ventas'"));
+            return exist;
+        }
+
+        public DataTable getMovimientoVentas()
+        {
+            DataTable exist = new DataTable();
+            exist = cnn.Select(string.Format(@"SELECT idmovimiento FROM MOVIMIENTOSINVENTARIO AS MI
+            INNER JOIN TIPOMOVIMIENTO AS TM
+            ON TM.idtipomovimiento = MI.idtipomovimiento
+            WHERE TM.descripcion ='Ventas'"));
+            return exist;
+        }
+
+        public void updateExistencia(string uuidbodega, string uuidproducto, string candidad)
+        {
+            cnn.Update(string.Format(@"UPDATE EXISTENCIA SET CANTIDAD = {0} WHERE idbodega = {1} AND idproducto ={2}",candidad,uuidbodega,uuidproducto));
+        }
+
+        public DataTable getProductDetail(string uuidProducto)
+        {
+            DataTable detail = new DataTable();
+            detail = cnn.Select(string.Format(@"SELECT precio,costo FROM PRODUCTO WHERE idproducto={0}",uuidProducto));
+            return detail;
+        }
+
+
         public DataTable getAllDev()
         {
             DataTable DataDev = new DataTable();
@@ -19,7 +70,7 @@ namespace Negocio
             DataDev = cnn.Select(@"SELECT DEV.iddevolucion AS [ID], 
             DEV.fechadevolucion AS [FECHA], 
             DEV.descripcion AS [DESCRIPCION],TDEV.nombre AS [TIPO DEVOLUCION], 
-            DEV.tipodocumento AS [DOCUMENTO],CL.idcliente AS [ID CLIENTE], CL.nombre AS [NOMBRE CLIENTE],
+            DEV.tipodocumento AS [DOCUMENTO],CL.idcliente AS [ID CLIENTE], CL.primernombre +' '+CL.segundonombre AS [NOMBRE CLIENTE],
             MON.idmoneda AS [ID MONEDA],MON.nombre_moneda AS [MONEDA],VEND.idvendedor AS [ID VENDEDOR], VEND.nombre AS [VENDEDOR] ,
             DEV.idfactura [FACTURA] FROM DEVOLUCIONES AS DEV
             INNER JOIN TIPODEVOLUCION AS TDEV
@@ -87,9 +138,10 @@ namespace Negocio
         public DataTable getClients()
         {
             DataTable cliente = new DataTable();
-            cliente = cnn.Select(@"SELECT idcliente as ID, nombre as Nombre ,apellido as Apellido, EMP.nombre_empresa as Empresa FROM CLIENTE 
+            cliente = cnn.Select(@"SELECT idcliente as ID, primernombre as Nombre ,primerapellido as Apellido, EMP.nombre_empresa as Empresa FROM CLIENTE 
             INNER JOIN EMPRESA AS EMP
-            ON EMP.idempresa = CLIENTE.idempresa ");
+            ON EMP.idempresa = CLIENTE.idempresa 
+			WHERE primernombre is not null ");
 
             return cliente;
         }
@@ -98,7 +150,7 @@ namespace Negocio
         {
             DataTable facturas = new DataTable();
             facturas = cnn.Select(string.Format(@"SELECT idfactura AS [Factura],total AS [Total Factura],
-            fechafactura AS [Fecha Factura] FROM FACTURA WHERE idcliente = {0}",idCliente));
+            fechafactura AS [Fecha Factura] FROM FACTURA WHERE idcliente = {0} AND idestado = 1",idCliente));
             return facturas;
         }
 
@@ -106,7 +158,7 @@ namespace Negocio
         {
             DataTable cxc = new DataTable();
             cxc = cnn.Select(string.Format(@"SELECT idcuentaporcobrar,CXC.idcliente, 
-            CLI.nombre, cantidadCuotas,cantidadPago FROM CUENTAS_POR_COBRAR AS CXC
+            CLI.primernombre, cantidadCuotas,cantidadPago FROM CUENTAS_POR_COBRAR AS CXC
             INNER JOIN CLIENTE AS CLI
             ON CLI.idcliente = CXC.idcliente 
             WHERE CXC.idcliente = {0}", idCliente));
@@ -165,7 +217,7 @@ namespace Negocio
         public DataTable Cliente (string uuidCliente)
         {
             DataTable cl = new DataTable();
-            cl = cnn.Select(string.Format("SELECT nombre + ' '+ apellido as [Nombre Cliente] FROM CLIENTE where idcliente ={0}",uuidCliente));
+            cl = cnn.Select(string.Format("SELECT primernombre + ' '+ primerapellido as [Nombre Cliente] FROM CLIENTE where idcliente ={0}", uuidCliente));
             return cl;
         }
 
@@ -319,7 +371,7 @@ namespace Negocio
 
         public void updateHistorico(eDevHistorico d,string fecha, string uuidCliente)
         {
-            cnn.Update(string.Format(@"UPDATE HISTORICA_CXC SET saldorestante = {0} WHERE idcliente = {1} AND fechapago = {2}",d.saldorestante,uuidCliente,fecha));
+            cnn.Update(string.Format(@"UPDATE HISTORICA_CXC SET saldorestante = {0} WHERE idcliente = {1} AND fechapago = '{2}'",d.saldorestante,uuidCliente,fecha));
         }
 
         public void insertHistorico(eDevHistorico dev)

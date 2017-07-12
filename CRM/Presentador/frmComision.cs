@@ -26,13 +26,11 @@ namespace Presentador
             cbEmpresa.ValueMember = "idempresa";
             cbEmpresa.DisplayMember = "nombre_empresa";
 
-            cbmarca.DataSource = comision.marca();
-            cbmarca.ValueMember = "idmarca";
-            cbmarca.DisplayMember = "descripcion";
+            //cbmarca.DataSource = comision.marca();
+            //cbmarca.ValueMember = "idmarca";
+            //cbmarca.DisplayMember = "descripcion";
 
-            cbproducto.DataSource = comision.producto();
-            cbproducto.ValueMember = "idproducto";
-            cbproducto.DisplayMember = "descripcion";
+
 
             cbvendedor.DataSource = comision.vendedores();
             cbvendedor.ValueMember = "idvendedor";
@@ -44,8 +42,25 @@ namespace Presentador
             eComision comision = new eComision();
             comision.estado = 1;
             comision.empresa = Convert.ToInt32(cbEmpresa.SelectedValue.ToString());
-            comision.marca = Convert.ToInt32(cbmarca.SelectedValue.ToString());
-            comision.producto = Convert.ToInt32(cbproducto.SelectedValue.ToString());
+            if (cbmarca.Text == "")
+            {
+                comision.marca = "NULL";
+            }
+            else
+            {
+                comision.marca = cbmarca.SelectedValue.ToString();
+            }
+
+            if (cbproducto.Text == "")
+            {
+                comision.producto = "NULL";
+            }
+            else
+            {
+                comision.producto = cbproducto.SelectedValue.ToString();
+            }
+
+
             comision.vendedor = Convert.ToInt32(cbvendedor.SelectedValue.ToString());
             comision.comision = txtcomision.Text;
 
@@ -66,8 +81,8 @@ namespace Presentador
 
         }
 
-    
-       
+
+
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
@@ -75,8 +90,23 @@ namespace Presentador
             comision.comision = txtcomision.Text;
             comision.empresa = Convert.ToInt32(cbEmpresa.SelectedValue.ToString());
             comision.estado = 1;
-            comision.marca = Convert.ToInt32(cbmarca.SelectedValue.ToString());
-            comision.producto = Convert.ToInt32(cbproducto.SelectedValue.ToString());
+            if (cbmarca.Text == "")
+            {
+                comision.marca = "NULL";
+            }
+            else
+            {
+                comision.marca = cbmarca.SelectedValue.ToString();
+            }
+
+            if (cbproducto.Text == "")
+            {
+                comision.producto = "NULL";
+            }
+            else
+            {
+                comision.producto = cbproducto.SelectedValue.ToString();
+            }
             comision.vendedor = Convert.ToInt32(cbvendedor.SelectedValue.ToString());
 
             nComision c = new nComision();
@@ -119,5 +149,40 @@ namespace Presentador
             }
         }
 
+        private void rdMarca_CheckedChanged(object sender, EventArgs e)
+        {
+            nComision comision = new nComision();
+            cbproducto.DataSource = comision.producto();
+            cbproducto.ValueMember = "idproducto";
+            cbproducto.DisplayMember = "descripcion";
+
+            cbmarca.DataSource = null;
+
+            cbproducto.Enabled = true;
+            cbmarca.Enabled = false;
+
+        }
+
+        private void rbProducto_CheckedChanged(object sender, EventArgs e)
+        {
+            cbproducto.DataSource = null;
+            cbproducto.Enabled = false;
+            cbmarca.Enabled = true;
+
+            nComision comision = new nComision();
+            cbmarca.DataSource = comision.marca();
+            cbmarca.ValueMember = "idmarca";
+            cbmarca.DisplayMember = "descripcion";
+        }
+
+        private void cbproducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbmarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

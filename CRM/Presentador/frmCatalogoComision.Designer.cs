@@ -44,7 +44,7 @@
             this.dgvcomision.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvcomision.Location = new System.Drawing.Point(26, 81);
             this.dgvcomision.Name = "dgvcomision";
-            this.dgvcomision.Size = new System.Drawing.Size(554, 274);
+            this.dgvcomision.Size = new System.Drawing.Size(607, 274);
             this.dgvcomision.TabIndex = 128;
             this.dgvcomision.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcomision_CellClick);
             // 
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 335);
+            this.ClientSize = new System.Drawing.Size(659, 377);
             this.Controls.Add(this.dgvcomision);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnactualizar);

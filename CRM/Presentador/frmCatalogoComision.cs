@@ -46,11 +46,11 @@ namespace Presentador
             comision.cbvendedor.Text = nombre;
 
             string porcentaje = this.dgvcomision.CurrentRow.Cells[3].Value.ToString();
-            comision.txtcomision.Text = porcentaje;
+            comision.txtcomision.Text = porcentaje.Replace(",",".");
             string empresa = this.dgvcomision.CurrentRow.Cells[4].Value.ToString();
             comision.cbEmpresa.Text = empresa;
-            string producto = this.dgvcomision.CurrentRow.Cells[6].Value.ToString();
-            comision.cbproducto.Text = producto;
+            //string producto = this.dgvcomision.CurrentRow.Cells[6].Value.ToString();
+            //comision.cbproducto.Text = producto;
 
             comision.MdiParent = this.ParentForm;
             comision.Show();

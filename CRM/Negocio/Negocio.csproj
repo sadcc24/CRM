@@ -54,6 +54,7 @@
     <Compile Include="nLogin.cs" />
     <Compile Include="nVendedores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

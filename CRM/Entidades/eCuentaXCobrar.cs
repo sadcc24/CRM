@@ -31,5 +31,9 @@ namespace Entidades
         public int iddetallepago { get; set; }
 
         public int iddevolucion { get; set; }
+
+        public int cantidadCuotas { get; set; }
+
+        public double cantidadPago { get; set; }
     }
 }

@@ -12,7 +12,8 @@ namespace Negocio
 {
     public class nListaPrecio
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        //ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
         public DataTable getAllListaPrecio()
         {
             DataTable ListaPrecio = new DataTable();
@@ -21,13 +22,11 @@ namespace Negocio
                         dbo.LISTAPRECIOS.descripcion as [Descripcion],
                         dbo.LISTAPRECIOS.preciounitario as [Precio Unitario],
                         dbo.ESTADO.estado as [Estado],
-                        dbo.EMPRESA.nombre_empresa as [Nombre Empresa],
                         dbo.PRODUCTO.descripcion as [Producto],
                         dbo.TIPOLISTAPRECIO.nombre as [Lista Precios]
                         FROM dbo.LISTAPRECIOS
                         INNER JOIN dbo.ESTADO ON dbo.LISTAPRECIOS.idestado = dbo.ESTADO.idestado
-                        INNER JOIN dbo.EMPRESA ON dbo.LISTAPRECIOS.idempresa = dbo.EMPRESA.idempresa
-                        INNER JOIN dbo.PRODUCTO ON dbo.PRODUCTO.idempresa = dbo.EMPRESA.idempresa AND dbo.LISTAPRECIOS.idproducto = dbo.PRODUCTO.idproducto
+                        INNER JOIN dbo.PRODUCTO ON dbo.LISTAPRECIOS.idproducto = dbo.PRODUCTO.idproducto
                         INNER JOIN dbo.TIPOLISTAPRECIO ON dbo.LISTAPRECIOS.idtipolistaprecio = dbo.TIPOLISTAPRECIO.idtipolistaprecio");
             return ListaPrecio;
         }
@@ -36,7 +35,8 @@ namespace Negocio
         {
             try
             {
-                cnn.Insert(string.Format("INSERT INTO LISTAPRECIOS(descripcion,preciounitario,idproducto,idtipolistaprecio,idestado,idempresa) VALUES('{0}',{1},{2},{3},{4},{5})", precios.descripcion, precios.precio, precios.producto,precios.idtipolista,precios.estado, precios.empresa));
+                string query = string.Format("INSERT INTO LISTAPRECIOS(descripcion,preciounitario,idproducto,idtipolistaprecio,idestado) VALUES('{0}',{1},{2},{3},{4})", precios.descripcion, precios.precio, precios.producto, precios.idtipolista, precios.estado);
+                cnn.Insert(string.Format("INSERT INTO LISTAPRECIOS(descripcion,preciounitario,idproducto,idtipolistaprecio,idestado) VALUES('{0}',{1},{2},{3},{4})", precios.descripcion, precios.precio, precios.producto,precios.idtipolista,precios.estado));
                 
                 return true;
             }
@@ -66,7 +66,7 @@ namespace Negocio
         {
             try
             {
-                cnn.Update(string.Format("UPDATE LISTAPRECIOS SET idtipolistaprecio = {0}, descripcion = '{1}', preciounitario = {2}, idproducto={3}, idestado = {4}, idempresa ={5}  WHERE idlistaprecio = {6}", listaPrecio.idtipolista, listaPrecio.descripcion, listaPrecio.precio, listaPrecio.producto, listaPrecio.estado,listaPrecio.empresa, idLP));
+                cnn.Update(string.Format("UPDATE LISTAPRECIOS SET idtipolistaprecio = {0}, descripcion = '{1}', preciounitario = {2}, idproducto={3}, idestado = {4}  WHERE idlistaprecio = {6}", listaPrecio.idtipolista, listaPrecio.descripcion, listaPrecio.precio, listaPrecio.producto, listaPrecio.estado, idLP));
                 return true;
             }
             catch (Exception ex)

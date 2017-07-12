@@ -42,15 +42,34 @@ namespace Presentador
 
             if (result != false)
             {
-                int cantProd = Convert.ToInt16(tbCantidad.Text);
+                double cantProd = Convert.ToDouble(tbCantidad.Text);
                 int idprod = Convert.ToInt16(producto);
-                int cantidadActual = Convert.ToInt16(this.dgvProductos.CurrentRow.Cells[2].Value.ToString());
-                int cantidadModificar = cantidadActual - cantProd;
-                bool result2 = insertDetFac.updateProducto(cantidadModificar, idprod);
+                double cantidadActual = Convert.ToDouble(this.dgvProductos.CurrentRow.Cells[2].Value.ToString());
+                int bodega =  Convert.ToInt16(this.dgvProductos.CurrentRow.Cells[4].Value.ToString());
+                double cantidadModificar = cantidadActual - cantProd;
+                bool result2 = insertDetFac.updateProducto(cantidadModificar, idprod , bodega);
                 if (result != false)
                 {
                     nDetalleFactura DetFact = new nDetalleFactura();
                     dgvProductos.DataSource = DetFact.getAllProductos();
+
+
+                    nDevoluciones productodetail = new nDevoluciones();
+                    DataTable detail = new DataTable();
+                    detail = productodetail.getProductDetail(Convert.ToString(idprod));
+
+
+                    eMovimientoDev movimiento = new eMovimientoDev();
+                    //obtiene idmovimiento
+                    DataTable mov = new DataTable();
+                    mov = productodetail.getMovimientoVentas();
+
+                    movimiento.idbodega = bodega;
+                    movimiento.idmovimiento = Convert.ToInt32(mov.Rows[0]["idmovimiento"].ToString());
+                    movimiento.idproducto = idprod;
+                    movimiento.cantidad = Convert.ToInt16(cantProd);
+                    movimiento.costo = detail.Rows[0]["costo"].ToString();
+                    movimiento.precio = detail.Rows[0]["precio"].ToString();
                     //MessageBox.Show("Actualizado exitoso productos", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 MessageBox.Show("Ingreso Exitoso", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -113,7 +132,7 @@ namespace Presentador
                 string cantidadprod = this.dgvProductos.CurrentRow.Cells[2].Value.ToString();
 
                 int cantSeleccionada = Convert.ToInt16(tbCantidad.Text);
-                int cantExistencia = Convert.ToInt16(cantidadprod);
+                double cantExistencia = Convert.ToDouble(cantidadprod);
 
                 if (cantSeleccionada > cantExistencia)
                 {
