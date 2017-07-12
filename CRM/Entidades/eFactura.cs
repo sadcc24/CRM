@@ -16,13 +16,13 @@ namespace Entidades
 
         public int idmoneda { get; set; }
 
-        public int total { get; set; }
+        public double total { get; set; }
 
-        public int subtotal { get; set; }
+        public double subtotal { get; set; }
 
-        public int impuesto { get; set; }
+        public double impuesto { get; set; }
 
-        public DateTime fecha { get; set; }
+        public string fecha { get; set; }
 
         public string tipodocumento { get; set; }
 

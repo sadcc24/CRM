@@ -121,18 +121,19 @@
             // dgvclientes
             // 
             this.dgvclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvclientes.Location = new System.Drawing.Point(12, 99);
+            this.dgvclientes.Location = new System.Drawing.Point(32, 89);
             this.dgvclientes.Name = "dgvclientes";
-            this.dgvclientes.Size = new System.Drawing.Size(554, 274);
-            this.dgvclientes.TabIndex = 112;
-            this.dgvclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvclientes_CellContentClick_1);
+            this.dgvclientes.Size = new System.Drawing.Size(897, 272);
+            this.dgvclientes.TabIndex = 113;
+            this.dgvclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvclientes_CellContentClick);
+            this.dgvclientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvclientes_CellDoubleClick_1);
             // 
             // frmCatalogClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(598, 415);
+            this.ClientSize = new System.Drawing.Size(997, 706);
             this.Controls.Add(this.dgvclientes);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.button1);
@@ -159,6 +160,6 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimerReg;
         private System.Windows.Forms.Button btnnuevo;
-        public System.Windows.Forms.DataGridView dgvclientes;
+        private System.Windows.Forms.DataGridView dgvclientes;
     }
 }

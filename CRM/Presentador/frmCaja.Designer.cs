@@ -46,6 +46,7 @@
             this.dgvCaja.Name = "dgvCaja";
             this.dgvCaja.Size = new System.Drawing.Size(480, 228);
             this.dgvCaja.TabIndex = 112;
+            this.dgvCaja.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCaja_CellDoubleClick);
             // 
             // btnAyuda
             // 
@@ -68,6 +69,7 @@
             this.button1.Size = new System.Drawing.Size(51, 49);
             this.button1.TabIndex = 118;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnUltimoReg
             // 

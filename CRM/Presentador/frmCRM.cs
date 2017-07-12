@@ -71,9 +71,9 @@ namespace Presentador
 
         private void ingresoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmClientes IngresoClientes = new frmClientes();
-            IngresoClientes.MdiParent = this;
-            IngresoClientes.Show();
+            //frmClientes IngresoClientes = new frmClientes();
+            //IngresoClientes.MdiParent = this;
+            //IngresoClientes.Show();
         }
 
         private void catalogoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace Presentador
 
         private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCatalogoVendedores consultavendedor = new frmCatalogoVendedores();
+            frmConsultaVendedores consultavendedor = new frmConsultaVendedores();
             consultavendedor.MdiParent = this;
             consultavendedor.Show();
         }
@@ -146,24 +146,22 @@ namespace Presentador
 
         private void cajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             frmCaja caja = new frmCaja();
             caja.MdiParent = this;
             caja.Show();
         }
 
-        private void comisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cancelacionCuentaACobrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
-            frmCatalogoComision comision = new frmCatalogoComision();
-            comision.MdiParent = this;
-            comision.Show();
-        }
- 
-
-
-
+            frmCancelacionCXC cancel = new frmCancelacionCXC();
+            cancel.MdiParent = this;
+            cancel.Show();
         }
     }
-
+}
 

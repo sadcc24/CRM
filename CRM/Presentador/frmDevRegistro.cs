@@ -28,14 +28,20 @@ namespace Presentador
             cbTipoDevolucion.DataSource = dev.getTipoDev();
             cbTipoDevolucion.ValueMember = "idtipodevolucion";
             cbTipoDevolucion.DisplayMember = "nombre";
+
+            cbTipocxc.DataSource = dev.getTipocxc();
+            cbTipocxc.ValueMember = "idtipocxc";
+            cbTipocxc.DisplayMember = "nombre";
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            eInsertDevolucion idev = new eInsertDevolucion();
+            DataTable id = new DataTable();
             if (String.IsNullOrEmpty(txtDescripcion.Text))
             {
-                MessageBox.Show("Rellene los Datos Requeridos: Motivo Devolucion", "Campos Requeridos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Rellene los Datos Requeridos: Motivo Devolucion, Total Partida", "Campos Requeridos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -49,13 +55,15 @@ namespace Presentador
                 dev.idestado = 1;
                 dev.tipodev = Convert.ToInt32(cbTipoDevolucion.SelectedValue);
                 dev.tipodocumento = "FACTURA";
+                dev.totaldevolucion = txtTotalPartida.Text;
+
 
                 nDevoluciones insertDev = new nDevoluciones();
                 bool result = insertDev.insertDevolucion(dev);
 
                 if(result != false)
                 {
-                    DataTable id = new DataTable();
+                    
                     nDevoluciones getid = new nDevoluciones();
                     id = getid.getDevolucionid(txtDescripcion.Text, txtFactura.Text);
                     bool result2 = false;
@@ -63,7 +71,7 @@ namespace Presentador
                     {
                         if (this.dgvDetalleFactura.CurrentRow.Cells[0].Value.ToString() != "0")
                         {
-                            eInsertDevolucion idev = new eInsertDevolucion();
+                            
                             idev.iddevolucion = Convert.ToInt32(id.Rows[0][0].ToString());
                             idev.cantidad = Convert.ToInt32(this.dgvDetalleFactura.Rows[i].Cells[0].Value.ToString());
                             idev.idbodega = Convert.ToInt32(this.dgvDetalleFactura.Rows[i].Cells[1].Value.ToString());
@@ -71,6 +79,10 @@ namespace Presentador
                             idev.preciounitario = this.dgvDetalleFactura.Rows[i].Cells[4].Value.ToString();
                             idev.comision = this.dgvDetalleFactura.Rows[i].Cells[5].Value.ToString();
                             idev.impuesto = this.dgvDetalleFactura.Rows[i].Cells[6].Value.ToString();
+
+                            nDevoluciones insert = new nDevoluciones();
+                            result2 = insert.insertDetatalleDev(idev);
+
 
 
                             //INSERCION DE MOVIMIENTO INVENTARIO DE DEVOLUCION VENTA
@@ -84,67 +96,131 @@ namespace Presentador
                             //dmov.insertMovimientoInventario(movdev)
 
 
-                            DataTable cantidad = new DataTable();
+                            //DataTable cantidad = new DataTable();
 
-                            nDevoluciones compare = new nDevoluciones();
-                            cantidad = compare.compareCantidadFact(txtFactura.Text);
+                            //nDevoluciones compare = new nDevoluciones();
+                            //cantidad = compare.compareCantidadFact(txtFactura.Text);
 
-                            compare.deleteProductoDetalle(this.dgvDetalleFactura.Rows[i].Cells[2].Value.ToString(), txtFactura.Text);
+                            //compare.deleteProductoDetalle(this.dgvDetalleFactura.Rows[i].Cells[2].Value.ToString(), txtFactura.Text);
                             //if (cantidad.Rows[i]["cantidad"].ToString() == idev.cantidad.ToString())
                             //{
-                                 
+
                             //}
                             //else
                             //{
                             //     compare.editProductoDetalle(this.dgvDetalleFactura.Rows[i].Cells[0].Value.ToString(), this.dgvDetalleFactura.Rows[i].Cells[2].Value.ToString(), txtFactura.Text);
                             //}
 
-                            nDevoluciones insert = new nDevoluciones();
-                            result2 = insert.insertDetatalleDev(idev);
+
                         }
-                      
+                        // INSERCION A MOVIMIENTO INVENTARIO Y A CUENTAS POR COBRAR
+
+
+                        else
+                        {
+
+
+                        }
+
 
                     }
-
-                    if (result2 != false)
+                    //Cuenta por cobrar
+                    DataTable checkData = new DataTable();
+                    nDevoluciones check = new nDevoluciones();
+                    checkData = check.checkdatacxc(dev.idfactura.ToString());
+                    if (checkData.Rows[0]["RESULT"].ToString() != "FALSE")
                     {
-                        MessageBox.Show("Ingreso Exitoso", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtCliente.ResetText();
-                        txtnCliente.ResetText();
-                        txtVendedor.ResetText();
-                        txtnVendedor.ResetText();
-                        txtMoneda.ResetText();
-                        txtnMoneda.ResetText();
-                        txtFactura.ResetText();
-                        txtTipoFactura.ResetText();
-                        txtntipo.ResetText();
-                        txtDescripcion.ResetText();
-                        txtTotalPartida.ResetText();
-                        dtpfechadev.Refresh();
-                        txttipodevolucion.ResetText();
-                        txttipodevolucion.Enabled = true;
-                        dgvDetalleFactura.DataSource = null;
-                        txtFacturadev.ResetText();
+                        //modifico cxc
+                        check.devolucioncxc(dev.idfactura.ToString(), id.Rows[0][0].ToString());
+                        // obtengo datos para historico
+                        DataTable idcxc = new DataTable();
+                        idcxc = check.getidcxc(dev.idfactura.ToString(), id.Rows[0][0].ToString());
+                        DataTable saldo = new DataTable();
+                        saldo = check.checkSaldo(idcxc.Rows[0]["idcliente"].ToString());
+
+                        if (saldo.Rows.Count != 0)
+                        {
+                            double SaldoCliente = Convert.ToDouble(saldo.Rows[0]["saldorestante"].ToString());
+
+                            double Total = SaldoCliente - Convert.ToDouble(txtTotalPartida.Text);
+
+                            eDevHistorico h = new eDevHistorico();
+                            h.idcuentaporcobrar = Convert.ToInt32(idcxc.Rows[0]["idcuentaporcobrar"].ToString());
+                            h.idcliente = Convert.ToInt32(idcxc.Rows[0]["idcliente"].ToString());
+                            h.idtipocxc = Convert.ToInt32(cbTipocxc.SelectedValue);
+                            h.fechapago = DateTime.Now.ToString();
+                            h.cantidadpagada = saldo.Rows[0]["cantidadpagada"].ToString();
+                            h.saldorestante = Convert.ToString(Total);
+
+                            check.updateHistorico(h, idcxc.Rows[0]["fechapago"].ToString(), idcxc.Rows[0]["idcliente"].ToString());
+
+
+                        }
+                        else
+                        {
+                            eDevHistorico h = new eDevHistorico();
+                            h.idcuentaporcobrar = Convert.ToInt32(idcxc.Rows[0]["idcuentaporcobrar"].ToString());
+                            h.idcliente = Convert.ToInt32(idcxc.Rows[0]["idcliente"].ToString());
+                            h.idtipocxc = Convert.ToInt32(cbTipocxc.SelectedValue);
+                            h.fechapago = DateTime.Now.ToString();
+                            h.cantidadpagada = "0";
+                            h.saldorestante = dev.totaldevolucion;
+                            check.insertHistorico(h);
+                        }
+
+
+
+
+                        if (result2 != false)
+                        {
+                            MessageBox.Show("Ingreso Exitoso", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCliente.ResetText();
+                            txtnCliente.ResetText();
+                            txtVendedor.ResetText();
+                            txtnVendedor.ResetText();
+                            txtMoneda.ResetText();
+                            txtnMoneda.ResetText();
+                            txtFactura.ResetText();
+                            txtTipoFactura.ResetText();
+                            txtntipo.ResetText();
+                            txtDescripcion.ResetText();
+                            txtTotalPartida.ResetText();
+                            dtpfechadev.Refresh();
+                            txttipodevolucion.ResetText();
+                            txttipodevolucion.Enabled = true;
+                            dgvDetalleFactura.DataSource = null;
+                            txtFacturadev.ResetText();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Factura Cuenta por Cobrar", "No existe la Factura en la Cuenta por Cobrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Ingreso Fallido", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCliente.ResetText();
+                            txtnCliente.ResetText();
+                            txtVendedor.ResetText();
+                            txtnVendedor.ResetText();
+                            txtMoneda.ResetText();
+                            txtnMoneda.ResetText();
+                            txtFactura.ResetText();
+                            txtTipoFactura.ResetText();
+                            txtntipo.ResetText();
+                            txtDescripcion.ResetText();
+                            txtTotalPartida.ResetText();
+                            dtpfechadev.Refresh();
+                            txttipodevolucion.ResetText();
+                            txttipodevolucion.Enabled = true;
+                            dgvDetalleFactura.DataSource = null;
+                        }
+
                     }
                     else
                     {
-                        MessageBox.Show("Ingreso Fallido", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtCliente.ResetText();
-                        txtnCliente.ResetText();
-                        txtVendedor.ResetText();
-                        txtnVendedor.ResetText();
-                        txtMoneda.ResetText();
-                        txtnMoneda.ResetText();
-                        txtFactura.ResetText();
-                        txtTipoFactura.ResetText();
-                        txtntipo.ResetText();
-                        txtDescripcion.ResetText();
-                        txtTotalPartida.ResetText();
-                        dtpfechadev.Refresh();
-                        txttipodevolucion.ResetText();
-                        txttipodevolucion.Enabled = true;
-                        dgvDetalleFactura.DataSource = null;
+                        nDevoluciones updatedev = new nDevoluciones();
+                        updatedev.deletedevolucion(id.Rows[0][0].ToString(), dev.idfactura.ToString());
+                        MessageBox.Show("Factura Cuenta por Cobrar", "No existe la Factura en la Cuenta por Cobrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
+                   
 
 
                 }
@@ -345,7 +421,7 @@ namespace Presentador
             {
                 string iddev = txtiddev.Text;
                 nDevoluciones updatedev = new nDevoluciones();
-                bool result = updatedev.deletedevolucion(iddev);
+                bool result = updatedev.deletedevolucion(iddev, txtFacturadev.Text);
 
 
                 if (result != false)
@@ -364,6 +440,7 @@ namespace Presentador
                     txtTotalPartida.ResetText();
                     dtpfechadev.Refresh();
                     txttipodevolucion.ResetText();
+                    txtFacturadev.ResetText();
                     txttipodevolucion.Enabled = true;
                     dgvDetalleFactura.DataSource = null;
 
@@ -499,9 +576,38 @@ namespace Presentador
 
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
 
+            foreach (DataGridViewRow item in this.dgvDetalleFactura.SelectedRows)
+            {
+                dgvDetalleFactura.Rows.RemoveAt(item.Index);
+            }
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dgvDetalleFactura.DataSource = null;
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            int Cantida = 0;
+            double Precio = 0.00;
+            double Total = 0;
+            if (this.dgvDetalleFactura.RowCount != 0)
+            {
+                for (int i = 0; i < this.dgvDetalleFactura.RowCount; i++)
+                {
+                    Cantida = Convert.ToInt32(this.dgvDetalleFactura.Rows[i].Cells[0].Value.ToString());
+                    Precio = Convert.ToDouble(this.dgvDetalleFactura.Rows[i].Cells[4].Value.ToString());
+                    Total += Cantida * Precio;
+                }
+
+                txtTotalPartida.Text = Total.ToString();
+            }
         }
     }
 }

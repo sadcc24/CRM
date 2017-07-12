@@ -42,10 +42,11 @@ namespace Presentador
 
 
             nDevoluciones dev = new nDevoluciones();
-            string idcuenta = this.dgvFacturas.CurrentRow.Cells[0].Value.ToString();
-            cancelacion.txtdocumento.Text = idcuenta;
             string idcliente = this.dgvFacturas.CurrentRow.Cells[1].Value.ToString();
             cancelacion.txtcliente.Text = idcliente;
+            string idcuenta = this.dgvFacturas.CurrentRow.Cells[0].Value.ToString();
+            cancelacion.txtdocumento.Text = idcuenta;
+
 
             cancelacion.MdiParent = this.ParentForm;
             cancelacion.Show();

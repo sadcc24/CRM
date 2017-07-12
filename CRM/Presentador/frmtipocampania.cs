@@ -8,10 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
-using Datos;
-using Entidades;
-
-
 
 
 namespace Presentador
@@ -37,19 +33,7 @@ namespace Presentador
             dgvcampanias.DataSource = campanias.getAllCampanias();
         }
 
-
-
         private void dgvcampanias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-
-
-
-
-    }
-
-        private void dgvcampanias_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
             frmRegCampania regcam = new frmRegCampania();
@@ -57,7 +41,7 @@ namespace Presentador
             string id = this.dgvcampanias.CurrentRow.Cells[0].Value.ToString();
             regcam.txtidcampania.Text = id;
             string tipocampana = this.dgvcampanias.CurrentRow.Cells[1].Value.ToString();
-            regcam.txtidcampania.Text = tipocampana;
+            regcam.cbtipocampania.Text = tipocampana;
             string nombre = this.dgvcampanias.CurrentRow.Cells[2].Value.ToString();
             regcam.txtnombre.Text = nombre;
             string descripcion = this.dgvcampanias.CurrentRow.Cells[3].Value.ToString();
@@ -74,17 +58,17 @@ namespace Presentador
 
             regcam.txtidcampania.Visible = true;
 
-          //  regdev.dtpfechadev.Enabled = true;
-          //  regdev.txtmotivodev.Enabled = true;
-          //  regdev.cbtipodev.Enabled = true;
-           // regdev.cbempresa.Enabled = true;
-           // regdev.cbsede.Enabled = true;
-           // regdev.cbproveedor.Enabled = true;
-           // regdev.cbproducto.Enabled = true;
-           // regdev.cbfactura.Enabled = true;
-          //  regdev.btnEditar.Enabled = true;
-          //  regdev.btnEliminar.Enabled = true;
-           // regdev.btnNuevo.Enabled = false;
+            //  regdev.dtpfechadev.Enabled = true;
+            //  regdev.txtmotivodev.Enabled = true;
+            //  regdev.cbtipodev.Enabled = true;
+            // regdev.cbempresa.Enabled = true;
+            // regdev.cbsede.Enabled = true;
+            // regdev.cbproveedor.Enabled = true;
+            // regdev.cbproducto.Enabled = true;
+            // regdev.cbfactura.Enabled = true;
+            //  regdev.btnEditar.Enabled = true;
+            //  regdev.btnEliminar.Enabled = true;
+            // regdev.btnNuevo.Enabled = false;
 
 
             regcam.MdiParent = this.ParentForm;
@@ -102,4 +86,4 @@ namespace Presentador
             dgvcampanias.DataSource = campanias.getAllCampanias();
         }
     }
-    }
+}

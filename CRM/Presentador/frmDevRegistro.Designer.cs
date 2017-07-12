@@ -61,6 +61,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbTipoDevolucion = new System.Windows.Forms.ComboBox();
             this.txtFacturadev = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.cbTipocxc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,22 +241,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(444, 487);
+            this.label3.Location = new System.Drawing.Point(526, 488);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 19);
             this.label3.TabIndex = 104;
             this.label3.Text = "Total Partida:";
-            this.label3.Visible = false;
             // 
             // txtTotalPartida
             // 
             this.txtTotalPartida.Enabled = false;
             this.txtTotalPartida.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPartida.Location = new System.Drawing.Point(546, 479);
+            this.txtTotalPartida.Location = new System.Drawing.Point(628, 480);
             this.txtTotalPartida.Name = "txtTotalPartida";
             this.txtTotalPartida.Size = new System.Drawing.Size(140, 27);
             this.txtTotalPartida.TabIndex = 105;
-            this.txtTotalPartida.Visible = false;
             // 
             // btnAyuda
             // 
@@ -278,7 +280,6 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
@@ -368,7 +369,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 487);
+            this.label5.Location = new System.Drawing.Point(21, 488);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 19);
             this.label5.TabIndex = 111;
@@ -380,9 +381,9 @@
             this.cbTipoDevolucion.FormattingEnabled = true;
             this.cbTipoDevolucion.Items.AddRange(new object[] {
             "Factura"});
-            this.cbTipoDevolucion.Location = new System.Drawing.Point(178, 479);
+            this.cbTipoDevolucion.Location = new System.Drawing.Point(144, 480);
             this.cbTipoDevolucion.Name = "cbTipoDevolucion";
-            this.cbTipoDevolucion.Size = new System.Drawing.Size(222, 27);
+            this.cbTipoDevolucion.Size = new System.Drawing.Size(150, 27);
             this.cbTipoDevolucion.TabIndex = 112;
             // 
             // txtFacturadev
@@ -395,12 +396,61 @@
             this.txtFacturadev.TabIndex = 113;
             this.txtFacturadev.Visible = false;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(12, 276);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(88, 37);
+            this.btnDelete.TabIndex = 114;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(12, 339);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 55);
+            this.button2.TabIndex = 115;
+            this.button2.Text = "Delete All";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnActualizar.BackgroundImage = global::Presentador.Properties.Resources.refresh;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizar.Location = new System.Drawing.Point(774, 480);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(27, 28);
+            this.btnActualizar.TabIndex = 116;
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // cbTipocxc
+            // 
+            this.cbTipocxc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipocxc.FormattingEnabled = true;
+            this.cbTipocxc.Items.AddRange(new object[] {
+            "Factura"});
+            this.cbTipocxc.Location = new System.Drawing.Point(336, 480);
+            this.cbTipocxc.Name = "cbTipocxc";
+            this.cbTipocxc.Size = new System.Drawing.Size(150, 27);
+            this.cbTipocxc.TabIndex = 117;
+            // 
             // frmDevRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(904, 515);
+            this.Controls.Add(this.cbTipocxc);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtFacturadev);
             this.Controls.Add(this.cbTipoDevolucion);
             this.Controls.Add(this.label5);
@@ -478,5 +528,9 @@
         public System.Windows.Forms.TextBox txtFacturadev;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnActualizar;
+        public System.Windows.Forms.ComboBox cbTipocxc;
     }
 }

@@ -61,7 +61,8 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.comisionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelacionCuentaACobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -162,8 +163,7 @@
             // 
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ventasToolStripMenuItem1,
-            this.vendedoresToolStripMenuItem,
-            this.comisionesToolStripMenuItem});
+            this.vendedoresToolStripMenuItem});
             this.ventasToolStripMenuItem.Image = global::Presentador.Properties.Resources.ventas;
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
@@ -173,14 +173,14 @@
             // 
             this.ventasToolStripMenuItem1.Image = global::Presentador.Properties.Resources.ventas_image;
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
             this.ventasToolStripMenuItem1.Text = "Ventas";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
             // vendedoresToolStripMenuItem
             // 
             this.vendedoresToolStripMenuItem.Name = "vendedoresToolStripMenuItem";
-            this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.vendedoresToolStripMenuItem.Text = "Vendedores";
             this.vendedoresToolStripMenuItem.Click += new System.EventHandler(this.vendedoresToolStripMenuItem_Click);
             // 
@@ -273,6 +273,9 @@
             // 
             // cajaToolStripMenuItem
             // 
+            this.cajaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transaccionesToolStripMenuItem,
+            this.cancelacionCuentaACobrarToolStripMenuItem});
             this.cajaToolStripMenuItem.Name = "cajaToolStripMenuItem";
             this.cajaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.cajaToolStripMenuItem.Text = "Caja";
@@ -331,12 +334,19 @@
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
             // 
-            // comisionesToolStripMenuItem
+            // transaccionesToolStripMenuItem
             // 
-            this.comisionesToolStripMenuItem.Name = "comisionesToolStripMenuItem";
-            this.comisionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.comisionesToolStripMenuItem.Text = "Comisiones";
-            this.comisionesToolStripMenuItem.Click += new System.EventHandler(this.comisionesToolStripMenuItem_Click);
+            this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.transaccionesToolStripMenuItem.Text = "Transacciones";
+            this.transaccionesToolStripMenuItem.Click += new System.EventHandler(this.transaccionesToolStripMenuItem_Click);
+            // 
+            // cancelacionCuentaACobrarToolStripMenuItem
+            // 
+            this.cancelacionCuentaACobrarToolStripMenuItem.Name = "cancelacionCuentaACobrarToolStripMenuItem";
+            this.cancelacionCuentaACobrarToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.cancelacionCuentaACobrarToolStripMenuItem.Text = "Cancelacion Cuenta a Cobrar";
+            this.cancelacionCuentaACobrarToolStripMenuItem.Click += new System.EventHandler(this.cancelacionCuentaACobrarToolStripMenuItem_Click);
             // 
             // frmCRM
             // 
@@ -397,6 +407,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripMenuItem cajaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comisionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelacionCuentaACobrarToolStripMenuItem;
     }
 }

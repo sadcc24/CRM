@@ -20,8 +20,5 @@ namespace Entidades
         public string estado { get; set; }
         public int idtipopago { get; set; }
 
-    } 
-
-
-    
+    }
 }
