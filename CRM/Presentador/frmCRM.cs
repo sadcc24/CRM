@@ -71,9 +71,9 @@ namespace Presentador
 
         private void ingresoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmClientes IngresoClientes = new frmClientes();
-            IngresoClientes.MdiParent = this;
-            IngresoClientes.Show();
+            //frmClientes IngresoClientes = new frmClientes();
+            //IngresoClientes.MdiParent = this;
+            //IngresoClientes.Show();
         }
 
         private void catalogoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,6 +154,13 @@ namespace Presentador
         private void cotizacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCotizacion cotiz = new frmCotizacion();
+            cotiz.MdiParent = this;
+            cotiz.Show();
+        }
+
+        private void registroUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegisterUser cotiz = new frmRegisterUser();
             cotiz.MdiParent = this;
             cotiz.Show();
         }

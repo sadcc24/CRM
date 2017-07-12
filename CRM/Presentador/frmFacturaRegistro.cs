@@ -309,7 +309,7 @@ namespace Presentador
 
                 
 
-                productodetail.insertMovimientoInventario(movimiento);
+                //productodetail.insertMovimientoInventario(movimiento);
 
                 int idcue = Convert.ToInt16(tbCxC.Text);
                 cuentaxc.updateSaldoCuenta(total1, subtotal, cantPagos ,idcue );
