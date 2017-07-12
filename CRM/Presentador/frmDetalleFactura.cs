@@ -42,11 +42,12 @@ namespace Presentador
 
             if (result != false)
             {
-                int cantProd = Convert.ToInt16(tbCantidad.Text);
+                double cantProd = Convert.ToDouble(tbCantidad.Text);
                 int idprod = Convert.ToInt16(producto);
-                int cantidadActual = Convert.ToInt16(this.dgvProductos.CurrentRow.Cells[2].Value.ToString());
-                int cantidadModificar = cantidadActual - cantProd;
-                bool result2 = insertDetFac.updateProducto(cantidadModificar, idprod);
+                double cantidadActual = Convert.ToDouble(this.dgvProductos.CurrentRow.Cells[2].Value.ToString());
+                int bodega =  Convert.ToInt16(this.dgvProductos.CurrentRow.Cells[4].Value.ToString());
+                double cantidadModificar = cantidadActual - cantProd;
+                bool result2 = insertDetFac.updateProducto(cantidadModificar, idprod , bodega);
                 if (result != false)
                 {
                     nDetalleFactura DetFact = new nDetalleFactura();
@@ -113,7 +114,7 @@ namespace Presentador
                 string cantidadprod = this.dgvProductos.CurrentRow.Cells[2].Value.ToString();
 
                 int cantSeleccionada = Convert.ToInt16(tbCantidad.Text);
-                int cantExistencia = Convert.ToInt16(cantidadprod);
+                double cantExistencia = Convert.ToDouble(cantidadprod);
 
                 if (cantSeleccionada > cantExistencia)
                 {

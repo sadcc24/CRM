@@ -43,14 +43,6 @@
             this.cbMoneda = new System.Windows.Forms.ComboBox();
             this.tbIdFac = new System.Windows.Forms.TextBox();
             this.cbLastIndex = new System.Windows.Forms.ComboBox();
-            this.btnAgregarProductos = new System.Windows.Forms.Button();
-            this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvFac = new System.Windows.Forms.DataGridView();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.cbTipoDoc = new System.Windows.Forms.ComboBox();
@@ -61,6 +53,18 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvCXC = new System.Windows.Forms.DataGridView();
             this.tbCxC = new System.Windows.Forms.TextBox();
+            this.cbCantidadCuotas = new System.Windows.Forms.ComboBox();
+            this.lbCantidadCuotas = new System.Windows.Forms.Label();
+            this.tbCantidadPago = new System.Windows.Forms.TextBox();
+            this.lbCantidadPago = new System.Windows.Forms.Label();
+            this.btnAgregarProductos = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
@@ -166,6 +170,7 @@
             this.cbTipoPago.Name = "cbTipoPago";
             this.cbTipoPago.Size = new System.Drawing.Size(121, 27);
             this.cbTipoPago.TabIndex = 107;
+            this.cbTipoPago.SelectedIndexChanged += new System.EventHandler(this.cbTipoPago_SelectedIndexChanged);
             // 
             // cbEstado
             // 
@@ -198,11 +203,167 @@
             // cbLastIndex
             // 
             this.cbLastIndex.FormattingEnabled = true;
-            this.cbLastIndex.Location = new System.Drawing.Point(1072, 194);
+            this.cbLastIndex.Location = new System.Drawing.Point(1167, 103);
             this.cbLastIndex.Name = "cbLastIndex";
             this.cbLastIndex.Size = new System.Drawing.Size(121, 21);
             this.cbLastIndex.TabIndex = 111;
             this.cbLastIndex.Visible = false;
+            // 
+            // dgvFac
+            // 
+            this.dgvFac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFac.Location = new System.Drawing.Point(1167, 12);
+            this.dgvFac.Name = "dgvFac";
+            this.dgvFac.Size = new System.Drawing.Size(166, 85);
+            this.dgvFac.TabIndex = 113;
+            // 
+            // dgvCliente
+            // 
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Location = new System.Drawing.Point(30, 26);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.Size = new System.Drawing.Size(472, 151);
+            this.dgvCliente.TabIndex = 114;
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
+            // 
+            // cbTipoDoc
+            // 
+            this.cbTipoDoc.Enabled = false;
+            this.cbTipoDoc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoDoc.FormattingEnabled = true;
+            this.cbTipoDoc.Items.AddRange(new object[] {
+            "Factura",
+            "Cotizacion"});
+            this.cbTipoDoc.Location = new System.Drawing.Point(148, 15);
+            this.cbTipoDoc.Name = "cbTipoDoc";
+            this.cbTipoDoc.Size = new System.Drawing.Size(121, 27);
+            this.cbTipoDoc.TabIndex = 115;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 19);
+            this.label3.TabIndex = 116;
+            this.label3.Text = "Tipo Documento:";
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(147, 236);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(277, 27);
+            this.dtpFecha.TabIndex = 117;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbCantidadPago);
+            this.groupBox1.Controls.Add(this.tbCantidadPago);
+            this.groupBox1.Controls.Add(this.lbCantidadCuotas);
+            this.groupBox1.Controls.Add(this.cbCantidadCuotas);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.dtpFecha);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.cbTipoDoc);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.tbTotal);
+            this.groupBox1.Controls.Add(this.cbVendedor);
+            this.groupBox1.Controls.Add(this.cbMoneda);
+            this.groupBox1.Controls.Add(this.cbTipoPago);
+            this.groupBox1.Controls.Add(this.cbEstado);
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(48, 289);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(524, 319);
+            this.groupBox1.TabIndex = 120;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ingreso de Datos:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvCliente);
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(48, 82);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(524, 201);
+            this.groupBox2.TabIndex = 121;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Seleccion de Cliente:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgvDetalleFactura);
+            this.groupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(578, 82);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(532, 526);
+            this.groupBox3.TabIndex = 122;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Producto:";
+            // 
+            // dgvCXC
+            // 
+            this.dgvCXC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCXC.Enabled = false;
+            this.dgvCXC.Location = new System.Drawing.Point(1167, 144);
+            this.dgvCXC.Name = "dgvCXC";
+            this.dgvCXC.Size = new System.Drawing.Size(262, 63);
+            this.dgvCXC.TabIndex = 123;
+            // 
+            // tbCxC
+            // 
+            this.tbCxC.Location = new System.Drawing.Point(1167, 213);
+            this.tbCxC.Name = "tbCxC";
+            this.tbCxC.Size = new System.Drawing.Size(100, 20);
+            this.tbCxC.TabIndex = 124;
+            // 
+            // cbCantidadCuotas
+            // 
+            this.cbCantidadCuotas.FormattingEnabled = true;
+            this.cbCantidadCuotas.Items.AddRange(new object[] {
+            "1",
+            "3",
+            "6",
+            "12"});
+            this.cbCantidadCuotas.Location = new System.Drawing.Point(381, 45);
+            this.cbCantidadCuotas.Name = "cbCantidadCuotas";
+            this.cbCantidadCuotas.Size = new System.Drawing.Size(121, 27);
+            this.cbCantidadCuotas.TabIndex = 118;
+            // 
+            // lbCantidadCuotas
+            // 
+            this.lbCantidadCuotas.AutoSize = true;
+            this.lbCantidadCuotas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantidadCuotas.Location = new System.Drawing.Point(377, 23);
+            this.lbCantidadCuotas.Name = "lbCantidadCuotas";
+            this.lbCantidadCuotas.Size = new System.Drawing.Size(120, 19);
+            this.lbCantidadCuotas.TabIndex = 119;
+            this.lbCantidadCuotas.Text = "Cantidad Cuotas:";
+            // 
+            // tbCantidadPago
+            // 
+            this.tbCantidadPago.Enabled = false;
+            this.tbCantidadPago.Location = new System.Drawing.Point(381, 100);
+            this.tbCantidadPago.Name = "tbCantidadPago";
+            this.tbCantidadPago.Size = new System.Drawing.Size(121, 27);
+            this.tbCantidadPago.TabIndex = 120;
+            // 
+            // lbCantidadPago
+            // 
+            this.lbCantidadPago.AutoSize = true;
+            this.lbCantidadPago.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantidadPago.Location = new System.Drawing.Point(377, 75);
+            this.lbCantidadPago.Name = "lbCantidadPago";
+            this.lbCantidadPago.Size = new System.Drawing.Size(107, 19);
+            this.lbCantidadPago.TabIndex = 121;
+            this.lbCantidadPago.Text = "Cantidad Pago:";
             // 
             // btnAgregarProductos
             // 
@@ -299,117 +460,6 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // dgvFac
-            // 
-            this.dgvFac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFac.Location = new System.Drawing.Point(1167, 12);
-            this.dgvFac.Name = "dgvFac";
-            this.dgvFac.Size = new System.Drawing.Size(166, 85);
-            this.dgvFac.TabIndex = 113;
-            // 
-            // dgvCliente
-            // 
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(30, 26);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.Size = new System.Drawing.Size(472, 151);
-            this.dgvCliente.TabIndex = 114;
-            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
-            // 
-            // cbTipoDoc
-            // 
-            this.cbTipoDoc.Enabled = false;
-            this.cbTipoDoc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipoDoc.FormattingEnabled = true;
-            this.cbTipoDoc.Items.AddRange(new object[] {
-            "Factura",
-            "Cotizacion"});
-            this.cbTipoDoc.Location = new System.Drawing.Point(148, 15);
-            this.cbTipoDoc.Name = "cbTipoDoc";
-            this.cbTipoDoc.Size = new System.Drawing.Size(121, 27);
-            this.cbTipoDoc.TabIndex = 115;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 19);
-            this.label3.TabIndex = 116;
-            this.label3.Text = "Tipo Documento:";
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(147, 236);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(277, 27);
-            this.dtpFecha.TabIndex = 117;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.dtpFecha);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.cbTipoDoc);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.tbTotal);
-            this.groupBox1.Controls.Add(this.cbVendedor);
-            this.groupBox1.Controls.Add(this.cbMoneda);
-            this.groupBox1.Controls.Add(this.cbTipoPago);
-            this.groupBox1.Controls.Add(this.cbEstado);
-            this.groupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(48, 289);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(524, 319);
-            this.groupBox1.TabIndex = 120;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ingreso de Datos:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dgvCliente);
-            this.groupBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(48, 82);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(524, 201);
-            this.groupBox2.TabIndex = 121;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Seleccion de Cliente:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dgvDetalleFactura);
-            this.groupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(578, 82);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(532, 526);
-            this.groupBox3.TabIndex = 122;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Producto:";
-            // 
-            // dgvCXC
-            // 
-            this.dgvCXC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCXC.Enabled = false;
-            this.dgvCXC.Location = new System.Drawing.Point(749, 13);
-            this.dgvCXC.Name = "dgvCXC";
-            this.dgvCXC.Size = new System.Drawing.Size(262, 19);
-            this.dgvCXC.TabIndex = 123;
-            // 
-            // tbCxC
-            // 
-            this.tbCxC.Location = new System.Drawing.Point(749, 56);
-            this.tbCxC.Name = "tbCxC";
-            this.tbCxC.Size = new System.Drawing.Size(100, 20);
-            this.tbCxC.TabIndex = 124;
-            // 
             // frmFacturaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,5 +533,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvCXC;
         public System.Windows.Forms.TextBox tbCxC;
+        private System.Windows.Forms.Label lbCantidadCuotas;
+        private System.Windows.Forms.Label lbCantidadPago;
+        public System.Windows.Forms.ComboBox cbCantidadCuotas;
+        public System.Windows.Forms.TextBox tbCantidadPago;
     }
 }

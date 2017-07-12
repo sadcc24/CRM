@@ -11,7 +11,8 @@ namespace Negocio
 {
     public class nLogin
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        //ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
         public DataTable login(eLogin login)
         {
             DataTable Login = new DataTable();

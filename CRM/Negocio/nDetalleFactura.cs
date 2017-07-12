@@ -11,7 +11,9 @@ namespace Negocio
 {
     public class nDetalleFactura
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        //ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
+
 
         public DataTable getAllDetalleFac(string detalleFact)
         {
@@ -43,7 +45,7 @@ namespace Negocio
             try
             {
                 //string query = string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6})", idfact, det.cantidad, det.idbodega, det.idproducto, det.preciounitario, det.comision,det.impuesto);
-                cnn.Insert(string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6} )", idfact, det.cantidad,det.idbodega, det.idproducto, det.preciounitario, det.comision , det.impuesto));
+                cnn.Insert(string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6} )", idfact, det.cantidad,det.idbodega, det.idproducto, det.comision , det.impuesto , det.preciounitario));
                 return true;
             }
             catch (Exception ex)
@@ -64,7 +66,8 @@ namespace Negocio
         public DataTable getAllProductos()
         {
             DataTable typeDev = new DataTable();
-            typeDev = cnn.Select("SELECT idproducto,descripcion,cantidad FROM PRODUCTO where activo = 1");
+            //SELECT dbo.PRODUCTO.idproducto, dbo.PRODUCTO.descripcion, dbo.BODEGA.nombre_bodega, dbo.EXISTENCIA.CANTIDAD FROM dbo.EXISTENCIA INNER JOIN dbo.PRODUCTO ON dbo.EXISTENCIA.idproducto = dbo.PRODUCTO.idproducto INNER JOIN dbo.BODEGA ON dbo.EXISTENCIA.idbodega = dbo.BODEGA.idbodega WHERE dbo.PRODUCTO.activo = 1
+            typeDev = cnn.Select("SELECT dbo.PRODUCTO.idproducto,  dbo.PRODUCTO.descripcion,  dbo.EXISTENCIA.CANTIDAD, dbo.BODEGA.nombre_bodega ,dbo.BODEGA.idbodega  FROM dbo.EXISTENCIA INNER JOIN dbo.PRODUCTO ON dbo.EXISTENCIA.idproducto = dbo.PRODUCTO.idproducto INNER JOIN dbo.BODEGA ON dbo.EXISTENCIA.idbodega = dbo.BODEGA.idbodega WHERE dbo.PRODUCTO.activo = 1");
             return typeDev;
 
         }
@@ -85,12 +88,12 @@ namespace Negocio
 
         }
 
-        public bool updateProducto(int cantidad, int idproducto)
+        public bool updateProducto(double cantidad, int idproducto , int idbodega)
         {
             try
             {
                 //string query = string.Format("INSERT INTO DETALLE_FACTURA VALUES({0},{1},{2},{3},{4},{5},{6})", idfact, det.cantidad, det.idbodega, det.idproducto, det.preciounitario, det.comision,det.impuesto);
-                cnn.Insert(string.Format("UPDATE PRODUCTO SET cantidad = {0} WHERE idproducto = {1}", cantidad, idproducto));
+                cnn.Insert(string.Format("UPDATE EXISTENCIA SET cantidad = {0} WHERE idproducto = {1}  AND idbodega = {2}", cantidad, idproducto ,idbodega));
                 return true;
             }
             catch (Exception ex)

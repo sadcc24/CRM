@@ -11,14 +11,15 @@ namespace Negocio
 {
     public class nFactura
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        //ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
 
         public DataTable getAllFactura()
         {
             DataTable ListaPrecio = new DataTable();
             ListaPrecio = cnn.Select(@"SELECT
                                 dbo.FACTURA.idfactura,
-                                dbo.CLIENTE.nombre as [Nombre Cliente],
+                                dbo.CLIENTE.primernombre as [Nombre Cliente],
                                 dbo.FACTURA.total,
                                 dbo.MONEDA.nombre_moneda as [Nombre Moneda],
                                 dbo.VENDEDOR.nombre as [Nombre Vendedor],
@@ -32,14 +33,37 @@ namespace Negocio
                                 INNER JOIN dbo.MONEDA ON dbo.FACTURA.idmoneda = dbo.MONEDA.idmoneda
                                 INNER JOIN dbo.VENDEDOR ON dbo.FACTURA.idvendedor = dbo.VENDEDOR.idvendedor
                                 INNER JOIN dbo.ESTADO ON dbo.CLIENTE.idestado = dbo.ESTADO.idestado AND dbo.FACTURA.idestado = dbo.ESTADO.idestado AND dbo.VENDEDOR.idestado = dbo.ESTADO.idestado
-                                INNER JOIN dbo.TIPOPAGOFACTURA ON dbo.FACTURA.idtipopago = dbo.TIPOPAGOFACTURA.idtipopago");
+                                INNER JOIN dbo.TIPOPAGOFACTURA ON dbo.FACTURA.idtipopago = dbo.TIPOPAGOFACTURA.idtipopago WHERE dbo.FACTURA.tipodocumento = 'Factura'");
+            return ListaPrecio;
+        }
+
+        public DataTable getAllCotizacion()
+        {
+            DataTable ListaPrecio = new DataTable();
+            ListaPrecio = cnn.Select(@"SELECT
+                                dbo.FACTURA.idfactura,
+                                dbo.CLIENTE.primernombre as [Nombre Cliente],
+                                dbo.FACTURA.total,
+                                dbo.MONEDA.nombre_moneda as [Nombre Moneda],
+                                dbo.VENDEDOR.nombre as [Nombre Vendedor],
+                                dbo.ESTADO.estado,
+                                dbo.TIPOPAGOFACTURA.nombre as [Tipo Pago Factura],
+                                dbo.FACTURA.subtotal,
+                                dbo.FACTURA.fechafactura as [Fecha Factura],
+                                dbo.FACTURA.tipodocumento as [Tipo Documento]
+                                FROM dbo.CLIENTE
+                                INNER JOIN dbo.FACTURA ON dbo.FACTURA.idcliente = dbo.CLIENTE.idcliente
+                                INNER JOIN dbo.MONEDA ON dbo.FACTURA.idmoneda = dbo.MONEDA.idmoneda
+                                INNER JOIN dbo.VENDEDOR ON dbo.FACTURA.idvendedor = dbo.VENDEDOR.idvendedor
+                                INNER JOIN dbo.ESTADO ON dbo.CLIENTE.idestado = dbo.ESTADO.idestado AND dbo.FACTURA.idestado = dbo.ESTADO.idestado AND dbo.VENDEDOR.idestado = dbo.ESTADO.idestado
+                                INNER JOIN dbo.TIPOPAGOFACTURA ON dbo.FACTURA.idtipopago = dbo.TIPOPAGOFACTURA.idtipopago WHERE dbo.FACTURA.tipodocumento = 'Cotizacion'");
             return ListaPrecio;
         }
 
         public DataTable getAllCliente()
         {
             DataTable proveedor = new DataTable();
-            proveedor = cnn.Select("SELECT idcliente,nombre,apellido,telefono,saldo FROM CLIENTE WHERE idestado = 1");
+            proveedor = cnn.Select("SELECT idcliente,primernombre,primerapellido,primerapellido,segundoapellido,saldo FROM CLIENTE WHERE idestado = 1");
             return proveedor;
         }
 
@@ -130,7 +154,7 @@ namespace Negocio
         {
             try
             {
-                //UPDATE FACTURA set total = 10, subtotal = (10/1.12), impuesto = (10*0.12)where idfactura = 48
+                string query = string.Format("UPDATE FACTURA SET total = {0}, subtotal = {1}, impuesto = {2} WHERE idfactura = {3}", fac.total, fac.subtotal, fac.impuesto, idfac);
                 cnn.Update(string.Format("UPDATE FACTURA SET total = {0}, subtotal = {1}, impuesto = {2} WHERE idfactura = {3}", fac.total, fac.subtotal, fac.impuesto,  idfac));
                 return true;
             }

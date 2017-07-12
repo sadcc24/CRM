@@ -165,6 +165,7 @@
             this.label2.Size = new System.Drawing.Size(62, 19);
             this.label2.TabIndex = 94;
             this.label2.Text = "Bodega:";
+            this.label2.Visible = false;
             // 
             // cbBodega
             // 
@@ -175,6 +176,7 @@
             this.cbBodega.Name = "cbBodega";
             this.cbBodega.Size = new System.Drawing.Size(121, 27);
             this.cbBodega.TabIndex = 95;
+            this.cbBodega.Visible = false;
             // 
             // tbComision
             // 

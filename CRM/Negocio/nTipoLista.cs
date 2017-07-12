@@ -11,7 +11,8 @@ namespace Negocio
 {
     public class nTipoLista
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        //ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
 
         public DataTable getAllTipoLista()
         {

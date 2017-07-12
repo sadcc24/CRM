@@ -96,13 +96,23 @@ namespace Presentador
                 if (cbTipoDoc.Text.Equals("Factura"))
                 {
                     eCuentaXCobrar cuentaxcobrar = new eCuentaXCobrar();
-                    cuentaxcobrar.idtipocxc = 1;
+                    //cuentaxcobrar.idtipocxc = 1;
                     cuentaxcobrar.idvendedor = Convert.ToInt16(cbVendedor.SelectedValue);
                     cuentaxcobrar.idfactura = Convert.ToInt16(idfac);
                     cuentaxcobrar.fecha = dtpFecha.Value.ToShortDateString();
                     cuentaxcobrar.idmoneda = Convert.ToInt16(cbMoneda.SelectedValue);
                     cuentaxcobrar.total = 1;
                     cuentaxcobrar.subtotal = 1;
+                    if (cbTipoPago.Text.Equals("Credito"))
+                    {
+                        cuentaxcobrar.cantidadCuotas = Convert.ToInt16(cbCantidadCuotas.Text);
+                    }
+                    else
+                    {
+                        cuentaxcobrar.cantidadCuotas = 1;
+                    }
+                    
+                    cuentaxcobrar.cantidadPago = 1;
                     cuentaxcobrar.idcliente = Convert.ToInt16(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
                     cuentaxcobrar.idestado = Convert.ToInt16(cbEstado.SelectedValue);
 
@@ -219,7 +229,7 @@ namespace Presentador
 
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string saldo = this.dgvCliente.CurrentRow.Cells[4].Value.ToString();
+            string saldo = this.dgvCliente.CurrentRow.Cells[5].Value.ToString();
             double saldototal = Convert.ToDouble(saldo);
             if (saldototal >= 1000)
             {
@@ -271,23 +281,37 @@ namespace Presentador
             nfactur.updateSaldo(efac, fac);
             tbTotal.Text = Convert.ToString(total1);
 
-            double idcliente = Convert.ToDouble(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
-            double saldoCliente = Convert.ToDouble(this.dgvCliente.CurrentRow.Cells[4].Value.ToString());
-            double totalSaldo = saldoCliente + total1;
-            int cliente  =  Convert.ToInt16(idcliente);
-            nfactur.updateClienteSaldo(totalSaldo, cliente);
-
-            dgvCliente.DataSource = nfactur.getAllCliente();
-
-
             
-            //Actualizar cuentas por cobrar
-            nCuentaXCobrar cuentaxc = new nCuentaXCobrar();
-            dgvCXC.DataSource = cuentaxc.getidcuentasxcobrar(fac);
-            tbCxC.Text = this.dgvCXC.CurrentRow.Cells[0].Value.ToString();
+
+
+
+            if (cbTipoDoc.Text.Equals("Factura"))
+            {
+                //Se le modifica el saldo al cliente si es factura
+                double idcliente = Convert.ToDouble(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
+                double saldoCliente = Convert.ToDouble(this.dgvCliente.CurrentRow.Cells[5].Value.ToString());
+                double totalSaldo = saldoCliente + total1;
+                double cantPagos = total1 / Convert.ToInt16(cbCantidadCuotas.Text);
+                tbCantidadPago.Text = Convert.ToString(cantPagos);
+                int cliente = Convert.ToInt16(idcliente);
+                nfactur.updateClienteSaldo(totalSaldo, cliente);
+
+                dgvCliente.DataSource = nfactur.getAllCliente();
+
+
+                //Actualizar cuentas por cobrar
+                nCuentaXCobrar cuentaxc = new nCuentaXCobrar();
+                dgvCXC.DataSource = cuentaxc.getidcuentasxcobrar(fac);
+                if(tbCxC.Text.Equals(""))
+                {
+                    tbCxC.Text = this.dgvCXC.CurrentRow.Cells[0].Value.ToString();
+                }
+                
+
+                int idcue = Convert.ToInt16(tbCxC.Text);
+                cuentaxc.updateSaldoCuenta(total1, subtotal, cantPagos ,idcue );
+            }
             
-            int idcue = Convert.ToInt16(tbCxC.Text);
-            cuentaxc.updateSaldoCuenta(total1, subtotal, idcue);
 
 
 
@@ -300,6 +324,23 @@ namespace Presentador
 
         }
 
-       
+        private void cbTipoPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTipoPago.Text.Equals("Contado"))
+            {
+                cbCantidadCuotas.Visible = false;
+                tbCantidadPago.Visible = false;
+                lbCantidadCuotas.Visible = false;
+                lbCantidadPago.Visible = false;
+            }
+            else
+            {
+                cbCantidadCuotas.Visible = true;
+                tbCantidadPago.Visible = true;
+                lbCantidadCuotas.Visible = true;
+                lbCantidadPago.Visible = true;
+            }
+            
+        }
     }
 }

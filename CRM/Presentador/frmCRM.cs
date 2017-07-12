@@ -150,6 +150,13 @@ namespace Presentador
             caja.MdiParent = this;
             caja.Show();
         }
+
+        private void cotizacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCotizacion cotiz = new frmCotizacion();
+            cotiz.MdiParent = this;
+            cotiz.Show();
+        }
     }
 }
 

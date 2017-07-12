@@ -41,7 +41,7 @@ namespace Presentador
             datoslistaPrecio.estado = Convert.ToInt16(cbEstado.SelectedValue);
             datoslistaPrecio.empresa = Convert.ToInt16(cbEmpresa.SelectedValue);
 
-            MessageBox.Show(cbTipoLista.SelectedValue + " " + cbProducto.SelectedValue + " " + cbEstado.SelectedValue + " " + cbEmpresa.SelectedValue + " " + txtDescripcion.Text + " " + txtPrecio.Text, "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show(cbTipoLista.SelectedValue + " " + cbProducto.SelectedValue + " " + cbEstado.SelectedValue + " " + cbEmpresa.SelectedValue + " " + txtDescripcion.Text + " " + txtPrecio.Text, "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             nListaPrecio listapre = new nListaPrecio();
             bool result = listapre.insertLisaPrecio(datoslistaPrecio);

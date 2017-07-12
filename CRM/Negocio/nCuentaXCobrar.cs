@@ -11,18 +11,19 @@ namespace Negocio
 {
     public class nCuentaXCobrar
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        //ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
         public bool insertCuentaxCobrar(eCuentaXCobrar cxc)
         {
             try
             {
-                //string query = string.Format("INSERT INTO FACTURA(idcliente,idvendedor,idmoneda,total,subtotal,fechafactura,tipodocumento,idestado,idtipopago) VALUES({0},{1},{2},{3},{4},'{5}','{6}',{7},{8})", fac.idcliente, fac.idvendedor, fac.idmoneda, fac.total, fac.subtotal, fac.fecha, fac.tipodocumento, fac.idestado, fac.idtipopago);
-                cnn.Insert(string.Format("INSERT INTO CUENTAS_POR_COBRAR(idtipocxc,idvendedor,idfactura,fecha,idmoneda,total,subtotal,idcliente,idestado) VALUES({0},{1},{2},'{3}',{4},{5},{6},{7},{8})", cxc.idtipocxc, cxc.idvendedor, cxc.idfactura, cxc.fecha, cxc.idmoneda, cxc.total, cxc.subtotal, cxc.idcliente, cxc.idestado));
+                string query = string.Format("INSERT INTO CUENTAS_POR_COBRAR(idvendedor,idfactura,fecha,idmoneda,total,subtotal,idcliente,idestado,cantidadCuotas,cantidadPago) VALUES({0},{1},'{2}',{3},{4},{5},{6},{7},{8},{9})", cxc.idvendedor, cxc.idfactura, cxc.fecha, cxc.idmoneda, cxc.total, cxc.subtotal, cxc.idcliente, cxc.idestado ,cxc.cantidadCuotas , cxc.cantidadPago);
+                cnn.Insert(string.Format("INSERT INTO CUENTAS_POR_COBRAR(idvendedor,idfactura,fecha,idmoneda,total,subtotal,idcliente,idestado,cantidadCuotas,cantidadPago) VALUES({0},{1},'{2}',{3},{4},{5},{6} ,{7},{8},{9} )", cxc.idvendedor, cxc.idfactura, cxc.fecha, cxc.idmoneda, cxc.total, cxc.subtotal, cxc.idcliente, cxc.idestado ,cxc.cantidadCuotas , cxc.cantidadPago));
                 return true;
             }
             catch (Exception ex)
             {
-                string message = ex.Message;
+                //string message = ex.Message;
                 return false;
             }
         }
@@ -41,13 +42,31 @@ namespace Negocio
             return typeDev;
         }
 
-        public bool updateSaldoCuenta(double saldocuenta,double subtotalcuenta, int idcuentaxcobrar)
+        public bool updateSaldoCuenta(double saldocuenta,double subtotalcuenta, double cantPagos, int idcuentaxcobrar )
         {
             try
             {
 
                 //string query = string.Format("UPDATE CUENTAS_POR_COBRAR SET total = {0}, subtotal = {1} WHERE idcuentaporcobrar = {2}", saldocuenta, subtotalcuenta, idcuentaxcobrar);
-                cnn.Update(string.Format("UPDATE CUENTAS_POR_COBRAR SET total = {0}, subtotal = {1} WHERE idcuentaporcobrar = {2}", saldocuenta, subtotalcuenta, idcuentaxcobrar));
+                cnn.Update(string.Format("UPDATE CUENTAS_POR_COBRAR SET total = {0}, subtotal = {1}, cantidadPago = {2} WHERE idcuentaporcobrar = {3}", saldocuenta, subtotalcuenta, cantPagos , idcuentaxcobrar));
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+
+
+        }
+
+        public bool updateCantidadPago(double cantidadPago,  int idcuentaxcobrar)
+        {
+            try
+            {
+
+                //string query = string.Format("UPDATE CUENTAS_POR_COBRAR SET total = {0}, subtotal = {1} WHERE idcuentaporcobrar = {2}", saldocuenta, subtotalcuenta, idcuentaxcobrar);
+                cnn.Update(string.Format("UPDATE CUENTAS_POR_COBRAR SET cantidadPago = {0} WHERE idcuentaporcobrar = {}", cantidadPago, idcuentaxcobrar));
                 return true;
             }
             catch (Exception ex)

@@ -248,6 +248,7 @@
             this.cbEmpresa.Name = "cbEmpresa";
             this.cbEmpresa.Size = new System.Drawing.Size(121, 27);
             this.cbEmpresa.TabIndex = 98;
+            this.cbEmpresa.Visible = false;
             // 
             // label6
             // 
@@ -258,6 +259,7 @@
             this.label6.Size = new System.Drawing.Size(69, 19);
             this.label6.TabIndex = 99;
             this.label6.Text = "Empresa:";
+            this.label6.Visible = false;
             // 
             // frmListaPreciosReg
             // 
