@@ -149,11 +149,11 @@
     <Compile Include="frmFacturas.Designer.cs">
       <DependentUpon>frmFacturas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHistoricoCxC.cs">
+    <Compile Include="frmHistoricoClienteCxC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHistoricoCxC.Designer.cs">
-      <DependentUpon>frmHistoricoCxC.cs</DependentUpon>
+    <Compile Include="frmHistoricoClienteCxC.Designer.cs">
+      <DependentUpon>frmHistoricoClienteCxC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmIngresotipocampania.cs">
       <SubType>Form</SubType>
@@ -179,11 +179,11 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMovimientosCxC.cs">
+    <Compile Include="frmHistoricoGeneralCxC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMovimientosCxC.Designer.cs">
-      <DependentUpon>frmMovimientosCxC.cs</DependentUpon>
+    <Compile Include="frmHistoricoGeneralCxC.Designer.cs">
+      <DependentUpon>frmHistoricoGeneralCxC.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalConceptosCxC.cs">
       <SubType>Form</SubType>
@@ -311,8 +311,8 @@
     <EmbeddedResource Include="frmFacturas.resx">
       <DependentUpon>frmFacturas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHistoricoCxC.resx">
-      <DependentUpon>frmHistoricoCxC.cs</DependentUpon>
+    <EmbeddedResource Include="frmHistoricoClienteCxC.resx">
+      <DependentUpon>frmHistoricoClienteCxC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresotipocampania.resx">
       <DependentUpon>frmIngresotipocampania.cs</DependentUpon>
@@ -328,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultatipocampania.resx">
       <DependentUpon>frmConsultatipocampania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistoricoGeneralCxC.resx">
+      <DependentUpon>frmHistoricoGeneralCxC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalConceptosCxC.resx">
       <DependentUpon>frmPrincipalConceptosCxC.cs</DependentUpon>

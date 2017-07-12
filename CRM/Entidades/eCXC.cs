@@ -20,5 +20,12 @@ namespace Entidades
         public string estado { get; set; }
         public int idtipopago { get; set; }
 
+        public int idclientecxc { get; set; }
+
+        public string nombreclientecxc { get; set; }
+
+
+
+        
     }
 }

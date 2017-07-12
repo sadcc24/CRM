@@ -1,4 +1,7 @@
-﻿using System;
+﻿//autor: Melvin alejandro Batz Farfan
+// carne: 0901-12-1049
+//fecha 09-07-2017
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

@@ -100,10 +100,10 @@ namespace Presentador
 
         private void cuentasPorCobrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmPrincipalConceptosCxC cuentascxc = new frmPrincipalConceptosCxC();
-            cuentascxc.MdiParent = this;
-            cuentascxc.Show();
-        }
+            frmHistoricoGeneralCxC general = new frmHistoricoGeneralCxC();
+            general.MdiParent = this;
+            general.Show();
+                    }
 
         private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -161,6 +161,21 @@ namespace Presentador
             frmCancelacionCXC cancel = new frmCancelacionCXC();
             cancel.MdiParent = this;
             cancel.Show();
+        }
+
+        private void conceptosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalConceptosCxC cuentascxc = new frmPrincipalConceptosCxC();
+            cuentascxc.MdiParent = this;
+            cuentascxc.Show();
+
+        }
+
+        private void clientesCxCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHistoricoClienteCxC clientescuentas = new frmHistoricoClienteCxC();
+            clientescuentas.MdiParent = this;
+            clientescuentas.Show();
         }
     }
 }

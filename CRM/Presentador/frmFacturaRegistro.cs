@@ -274,6 +274,7 @@ namespace Presentador
             double idcliente = Convert.ToDouble(this.dgvCliente.CurrentRow.Cells[0].Value.ToString());
             double saldoCliente = Convert.ToDouble(this.dgvCliente.CurrentRow.Cells[4].Value.ToString());
             double totalSaldo = saldoCliente + total1;
+
             int cliente  =  Convert.ToInt16(idcliente);
             nfactur.updateClienteSaldo(totalSaldo, cliente);
 
@@ -300,6 +301,9 @@ namespace Presentador
 
         }
 
-       
+        private void tbTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -236,6 +236,7 @@
             this.dgvDetalleFactura.Name = "dgvDetalleFactura";
             this.dgvDetalleFactura.Size = new System.Drawing.Size(689, 215);
             this.dgvDetalleFactura.TabIndex = 103;
+            this.dgvDetalleFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleFactura_CellContentClick);
             // 
             // label3
             // 

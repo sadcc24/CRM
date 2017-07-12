@@ -45,8 +45,6 @@ C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Pr
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.exe
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
-C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.exe
-C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Presentador.exe
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Presentador.pdb
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\bin\Debug\Datos.dll
@@ -74,12 +72,13 @@ C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presenta
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmDevRegistro.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmFacturaRegistro.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmFacturas.resources
-C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmHistoricoCxC.resources
+C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmHistoricoClienteCxC.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmIngresotipocampania.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmListaPrecios.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmListaPreciosReg.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmLogin.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.TipoCampania.resources
+C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmHistoricoGeneralCxC.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmPrincipalConceptosCxC.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmRegCaja.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmRegCampania.resources
@@ -92,3 +91,5 @@ C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presenta
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.Properties.Resources.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.SelectingClient.resources
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
+C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.exe
+C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.pdb

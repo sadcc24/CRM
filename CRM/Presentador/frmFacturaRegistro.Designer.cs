@@ -118,6 +118,7 @@
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(276, 27);
             this.tbTotal.TabIndex = 100;
+            this.tbTotal.TextChanged += new System.EventHandler(this.tbTotal_TextChanged);
             // 
             // label8
             // 

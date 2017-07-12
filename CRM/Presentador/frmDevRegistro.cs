@@ -609,5 +609,10 @@ namespace Presentador
                 txtTotalPartida.Text = Total.ToString();
             }
         }
+
+        private void dgvDetalleFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
