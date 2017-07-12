@@ -37,6 +37,7 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pbCRM = new System.Windows.Forms.PictureBox();
+            this.btnRegistro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbCRM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(139, 291);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(127, 282);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(112, 30);
             this.btnIniciarSesion.TabIndex = 4;
@@ -118,12 +119,25 @@
             this.pbCRM.TabIndex = 7;
             this.pbCRM.TabStop = false;
             // 
+            // btnRegistro
+            // 
+            this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.Location = new System.Drawing.Point(127, 314);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(112, 30);
+            this.btnRegistro.TabIndex = 8;
+            this.btnRegistro.Text = "Registro";
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Visible = false;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(382, 356);
+            this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.pbCRM);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
@@ -152,5 +166,6 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pbCRM;
+        private System.Windows.Forms.Button btnRegistro;
     }
 }

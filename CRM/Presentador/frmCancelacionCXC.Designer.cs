@@ -37,15 +37,16 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dtpfechadev = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.dgvHistorico = new System.Windows.Forms.DataGridView();
+            this.cbTipocxc = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSaldo = new System.Windows.Forms.TextBox();
-            this.dgvHistorico = new System.Windows.Forms.DataGridView();
+            this.txtidhistorico = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +108,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(51, 49);
             this.btnEliminar.TabIndex = 118;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -125,7 +127,7 @@
             this.btnGuardar.BackgroundImage = global::Presentador.Properties.Resources.buscar;
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.Image = global::Presentador.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(145, 36);
+            this.btnGuardar.Location = new System.Drawing.Point(202, 36);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(51, 49);
             this.btnGuardar.TabIndex = 116;
@@ -143,23 +145,12 @@
             this.btnCancelar.TabIndex = 115;
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEditar.BackgroundImage = global::Presentador.Properties.Resources.editar;
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Location = new System.Drawing.Point(198, 36);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(51, 49);
-            this.btnEditar.TabIndex = 114;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.SystemColors.Control;
             this.btnNuevo.BackgroundImage = global::Presentador.Properties.Resources.nuevo;
             this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnNuevo.Location = new System.Drawing.Point(92, 36);
+            this.btnNuevo.Location = new System.Drawing.Point(149, 36);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(51, 49);
             this.btnNuevo.TabIndex = 113;
@@ -187,45 +178,67 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(104, 217);
+            this.label4.Location = new System.Drawing.Point(130, 217);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 19);
+            this.label4.Size = new System.Drawing.Size(45, 19);
             this.label4.TabIndex = 128;
-            this.label4.Text = "Cantidad:";
+            this.label4.Text = "Pago:";
             // 
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(181, 209);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(182, 27);
+            this.txtCantidad.Size = new System.Drawing.Size(91, 27);
             this.txtCantidad.TabIndex = 129;
+            // 
+            // dgvHistorico
+            // 
+            this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorico.Location = new System.Drawing.Point(66, 288);
+            this.dgvHistorico.Name = "dgvHistorico";
+            this.dgvHistorico.Size = new System.Drawing.Size(411, 184);
+            this.dgvHistorico.TabIndex = 132;
+            this.dgvHistorico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellDoubleClick);
+            // 
+            // cbTipocxc
+            // 
+            this.cbTipocxc.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipocxc.FormattingEnabled = true;
+            this.cbTipocxc.Items.AddRange(new object[] {
+            "Factura"});
+            this.cbTipocxc.Location = new System.Drawing.Point(181, 255);
+            this.cbTipocxc.Name = "cbTipocxc";
+            this.cbTipocxc.Size = new System.Drawing.Size(150, 27);
+            this.cbTipocxc.TabIndex = 133;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(127, 255);
+            this.label5.Location = new System.Drawing.Point(119, 260);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 19);
-            this.label5.TabIndex = 130;
-            this.label5.Text = "Saldo:";
+            this.label5.Size = new System.Drawing.Size(59, 19);
+            this.label5.TabIndex = 134;
+            this.label5.Text = "Cuenta:";
             // 
             // txtSaldo
             // 
             this.txtSaldo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaldo.Location = new System.Drawing.Point(181, 247);
+            this.txtSaldo.Location = new System.Drawing.Point(312, 209);
             this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.Size = new System.Drawing.Size(182, 27);
-            this.txtSaldo.TabIndex = 131;
+            this.txtSaldo.Size = new System.Drawing.Size(91, 27);
+            this.txtSaldo.TabIndex = 135;
+            this.txtSaldo.Visible = false;
             // 
-            // dgvHistorico
+            // txtidhistorico
             // 
-            this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorico.Location = new System.Drawing.Point(66, 302);
-            this.dgvHistorico.Name = "dgvHistorico";
-            this.dgvHistorico.Size = new System.Drawing.Size(411, 150);
-            this.dgvHistorico.TabIndex = 132;
+            this.txtidhistorico.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidhistorico.Location = new System.Drawing.Point(30, 58);
+            this.txtidhistorico.Name = "txtidhistorico";
+            this.txtidhistorico.Size = new System.Drawing.Size(40, 27);
+            this.txtidhistorico.TabIndex = 136;
+            this.txtidhistorico.Visible = false;
             // 
             // frmCancelacionCXC
             // 
@@ -233,9 +246,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(534, 527);
-            this.Controls.Add(this.dgvHistorico);
+            this.Controls.Add(this.txtidhistorico);
             this.Controls.Add(this.txtSaldo);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbTipocxc);
+            this.Controls.Add(this.dgvHistorico);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -249,10 +264,10 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Name = "frmCancelacionCXC";
             this.Text = "FRMCANCELACION";
+            this.Load += new System.EventHandler(this.frmCancelacionCXC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,7 +281,6 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnCliente;
         public System.Windows.Forms.TextBox txtcliente;
@@ -275,8 +289,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.DataGridView dgvHistorico;
+        public System.Windows.Forms.ComboBox cbTipocxc;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox txtSaldo;
-        private System.Windows.Forms.DataGridView dgvHistorico;
+        public System.Windows.Forms.TextBox txtidhistorico;
     }
 }

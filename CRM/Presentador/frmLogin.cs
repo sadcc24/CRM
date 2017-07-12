@@ -37,21 +37,39 @@ namespace Presentador
                 nLogin login = new nLogin();
                 result = login.login(elogin);
 
-                if (result.Rows.Count != 0)
+                if(result.Rows.Count != 0)
                 {
-                    frmCRM crm = new frmCRM();
-                    crm.user = elogin.user;
-                    
-                    crm.Show();
-                    this.Hide();
-                }
-                else
+                    string PassSQL = Seguridad.DesEncriptar(result.Rows[0]["password"].ToString());
+
+                    if (PassSQL == txtPassword.Text)
+                    {
+                        frmCRM crm = new frmCRM();
+                        crm.user = elogin.user;
+
+                        crm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error en Usuario/Contraseña, verifique datos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtPassword.Clear();
+                        txtUser.Clear();
+                    }
+                }else
                 {
-                    MessageBox.Show("Error en Usuario/Contraseña, verifique datos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error , Usuario no Existe", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPassword.Clear();
                     txtUser.Clear();
                 }
+
+               
             }
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            frmRegisterUser reguser = new frmRegisterUser();
+            reguser.Show();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Negocio
 {
     public class nCaja
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
 
         public DataTable Caja()
         {
@@ -30,8 +30,8 @@ namespace Negocio
         {
             try
             {
-                string query = string.Format(@"INSERT INTO HISTORICA_CXC VALUES({0},'{1}',{2},{3},{4})", historico.cuentacxc, historico.fecha, historico.cantidadpagada, historico.saldo, historico.cliente);
-                cnn.Insert(string.Format(@"INSERT INTO HISTORICA_CXC VALUES({0},'{1}',{2},{3},{4})", historico.cuentacxc, historico.fecha, historico.cantidadpagada, historico.saldo, historico.cliente));
+                string query = string.Format(@"INSERT INTO HISTORICA_CXC VALUES({0},{1},{2},'{3}',{4},{5})",historico.idcuentacxc,historico.idcliente,historico.idtipocxc,historico.Fecha,historico.cantidadPagada,historico.saldo);
+                cnn.Insert(string.Format(@"INSERT INTO HISTORICA_CXC VALUES({0},{1},{2},'{3}',{4},{5})", historico.idcuentacxc, historico.idcliente, historico.idtipocxc, historico.Fecha, historico.cantidadPagada, historico.saldo));
                 return true;
             }
             catch (Exception)
