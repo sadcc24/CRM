@@ -46,13 +46,15 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.rdMarca = new System.Windows.Forms.RadioButton();
+            this.rbProducto = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(165, 311);
+            this.label5.Location = new System.Drawing.Point(373, 303);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 19);
             this.label5.TabIndex = 130;
@@ -60,31 +62,35 @@
             // 
             // cbproducto
             // 
+            this.cbproducto.Enabled = false;
             this.cbproducto.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbproducto.FormattingEnabled = true;
             this.cbproducto.Items.AddRange(new object[] {
             "Factura"});
-            this.cbproducto.Location = new System.Drawing.Point(253, 304);
+            this.cbproducto.Location = new System.Drawing.Point(449, 303);
             this.cbproducto.Name = "cbproducto";
             this.cbproducto.Size = new System.Drawing.Size(174, 27);
             this.cbproducto.TabIndex = 129;
+            this.cbproducto.SelectedIndexChanged += new System.EventHandler(this.cbproducto_SelectedIndexChanged);
             // 
             // cbmarca
             // 
+            this.cbmarca.Enabled = false;
             this.cbmarca.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbmarca.FormattingEnabled = true;
             this.cbmarca.Items.AddRange(new object[] {
             "Factura"});
-            this.cbmarca.Location = new System.Drawing.Point(253, 254);
+            this.cbmarca.Location = new System.Drawing.Point(102, 300);
             this.cbmarca.Name = "cbmarca";
             this.cbmarca.Size = new System.Drawing.Size(174, 27);
             this.cbmarca.TabIndex = 128;
+            this.cbmarca.SelectedIndexChanged += new System.EventHandler(this.cbmarca_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(170, 257);
+            this.label4.Location = new System.Drawing.Point(42, 303);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 19);
             this.label4.TabIndex = 127;
@@ -123,7 +129,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 157);
+            this.label2.Location = new System.Drawing.Point(137, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 123;
@@ -239,11 +245,35 @@
             this.btnNuevo.TabIndex = 114;
             this.btnNuevo.UseVisualStyleBackColor = false;
             // 
+            // rdMarca
+            // 
+            this.rdMarca.AutoSize = true;
+            this.rdMarca.Location = new System.Drawing.Point(265, 261);
+            this.rdMarca.Name = "rdMarca";
+            this.rdMarca.Size = new System.Drawing.Size(68, 17);
+            this.rdMarca.TabIndex = 135;
+            this.rdMarca.Text = "Producto";
+            this.rdMarca.UseVisualStyleBackColor = true;
+            this.rdMarca.CheckedChanged += new System.EventHandler(this.rdMarca_CheckedChanged);
+            // 
+            // rbProducto
+            // 
+            this.rbProducto.AutoSize = true;
+            this.rbProducto.Location = new System.Drawing.Point(339, 261);
+            this.rbProducto.Name = "rbProducto";
+            this.rbProducto.Size = new System.Drawing.Size(55, 17);
+            this.rbProducto.TabIndex = 134;
+            this.rbProducto.Text = "Marca";
+            this.rbProducto.UseVisualStyleBackColor = true;
+            this.rbProducto.CheckedChanged += new System.EventHandler(this.rbProducto_CheckedChanged);
+            // 
             // frmComision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 354);
+            this.Controls.Add(this.rdMarca);
+            this.Controls.Add(this.rbProducto);
             this.Controls.Add(this.txtidcomision);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbproducto);
@@ -290,5 +320,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         public System.Windows.Forms.TextBox txtidcomision;
+        private System.Windows.Forms.RadioButton rdMarca;
+        private System.Windows.Forms.RadioButton rbProducto;
     }
 }

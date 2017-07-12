@@ -88,7 +88,7 @@ namespace Negocio
         {
             try
             {
-                string query = string.Format(@"UPDATE COMISION SET idvendedor ={0},idempresa = {1},idproducto ={2}, idmarca ={3}, porcentajecomision={4} where idcomision = {5}", comision.vendedor, comision.empresa, comision.producto, comision.marca, comision.comision, idcomision);
+                string query = string.Format(@"UPDATE COMISION SET idvendedor ={0},idempresa = {1},idproducto ={2}, idmarca ={3}, porcentajecomision = {4} where idcomision = {5}", comision.vendedor, comision.empresa, comision.producto, comision.marca, Convert.ToDouble(comision.comision), idcomision);
                 cnn.Update(string.Format(@"UPDATE COMISION SET idvendedor ={0},idempresa = {1},idproducto ={2}, idmarca ={3}, porcentajecomosion={4} where idcomision = {5}", comision.vendedor, comision.empresa, comision.producto, comision.marca, comision.comision, idcomision));
                 return true;
             }

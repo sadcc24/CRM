@@ -160,6 +160,12 @@
     <Compile Include="frmHistoricoCxC.Designer.cs">
       <DependentUpon>frmHistoricoCxC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIngresoEstadoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresoEstadoCliente.Designer.cs">
+      <DependentUpon>frmIngresoEstadoCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIngresotipocampania.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,12 @@
     <Compile Include="frmRegCampania.Designer.cs">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRepCampaniaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepCampaniaCliente.Designer.cs">
+      <DependentUpon>frmRepCampaniaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRepCampaniasCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +267,18 @@
     </Compile>
     <Compile Include="frmvendoresc.Designer.cs">
       <DependentUpon>frmvendoresc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentasRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentasRegistro.Designer.cs">
+      <DependentUpon>frmVentasRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -325,6 +349,9 @@
     <EmbeddedResource Include="frmHistoricoCxC.resx">
       <DependentUpon>frmHistoricoCxC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmIngresoEstadoCliente.resx">
+      <DependentUpon>frmIngresoEstadoCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIngresotipocampania.resx">
       <DependentUpon>frmIngresotipocampania.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +376,9 @@
     <EmbeddedResource Include="frmRegCampania.resx">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRepCampaniaCliente.resx">
+      <DependentUpon>frmRepCampaniaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRepCampaniasCliente.resx">
       <DependentUpon>frmRepCampaniasCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +399,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmvendoresc.resx">
       <DependentUpon>frmvendoresc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentasRegistro.resx">
+      <DependentUpon>frmVentasRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

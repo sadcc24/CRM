@@ -13,8 +13,8 @@ namespace Entidades
 
         public string comision { get; set; }
         public int empresa { get; set; }
-        public int marca { get; set; }
+        public string marca { get; set; }
 
-        public int producto { get; set; }
+        public string producto { get; set; }
     }
 }
