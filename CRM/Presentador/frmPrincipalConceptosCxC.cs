@@ -55,10 +55,12 @@ namespace Presentador
             //string cuotamaxima = this.dgvconceptos.CurrentRow.Cells[2].Value.ToString();
             //conceptos.txtmaxima.Text = cuotamaxima;
 
-            string cuotaminima = this.dgvconceptos.CurrentRow.Cells[3].Value.ToString();
+            string cuotaminima = this.dgvconceptos.CurrentRow.Cells[2].Value.ToString();
             conceptos.txtcuotas.Text = cuotaminima;
 
-            string pago = this.dgvconceptos.CurrentRow.Cells[4].Value.ToString();
+            // string tipo = this.dgvconceptos.CurrentRow.Cells[4].Value.ToString();
+            //conceptos.cmbMovimientos.Text = tipo;
+            // pago = this.dgvconceptos.CurrentRow.Cells[4].Value.ToString();
             //conceptos.txtcompra.Text = pago;
 
 

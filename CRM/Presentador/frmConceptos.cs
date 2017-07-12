@@ -40,7 +40,7 @@ namespace Presentador
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtcuotas.Text))
-                {
+            {
                 MessageBox.Show("Rellene los Datos Requeridos", "Campos Requeridos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -48,10 +48,10 @@ namespace Presentador
                 eCXC tipocxc = new eCXC();
                 tipocxc.nombre = txtnombrecxc.Text;
                 tipocxc.cuotaminima = txtcuotas.Text;
-                tipocxc.cuotamaxima = cmbMovimientos.SelectedText;
-                
+                tipocxc.cuotamaxima = cmbMovimientos.Text;
+
                 tipocxc.estado = txtestado.Text;
-                tipocxc.idtipopago= Convert.ToInt16(txttipopago.Text);
+                tipocxc.idtipopago = Convert.ToInt16(txttipopago.Text);
 
 
 
@@ -67,12 +67,12 @@ namespace Presentador
                     frmcxc.dgvconceptos.DataSource = allcxc.datatcxc();
                     txtcuotas.Clear();
                     txtnombrecxc.Clear();
-                     }
+                }
                 else
                 {
                     MessageBox.Show("Ingreso Fallido", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                }
+            }
 
         }
 
@@ -80,20 +80,20 @@ namespace Presentador
         {
             eCXC editconcxc = new eCXC();
 
-            string idconcepto  = txtidconcepto.Text;
+            string idconcepto = txtidconcepto.Text;
 
             editconcxc.idtipopago = Convert.ToInt16(txttipopago.Text);
             editconcxc.idtipocxc = Convert.ToInt16(txtidconcepto.Text);
             editconcxc.nombre = txtnombrecxc.Text;
             editconcxc.cuotaminima = txtcuotas.Text;
             editconcxc.cuotamaxima = cmbMovimientos.SelectedText;
-            
+
             editconcxc.estado = txtestado.Text;
 
 
             nCXC updateconceptos = new nCXC();
             bool result = updateconceptos.updateconcepto(editconcxc, idconcepto);
-            
+
             if (result != false)
             {
                 MessageBox.Show("Actualizacion Exitosa", "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,7 +101,7 @@ namespace Presentador
                 nCXC allconceptos = new nCXC();
                 frmPrincipalConceptosCxC conceptos = new frmPrincipalConceptosCxC();
                 conceptos.dgvconceptos.DataSource = allconceptos.datatcxc();
-                
+
                 txtcuotas.Clear();
                 txtidconcepto.Clear();
                 txtidconcepto.Clear();
@@ -154,6 +154,6 @@ namespace Presentador
 
         }
     }
-    }
+}
 
 
