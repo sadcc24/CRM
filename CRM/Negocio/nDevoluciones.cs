@@ -40,6 +40,16 @@ namespace Negocio
             return exist;
         }
 
+        public DataTable getMovimientoVentas()
+        {
+            DataTable exist = new DataTable();
+            exist = cnn.Select(string.Format(@"SELECT idmovimiento FROM MOVIMIENTOSINVENTARIO AS MI
+            INNER JOIN TIPOMOVIMIENTO AS TM
+            ON TM.idtipomovimiento = MI.idtipomovimiento
+            WHERE TM.descripcion ='Ventas'"));
+            return exist;
+        }
+
         public void updateExistencia(string uuidbodega, string uuidproducto, string candidad)
         {
             cnn.Update(string.Format(@"UPDATE EXISTENCIA SET CANTIDAD = {0} WHERE idbodega = {1} AND idproducto ={2}",candidad,uuidbodega,uuidproducto));

@@ -52,6 +52,24 @@ namespace Presentador
                 {
                     nDetalleFactura DetFact = new nDetalleFactura();
                     dgvProductos.DataSource = DetFact.getAllProductos();
+
+
+                    nDevoluciones productodetail = new nDevoluciones();
+                    DataTable detail = new DataTable();
+                    detail = productodetail.getProductDetail(Convert.ToString(idprod));
+
+
+                    eMovimientoDev movimiento = new eMovimientoDev();
+                    //obtiene idmovimiento
+                    DataTable mov = new DataTable();
+                    mov = productodetail.getMovimientoVentas();
+
+                    movimiento.idbodega = bodega;
+                    movimiento.idmovimiento = Convert.ToInt32(mov.Rows[0]["idmovimiento"].ToString());
+                    movimiento.idproducto = idprod;
+                    movimiento.cantidad = Convert.ToInt16(cantProd);
+                    movimiento.costo = detail.Rows[0]["costo"].ToString();
+                    movimiento.precio = detail.Rows[0]["precio"].ToString();
                     //MessageBox.Show("Actualizado exitoso productos", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 MessageBox.Show("Ingreso Exitoso", "Ingreso Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -306,7 +306,10 @@ namespace Presentador
                 {
                     tbCxC.Text = this.dgvCXC.CurrentRow.Cells[0].Value.ToString();
                 }
+
                 
+
+                productodetail.insertMovimientoInventario(movimiento);
 
                 int idcue = Convert.ToInt16(tbCxC.Text);
                 cuentaxc.updateSaldoCuenta(total1, subtotal, cantPagos ,idcue );
