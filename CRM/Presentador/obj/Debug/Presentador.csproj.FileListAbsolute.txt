@@ -196,7 +196,6 @@ C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmCa
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmCatalogoComision.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmCatalogoVendedores.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmClienteCXC.resources
-C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmClientes.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmCobrosProximos.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmComision.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmConceptos.resources
@@ -208,7 +207,6 @@ C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmDe
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmFacturaRegistro.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmFacturas.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmHistoricoCxC.resources
-C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmIngresoEstadoCliente.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmIngresotipocampania.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmListaPrecios.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmListaPreciosReg.resources
@@ -217,16 +215,12 @@ C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.TipoC
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmPrincipalConceptosCxC.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmRegCaja.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmRegCampania.resources
-C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmRepCampaniaCliente.resources
-C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmRepCampaniasCliente.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmtipocampania.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmConsultaVendedores.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmTipoListaPrecio.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmTipoListaPrecioReg.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmUserRegister.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmvendoresc.resources
-C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmVentas.resources
-C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.frmVentasRegistro.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.Properties.Resources.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.SelectingClient.resources
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
