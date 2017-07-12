@@ -107,7 +107,7 @@ namespace Presentador
 
         private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaVendedores consultavendedor = new frmConsultaVendedores();
+            frmCatalogoVendedores consultavendedor = new frmCatalogoVendedores();
             consultavendedor.MdiParent = this;
             consultavendedor.Show();
         }
@@ -159,6 +159,13 @@ namespace Presentador
         private void cancelacionCuentaACobrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCancelacionCXC cancel = new frmCancelacionCXC();
+            cancel.MdiParent = this;
+            cancel.Show();
+        }
+
+        private void comisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCatalogoComision cancel = new frmCatalogoComision();
             cancel.MdiParent = this;
             cancel.Show();
         }
