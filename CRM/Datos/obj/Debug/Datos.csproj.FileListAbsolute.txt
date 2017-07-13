@@ -22,13 +22,14 @@ C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Datos\bin\Debug\MRP_BD.dll
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Datos\obj\Debug\Datos.dll
 C:\Users\Wasaby\Documents\GitHub\CRM\CRM\Datos\obj\Debug\Datos.pdb
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\bin\Debug\Datos.dll
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\bin\Debug\Datos.pdb
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\bin\Debug\MRP_BD.dll
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\obj\Debug\Datos.dll
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\obj\Debug\Datos.pdb
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Datos\bin\Debug\Datos.dll
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Datos\bin\Debug\Datos.pdb
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Datos\bin\Debug\MRP_BD.dll
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Datos\obj\Debug\Datos.dll
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Datos\obj\Debug\Datos.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\bin\Debug\Datos.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\bin\Debug\Datos.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\bin\Debug\MRP_BD.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\obj\Debug\Datos.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Datos\obj\Debug\Datos.pdb

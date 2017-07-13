@@ -164,14 +164,14 @@
             // 
             // cbTipoPago
             // 
-            this.cbTipoPago.Enabled = false;
-            this.cbTipoPago.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipoPago.FormattingEnabled = true;
-            this.cbTipoPago.Location = new System.Drawing.Point(147, 100);
-            this.cbTipoPago.Name = "cbTipoPago";
-            this.cbTipoPago.Size = new System.Drawing.Size(121, 27);
-            this.cbTipoPago.TabIndex = 107;
-            this.cbTipoPago.SelectedIndexChanged += new System.EventHandler(this.cbTipoPago_SelectedIndexChanged);
+            //this.cbTipoPago.Enabled = false;
+            //this.cbTipoPago.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.cbTipoPago.FormattingEnabled = true;
+            //this.cbTipoPago.Location = new System.Drawing.Point(147, 100);
+            //this.cbTipoPago.Name = "cbTipoPago";
+            //this.cbTipoPago.Size = new System.Drawing.Size(121, 27);
+            //this.cbTipoPago.TabIndex = 107;
+            //this.cbTipoPago.SelectedIndexChanged += new System.EventHandler(this.cbTipoPago_SelectedIndexChanged);
             // 
             // cbEstado
             // 

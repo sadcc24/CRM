@@ -288,7 +288,7 @@ namespace Presentador
             tbCxC.Text = this.dgvCXC.CurrentRow.Cells[0].Value.ToString();
             
             int idcue = Convert.ToInt16(tbCxC.Text);
-            cuentaxc.updateSaldoCuenta(total1, subtotal, idcue);
+           // cuentaxc.updateSaldoCuenta(total1, subtotal, idcue);
 
 
 

@@ -65,12 +65,6 @@
     <Compile Include="frmCatalogClientes.Designer.cs">
       <DependentUpon>frmCatalogClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCatalogoClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCatalogoClientes.Designer.cs">
-      <DependentUpon>frmCatalogoClientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCatalogoComision.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +106,12 @@
     </Compile>
     <Compile Include="frmConsultaCliente.Designer.cs">
       <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCotizacion.Designer.cs">
+      <DependentUpon>frmCotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCRM.cs">
       <SubType>Form</SubType>
@@ -209,6 +209,12 @@
     <Compile Include="frmRegCampania.Designer.cs">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterUser.Designer.cs">
+      <DependentUpon>frmRegisterUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmtipocampania.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,9 +275,6 @@
     <EmbeddedResource Include="frmCatalogClientes.resx">
       <DependentUpon>frmCatalogClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatalogoClientes.resx">
-      <DependentUpon>frmCatalogoClientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoComision.resx">
       <DependentUpon>frmCatalogoComision.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaCliente.resx">
       <DependentUpon>frmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCotizacion.resx">
+      <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCRM.resx">
       <DependentUpon>frmCRM.cs</DependentUpon>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegCampania.resx">
       <DependentUpon>frmRegCampania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterUser.resx">
+      <DependentUpon>frmRegisterUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtipocampania.resx">
       <DependentUpon>frmtipocampania.cs</DependentUpon>

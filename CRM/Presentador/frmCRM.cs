@@ -179,6 +179,27 @@ namespace Presentador
             clientescuentas.MdiParent = this;
             clientescuentas.Show();
         }
+
+        private void cancelacionCuentaPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCancelacionCXC clientescuentas = new frmCancelacionCXC();
+            clientescuentas.MdiParent = this;
+            clientescuentas.Show();
+        }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCaja caja = new frmCaja();
+            caja.MdiParent = this;
+            caja.Show();
+        }
+
+        private void registerUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegisterUser user = new frmRegisterUser();
+            user.MdiParent = this;
+            user.Show();
+        }
     }
 }
 

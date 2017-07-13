@@ -53,9 +53,9 @@
             this.catalogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorCobrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.conceptosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesCxCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelacionCuentaACobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -63,8 +63,9 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.conceptosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesCxCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelacionCuentaPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +84,8 @@
             // 
             // archivoToolStripMenuItem
             // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registerUserToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -275,29 +278,29 @@
             this.cuentasPorCobrarToolStripMenuItem1.Text = "Cuentas por Cobrar";
             this.cuentasPorCobrarToolStripMenuItem1.Click += new System.EventHandler(this.cuentasPorCobrarToolStripMenuItem1_Click);
             // 
+            // conceptosToolStripMenuItem
+            // 
+            this.conceptosToolStripMenuItem.Name = "conceptosToolStripMenuItem";
+            this.conceptosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.conceptosToolStripMenuItem.Text = "Conceptos";
+            this.conceptosToolStripMenuItem.Click += new System.EventHandler(this.conceptosToolStripMenuItem_Click);
+            // 
+            // clientesCxCToolStripMenuItem
+            // 
+            this.clientesCxCToolStripMenuItem.Name = "clientesCxCToolStripMenuItem";
+            this.clientesCxCToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.clientesCxCToolStripMenuItem.Text = "Clientes CxC";
+            this.clientesCxCToolStripMenuItem.Click += new System.EventHandler(this.clientesCxCToolStripMenuItem_Click);
+            // 
             // cajaToolStripMenuItem
             // 
             this.cajaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.transaccionesToolStripMenuItem,
-            this.cancelacionCuentaACobrarToolStripMenuItem});
+            this.cancelacionCuentaPorCobrarToolStripMenuItem,
+            this.transaccionesToolStripMenuItem});
             this.cajaToolStripMenuItem.Name = "cajaToolStripMenuItem";
             this.cajaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.cajaToolStripMenuItem.Text = "Caja";
             this.cajaToolStripMenuItem.Click += new System.EventHandler(this.cajaToolStripMenuItem_Click);
-            // 
-            // transaccionesToolStripMenuItem
-            // 
-            this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
-            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.transaccionesToolStripMenuItem.Text = "Transacciones";
-            this.transaccionesToolStripMenuItem.Click += new System.EventHandler(this.transaccionesToolStripMenuItem_Click);
-            // 
-            // cancelacionCuentaACobrarToolStripMenuItem
-            // 
-            this.cancelacionCuentaACobrarToolStripMenuItem.Name = "cancelacionCuentaACobrarToolStripMenuItem";
-            this.cancelacionCuentaACobrarToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.cancelacionCuentaACobrarToolStripMenuItem.Text = "Cancelacion Cuenta a Cobrar";
-            this.cancelacionCuentaACobrarToolStripMenuItem.Click += new System.EventHandler(this.cancelacionCuentaACobrarToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -352,19 +355,26 @@
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel4.Text = "toolStripStatusLabel4";
             // 
-            // conceptosToolStripMenuItem
+            // cancelacionCuentaPorCobrarToolStripMenuItem
             // 
-            this.conceptosToolStripMenuItem.Name = "conceptosToolStripMenuItem";
-            this.conceptosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.conceptosToolStripMenuItem.Text = "Conceptos";
-            this.conceptosToolStripMenuItem.Click += new System.EventHandler(this.conceptosToolStripMenuItem_Click);
+            this.cancelacionCuentaPorCobrarToolStripMenuItem.Name = "cancelacionCuentaPorCobrarToolStripMenuItem";
+            this.cancelacionCuentaPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.cancelacionCuentaPorCobrarToolStripMenuItem.Text = "Cancelacion Cuenta por Cobrar";
+            this.cancelacionCuentaPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.cancelacionCuentaPorCobrarToolStripMenuItem_Click);
             // 
-            // clientesCxCToolStripMenuItem
+            // transaccionesToolStripMenuItem
             // 
-            this.clientesCxCToolStripMenuItem.Name = "clientesCxCToolStripMenuItem";
-            this.clientesCxCToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.clientesCxCToolStripMenuItem.Text = "Clientes CxC";
-            this.clientesCxCToolStripMenuItem.Click += new System.EventHandler(this.clientesCxCToolStripMenuItem_Click);
+            this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.transaccionesToolStripMenuItem.Text = "Transacciones";
+            this.transaccionesToolStripMenuItem.Click += new System.EventHandler(this.transaccionesToolStripMenuItem_Click);
+            // 
+            // registerUserToolStripMenuItem
+            // 
+            this.registerUserToolStripMenuItem.Name = "registerUserToolStripMenuItem";
+            this.registerUserToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.registerUserToolStripMenuItem.Text = "Register User";
+            this.registerUserToolStripMenuItem.Click += new System.EventHandler(this.registerUserToolStripMenuItem_Click);
             // 
             // frmCRM
             // 
@@ -425,9 +435,10 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripMenuItem cajaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cancelacionCuentaACobrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem conceptosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesCxCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelacionCuentaPorCobrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerUserToolStripMenuItem;
     }
 }
