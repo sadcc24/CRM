@@ -11,7 +11,7 @@ namespace Negocio
 {
     public class nVendedores
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
         public DataTable getAllVendedores()
         {
             DataTable vendedores = new DataTable();

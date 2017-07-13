@@ -46,6 +46,15 @@ C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presenta
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.exe
 C:\Users\melvinalejandro\Documents\GitHub\CRM\CRM\Presentador\obj\Debug\Presentador.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Presentador.exe
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Presentador.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Datos.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Entidades.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Negocio.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\MRP_BD.dll
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Datos.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Entidades.pdb
+C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Negocio.pdb
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.csprojResolveAssemblyReference.cache
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmCaja.resources
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.frmCancelacionCXC.resources
@@ -84,14 +93,5 @@ C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Pr
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.Properties.Resources.resources
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.SelectingClient.resources
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.csproj.GenerateResource.Cache
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Presentador.exe
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Presentador.pdb
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Datos.dll
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Entidades.dll
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Negocio.dll
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\MRP_BD.dll
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Datos.pdb
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Entidades.pdb
-C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\bin\Debug\Negocio.pdb
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.exe
 C:\Users\Hector Cardona\Documents\CRM-SEMINARIO\CRM\CRM\Presentador\obj\Debug\Presentador.pdb

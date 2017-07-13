@@ -11,7 +11,7 @@ namespace Negocio
 {
     public class nComision
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
         public DataTable getComision()
         {
             DataTable comision = new DataTable();
@@ -51,8 +51,8 @@ namespace Negocio
         {
             try
             {
-                string query = string.Format(@"INSERT INTO COMISION VALUES({0},{1},{2},{3},{4},{5})", comision.vendedor, comision.estado, comision.comision, comision.empresa, comision.marca, comision.producto);
-                cnn.Insert(string.Format(@"INSERT INTO COMISION VALUES({0},{1},{2},{3},{4},{5})", comision.vendedor, comision.estado, comision.comision, comision.empresa, comision.marca, comision.producto));
+                string query = string.Format(@"INSERT INTO COMISION VALUES({0},{1},{2},{3},{4},{5})", comision.vendedor, comision.estado, comision.comision,comision.producto,comision.marca, comision.empresa);
+                cnn.Insert(string.Format(@"INSERT INTO COMISION VALUES({0},{1},{2},{3},{4},{5})", comision.vendedor, comision.estado, comision.comision, comision.producto, comision.marca, comision.empresa));
                 return true;
             }
             catch (Exception)

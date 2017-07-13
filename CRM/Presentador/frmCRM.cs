@@ -200,6 +200,13 @@ namespace Presentador
             user.MdiParent = this;
             user.Show();
         }
+
+        private void comisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCatalogoComision com = new frmCatalogoComision();
+            com.MdiParent = this;
+            com.Show();
+        }
     }
 }
 
