@@ -14,7 +14,7 @@ namespace Negocio
 {
     public class nCXC
     {
-        ConnectionDBLocal cnn = new ConnectionDBLocal();
+        ConnectionDBAzure cnn = new ConnectionDBAzure();
 
         public DataTable datatcxc()
         {
